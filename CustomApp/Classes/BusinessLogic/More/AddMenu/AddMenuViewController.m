@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"添加菜单";
+    self.title = @"添加菜名";
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)clearn:(id)sender {

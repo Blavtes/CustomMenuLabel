@@ -35,6 +35,9 @@ NSString *const BdTableMenuName = @"BDMenuNameTable";
 NSString *const BdTableMenuLabelName = @"BDMenuNameLabelTable";
 NSString *const BdTableTypeName = @"BDMenuTypeTable";
 
+NSString *const BdOldTableName = @"BDOldMenuTable";
+NSString *const BDOleMenuTimeTable = @"BDOleMenuTimeTable";
+
 @interface RMTBdReportBufferManager ()
 @property (nonatomic, strong)FMDatabase *dataBase;
 
@@ -82,7 +85,6 @@ NSString *const BdTableTypeName = @"BDMenuTypeTable";
 {
     if([_dataBase open])
     {
-        // 以后增加字段
         NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' INTEGER PRIMARY KEY AUTOINCREMENT, '%@' TEXT, '%@' TEXT, '%@' TEXT)", tableName, BdReportPrimaryKey,BdTableTypeName, BdTableMenuName, BdTableMenuLabelName];
         if([_dataBase executeUpdate:sqlCreateTable])
         {
@@ -173,6 +175,129 @@ NSString *const BdTableTypeName = @"BDMenuTypeTable";
 }
 
 - (void)deleteMenuFromTable:(NSString *)tableName
+                   tableKey:(NSString *)key
+                      value:(NSString *)value // 插入table的信息对应的key值
+                     result:(void (^)(id result))block// 插入table的seq对应key值
+{
+    if([_dataBase open])
+    {
+        NSString *sqlDelete = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = '%@'", tableName, key, value];
+        if([_dataBase executeUpdate:sqlDelete])
+        {
+            // 删除成功
+            block(nil);
+        }
+        else
+        {
+            NSLog(@"delete from bdreport table %@ single failed %@", tableName, [_dataBase lastError]);
+            block([_dataBase lastError]);
+        }
+        
+        [_dataBase close];
+    }
+}
+
+- (void)insertOldMenuIntoTable:(NSString *)tableName
+                   menuName:(NSString *)menuName
+             menuMutilpeStr:(NSString *)menuLabel
+                   menuType:(NSString *)type
+                          time:(NSString *)time
+                     result:(void (^)(id result))block
+{
+    if([_dataBase open])
+    {
+        // 以后增加字段
+        NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' INTEGER PRIMARY KEY AUTOINCREMENT, '%@' TEXT, '%@' TEXT, '%@' TEXT, '%@' TEXT)", tableName, BdReportPrimaryKey,BdTableTypeName, BdTableMenuName, BdTableMenuLabelName ,BDOleMenuTimeTable];
+        if([_dataBase executeUpdate:sqlCreateTable])
+        {
+            // 创建表成功
+            
+            NSString *sqlInsert = [NSString stringWithFormat:@"INSERT INTO '%@' ('%@', '%@', '%@', '%@') VALUES ('%@', '%@', '%@', '%@')", tableName, BdTableTypeName, BdTableMenuName, BdTableMenuLabelName,BDOleMenuTimeTable, type, menuName,menuLabel, time];
+            
+            
+            if(menuName != nil && menuLabel != nil)
+            {
+                if([_dataBase executeUpdate:sqlInsert])
+                {
+                    // 插入表格成功
+                    block(nil);
+                }
+                else
+                {
+                    NSLog(@"insert into bdreport table %@ failed %@", tableName, [_dataBase lastError]);
+                    block([_dataBase lastError]);
+                }
+            }
+            else
+            {
+                block([NSError errorWithDomain:@"nil error" code:-1 userInfo:@{@"userInfo":@"bdreport try to insert nil"}]);
+            }
+        }
+        else
+        {
+            NSLog(@"创建 %@ failed %@", tableName, [_dataBase lastError]);
+            block([_dataBase lastError]);
+        }
+        
+        [_dataBase close];
+    }
+}
+
+- (void)queryOldDBMenuFromTable:(NSString *)tableName
+                 menuNameKey:(NSString *)menuNameKey
+                menuLabelKey:(NSString *)menuLabelKey
+                 menuTypeKey:(NSString *)menuTypeKey
+                      result:(void (^)(NSArray* seqsArray, NSArray* infoArray, NSArray *reportTypeArray, id result))block
+{
+    // 必须将sid数组和对应的dictionary数组一期返回
+    if([_dataBase open])
+    {
+        NSString *sqlQuery = [NSString stringWithFormat:@"SELECT * FROM %@ LIMIT %@", tableName, @(5000)];
+        NSMutableArray *seqsArray = [NSMutableArray array];
+        NSMutableArray *reportsInfoArray = [NSMutableArray array];
+        NSMutableArray *reportTypeArray = [NSMutableArray array];
+        FMResultSet *resultSets = [_dataBase executeQuery:sqlQuery];
+        
+        NSInteger cachedReportNumber = 0;
+        while ([resultSets next])
+        {
+            cachedReportNumber++;
+            
+            NSString *seqString = [resultSets stringForColumn:menuNameKey];
+            NSString *reportInfoDataString = [resultSets stringForColumn:menuLabelKey];
+            NSString *typeString = [resultSets stringForColumn:menuTypeKey];
+            NSString *time = [resultSets stringForColumn:BDOleMenuTimeTable];
+            
+            NSString *idNumber = [resultSets stringForColumn:BdReportPrimaryKey];
+            NSString *seqStringF8 = [NSString stringWithString:[seqString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            NSString *reportInfoDataStringF8 = [NSString stringWithString:[reportInfoDataString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            
+            {
+                NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
+                [dict setObject:idNumber forKey:BdReportPrimaryKey];
+                [dict setObject:seqStringF8 forKey:menuNameKey];
+                [dict setObject:reportInfoDataStringF8 forKey:menuLabelKey];
+                [dict setObject:typeString forKey:menuTypeKey];
+                [dict setObject:time forKey:BDOleMenuTimeTable];
+                [seqsArray addObject:dict];
+                [reportsInfoArray addObject:reportInfoDataStringF8];
+                
+            }
+        }
+        
+        NSLog(@"query bdrepport %ld  %ld", (unsigned long)seqsArray.count, (unsigned long)reportsInfoArray.count);
+        
+        
+        block(seqsArray, reportsInfoArray, reportTypeArray, nil);
+        
+        
+        
+        [_dataBase close];
+    }
+    
+}
+
+- (void)deleteOldMenuFromTable:(NSString *)tableName
                    tableKey:(NSString *)key
                       value:(NSString *)value // 插入table的信息对应的key值
                      result:(void (^)(id result))block// 插入table的seq对应key值

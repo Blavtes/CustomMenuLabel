@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
+            timestampString = "518188156.999275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-insertMenuIntoTable:menuName:menuMutilpeStr:menuType:result:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,23 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-insertMenuIntoTable:menuName:menuMutilpeStr:menuType:result:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
+            timestampString = "518188156.999275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -74,27 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
+            timestampString = "518188156.999275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-insertMenuIntoTable:menuName:menuMutilpeStr:menuType:result:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-queryDBMenuFromTable:menuNameKey:menuLabelKey:menuTypeKey:result:"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
+            timestampString = "518188156.999275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "-queryDBMenuFromTable:menuNameKey:menuLabelKey:menuTypeKey:result:"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
+            timestampString = "518188156.999275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "-queryDBMenuFromTable:menuNameKey:menuLabelKey:menuTypeKey:result:"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/RMTBdReportBufferManager.m"
-            timestampString = "518162215.956357"
+            timestampString = "518188156.999275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "-queryDBMenuFromTable:menuNameKey:menuLabelKey:menuTypeKey:result:"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/SearchMenuViewController.m"
-            timestampString = "518163220.061322"
+            timestampString = "518186224.157752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-queryData"
             landmarkType = "7">
             <Locations>
@@ -170,11 +138,11 @@
                   moduleName = "CustomApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/SearchMenuViewController.m"
-                  timestampString = "518165487.411677"
+                  timestampString = "518191555.042112"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "78">
                </Location>
                <Location
@@ -185,11 +153,11 @@
                   moduleName = "CustomApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/SearchMenuViewController.m"
-                  timestampString = "518165487.413371"
+                  timestampString = "518191555.043568"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
                   offsetFromSymbolStart = "138">
                </Location>
             </Locations>
@@ -202,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/SearchMenuViewController.m"
-            timestampString = "518163220.061322"
+            timestampString = "518186224.157752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "-queryData"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/SearchMenuViewController.m"
-            timestampString = "518163220.061322"
+            timestampString = "518186224.157752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,13 +202,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
-            timestampString = "518165304.054449"
+            timestampString = "518189197.953963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RadomViewController viewDidLoad]"
+                  moduleName = "CustomApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+                  timestampString = "518191555.053164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "365">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__34-[RadomViewController viewDidLoad]_block_invoke"
+                  moduleName = "CustomApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+                  timestampString = "518191555.054691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
-            timestampString = "518165415.921789"
+            timestampString = "518189197.953963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-random"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,12 +266,172 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
-            timestampString = "518165485.635692"
+            timestampString = "518189197.953963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-filetrData:data:type:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+            timestampString = "518189197.953963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-random"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+            timestampString = "518189197.953963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-fileData"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RadomViewController fileData]"
+                  moduleName = "CustomApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+                  timestampString = "518191555.067146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RadomViewController fileData]"
+                  moduleName = "CustomApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+                  timestampString = "518191555.068554"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "169">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+            timestampString = "518189197.953963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-filetrData:data:type:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+            timestampString = "518189197.953963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-addAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+            timestampString = "518189197.953963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-addAction:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RadomViewController addAction:]"
+                  moduleName = "CustomApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+                  timestampString = "518191555.077524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "567">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[RadomViewController addAction:]_block_invoke"
+                  moduleName = "CustomApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyong/Documents/workPlace/mywork/CustomMenu/CustomApp/Classes/BusinessLogic/More/ShowMenu/RadomViewController.m"
+                  timestampString = "518191555.078943"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/ShowMenu/YesterdayMenuViewController.m"
+            timestampString = "518191857.243593"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-filterData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

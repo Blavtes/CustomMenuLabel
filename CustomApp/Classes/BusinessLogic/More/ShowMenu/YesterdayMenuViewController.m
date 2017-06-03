@@ -1,33 +1,30 @@
 //
-//  SearchMenuViewController.m
+//  YesterdayMenuViewController.m
 //  CustomApp
 //
 //  Created by yangyong on 2017/6/3.
 //  Copyright © 2017年 Blavtes. All rights reserved.
 //
 
-#import "SearchMenuViewController.h"
+#import "YesterdayMenuViewController.h"
 #import "RMTBdReportBufferManager.h"
-#import "RadomViewController.h"
 
-@interface SearchMenuViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface YesterdayMenuViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *data;
-@property (nonatomic, strong) NSMutableArray *data1;
-@property (nonatomic, strong) NSMutableArray *data2;
-@property (nonatomic, strong) NSMutableArray *data3;
-@property (nonatomic, strong) NSArray *titleArr;
-@property (nonatomic, strong) NSMutableArray *arrData;
+@property (nonatomic, strong) NSArray *dataArr;
+@property (nonatomic, strong) NSMutableArray *timeArr;
+@property (nonatomic, strong) NSMutableArray *dictArr;
 @end
 
-@implementation SearchMenuViewController
+@implementation YesterdayMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titleArr = @[@"荤",@"素",@"汤"];
+    self.title = @"昨天吃了啥";
+    _timeArr = [NSMutableArray arrayWithCapacity:1];
+    self.dictArr = [NSMutableArray arrayWithCapacity:1];
+    
     [self queryData];
-    [self addRight];
-    self.title = @"菜单";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -35,44 +32,42 @@
 {
     RMTBdReportBufferManager *maneger = [RMTBdReportBufferManager sharedInstance];
     __weak typeof(self) weakSelf = self;
-    [maneger queryDBMenuFromTable:BdTableName menuNameKey:BdTableMenuName menuLabelKey:BdTableMenuLabelName menuTypeKey:BdTableTypeName result:^(NSArray *seqsArray, NSArray *infoArray, NSArray *reportTypeArray, id result) {
+    [maneger queryOldDBMenuFromTable:BdOldTableName menuNameKey:BdTableMenuName menuLabelKey:BdTableMenuLabelName menuTypeKey:BdTableTypeName result:^(NSArray *seqsArray, NSArray *infoArray, NSArray *reportTypeArray, id result) {
+        __strong typeof(weakSelf) strongSef = weakSelf;
         DLog(@"%@ \n %@ \n %@",seqsArray,infoArray ,reportTypeArray);
-        weakSelf.data = seqsArray;
-        [weakSelf filterData];
-        [weakSelf.tableView reloadData];
+        strongSef.dataArr = seqsArray;
+        [strongSef filterData];
+        [strongSef.tableView reloadData];
     }];
 }
 
 - (void)filterData
 {
-    _data1 = [NSMutableArray arrayWithCapacity:1];
-    _data2 = [NSMutableArray arrayWithCapacity:1];
-    _data3 = [NSMutableArray arrayWithCapacity:1];
-    _arrData = [NSMutableArray arrayWithCapacity:1];
-    
-    for (NSDictionary *dict in _data) {
-        NSString *name = dict[BdTableTypeName];
-        if ([name isEqualToString:@"荤"]) {
-            [_data1 addObject:dict];
-        } else if ([name isEqualToString:@"素"]) {
-            [_data2 addObject:dict];
-        } else {
-            [_data3 addObject:dict];
+    @synchronized (self) {
+        [_timeArr removeAllObjects];
+        [_dictArr removeAllObjects];
+        
+        NSMutableDictionary *timeDict = [NSMutableDictionary dictionaryWithCapacity:1];
+        for (NSDictionary *dict in _dataArr) {
+            NSString *time = dict[BDOleMenuTimeTable];
+            [timeDict setObject:time forKey:time];
         }
-    }
-    [_arrData addObject:_data1];
-    [_arrData addObject:_data2];
-    [_arrData addObject:_data3];
-}
+        
+        for (NSString *keyTime in [timeDict allKeys]) {
+            NSMutableArray *data = [NSMutableArray arrayWithCapacity:1];
 
-- (void)addRight
-{
-    __weak typeof(self) weakSelf = self;
-    [self.navTopView showRightTitle:@"选菜" rightHandle:^(UIButton *view) {
-        RadomViewController *vc = [[RadomViewController alloc] init];
-        vc.menuData = weakSelf.data;
-        [weakSelf.navigationController pushViewController:vc animated:YES];
-    }];
+            for (NSDictionary *dict in _dataArr) {
+                NSString *time = dict[BDOleMenuTimeTable];
+                if ([time isEqualToString:keyTime]) {
+                    [data addObject:dict];
+                }
+            }
+            [self.dictArr addObject:data];
+            [_timeArr addObject:keyTime];
+        }
+     
+        NSLog(@"dict %@",_dictArr);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,13 +82,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return  _dictArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-   
-    return ((NSMutableArray *)_arrData[section]).count;
+    
+    return ((NSMutableArray *)_dictArr[section]).count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -112,7 +107,7 @@
     
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(20, 0, 100, 30);
-    label.text = _titleArr[section];
+    label.text = _timeArr[section];
     [view addSubview:label];
     return view;
 }
@@ -132,15 +127,15 @@
     
     cell.textLabel.textColor = COMMON_BLACK_COLOR;
     cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeDetail_16];
-    NSDictionary *dict = _arrData[indexPath.section][indexPath.row];
-//    if (indexPath.section == 0) {
-//        dict = _data1[indexPath.row];
-//    } else if (indexPath.section == 1) {
-//        dict = _data2[indexPath.row];
-//    } else {
-//        dict = _data3[indexPath.row];
-//    }
-//    
+    NSDictionary *dict = _dictArr[indexPath.section][indexPath.row];
+    //    if (indexPath.section == 0) {
+    //        dict = _data1[indexPath.row];
+    //    } else if (indexPath.section == 1) {
+    //        dict = _data2[indexPath.row];
+    //    } else {
+    //        dict = _data3[indexPath.row];
+    //    }
+    //
     cell.textLabel.text = dict[BdTableMenuName];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     return cell;
@@ -150,13 +145,13 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     // 删除操作
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSDictionary *dict = _arrData[indexPath.section][indexPath.row];
+        NSDictionary *dict = _dictArr[indexPath.section][indexPath.row];
         __weak typeof(self) weakSelf = self;
         RMTBdReportBufferManager *manager = [RMTBdReportBufferManager sharedInstance];
-        [manager deleteMenuFromTable:BdTableName tableKey:BdTableMenuName value:dict[BdTableMenuName] result:^(id result) {
+        [manager deleteOldMenuFromTable:BdOldTableName tableKey:BdTableMenuName value:dict[BdTableMenuName] result:^(id result) {
             [weakSelf queryData];
         }];
-     
+        
     }
 }
 
@@ -164,7 +159,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSDictionary *dict = _arrData[indexPath.section][indexPath.row];
+    NSDictionary *dict = _dictArr[indexPath.section][indexPath.row];
     
     CustomAlertView *show = [[CustomAlertView alloc] initWithCompletionBlock:^(id  _Nonnull alertView) {
         [alertView dismiss];
@@ -181,6 +176,7 @@
     text.text = dict[BdTableMenuLabelName];
     [show show];
 }
+
 
 /*
 #pragma mark - Navigation

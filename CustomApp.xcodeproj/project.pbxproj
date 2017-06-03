@@ -207,6 +207,8 @@
 		C11DF3CA1EE267EE00DEA7F8 /* SearchMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11DF3C81EE267EE00DEA7F8 /* SearchMenuViewController.xib */; };
 		C11DF3CE1EE2894B00DEA7F8 /* RadomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DF3CC1EE2894B00DEA7F8 /* RadomViewController.m */; };
 		C11DF3CF1EE2894B00DEA7F8 /* RadomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11DF3CD1EE2894B00DEA7F8 /* RadomViewController.xib */; };
+		C176E9161EE2E6D100D83EB2 /* YesterdayMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C176E9141EE2E6D100D83EB2 /* YesterdayMenuViewController.m */; };
+		C176E9171EE2E6D100D83EB2 /* YesterdayMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C176E9151EE2E6D100D83EB2 /* YesterdayMenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -592,6 +594,9 @@
 		C11DF3CB1EE2894B00DEA7F8 /* RadomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadomViewController.h; sourceTree = "<group>"; };
 		C11DF3CC1EE2894B00DEA7F8 /* RadomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadomViewController.m; sourceTree = "<group>"; };
 		C11DF3CD1EE2894B00DEA7F8 /* RadomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadomViewController.xib; sourceTree = "<group>"; };
+		C176E9131EE2E6D100D83EB2 /* YesterdayMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YesterdayMenuViewController.h; sourceTree = "<group>"; };
+		C176E9141EE2E6D100D83EB2 /* YesterdayMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YesterdayMenuViewController.m; sourceTree = "<group>"; };
+		C176E9151EE2E6D100D83EB2 /* YesterdayMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesterdayMenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2690,6 +2695,9 @@
 				C11DF3CB1EE2894B00DEA7F8 /* RadomViewController.h */,
 				C11DF3CC1EE2894B00DEA7F8 /* RadomViewController.m */,
 				C11DF3CD1EE2894B00DEA7F8 /* RadomViewController.xib */,
+				C176E9131EE2E6D100D83EB2 /* YesterdayMenuViewController.h */,
+				C176E9141EE2E6D100D83EB2 /* YesterdayMenuViewController.m */,
+				C176E9151EE2E6D100D83EB2 /* YesterdayMenuViewController.xib */,
 			);
 			path = ShowMenu;
 			sourceTree = "<group>";
@@ -2765,6 +2773,7 @@
 				571D655C1EA495AC00BD6D15 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				571D65181EA495AC00BD6D15 /* WebViewController.xib in Resources */,
 				571D65521EA495AC00BD6D15 /* ShareSDKLocalizable.strings in Resources */,
+				C176E9171EE2E6D100D83EB2 /* YesterdayMenuViewController.xib in Resources */,
 				571D65471EA495AC00BD6D15 /* SCNavTabBar.bundle in Resources */,
 				C11DF3CF1EE2894B00DEA7F8 /* RadomViewController.xib in Resources */,
 				571D653C1EA495AC00BD6D15 /* MCCharacterKeyboardView.xib in Resources */,
@@ -2880,6 +2889,7 @@
 				571D64D71EA495AC00BD6D15 /* CustomerCountDownView.m in Sources */,
 				571D64CE1EA495AC00BD6D15 /* UIViewController+PresentVC.m in Sources */,
 				571D652D1EA495AC00BD6D15 /* CALayer+Anim.m in Sources */,
+				C176E9161EE2E6D100D83EB2 /* YesterdayMenuViewController.m in Sources */,
 				571D65161EA495AC00BD6D15 /* UpdateTool.m in Sources */,
 				571D64D41EA495AC00BD6D15 /* CustomADTipsView.m in Sources */,
 				C11DF3B21EE24F6500DEA7F8 /* FMDatabaseQueue.m in Sources */,

@@ -42,6 +42,11 @@ extern NSString *const BdTableMenuLabelName;
 extern NSString *const BdTableMenuName;
 extern NSString *const BdTableTypeName;
 
+
+extern NSString *const BdOldTableName;
+extern NSString *const BDOleMenuTimeTable;
+
+
 @interface RMTBdReportBufferManager : NSObject
 
 + (instancetype)sharedInstance;
@@ -101,4 +106,22 @@ extern NSString *const BdTableTypeName;
                    tableKey:(NSString *)key
                       value:(NSString *)value // 插入table的信息对应的key值
                      result:(void (^)(id result))block;
+
+
+- (void)insertOldMenuIntoTable:(NSString *)tableName
+                      menuName:(NSString *)menuName
+                menuMutilpeStr:(NSString *)menuLabel
+                      menuType:(NSString *)type
+                          time:(NSString *)tim
+                        result:(void (^)(id result))block;
+
+- (void)queryOldDBMenuFromTable:(NSString *)tableName
+                 menuNameKey:(NSString *)menuNameKey
+                menuLabelKey:(NSString *)menuLabelKey
+                 menuTypeKey:(NSString *)menuTypeKey
+                      result:(void (^)(NSArray* seqsArray, NSArray* infoArray, NSArray *reportTypeArray, id result))block;
+- (void)deleteOldMenuFromTable:(NSString *)tableName
+                      tableKey:(NSString *)key
+                         value:(NSString *)value // 插入table的信息对应的key值
+                        result:(void (^)(id result))block;
 @end
