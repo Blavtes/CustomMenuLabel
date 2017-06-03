@@ -35,8 +35,8 @@
     
   
         //  首页推荐
-    HomePageViewController *homeVc = [[HomePageViewController alloc] init];
-    [self addOneChildVc:homeVc title:@"菜单" imageName:nomarlImageArr[0] selectedImageName:selectImageArr[0]];
+//    HomePageViewController *homeVc = [[HomePageViewController alloc] init];
+//    [self addOneChildVc:homeVc title:@"菜单" imageName:nomarlImageArr[0] selectedImageName:selectImageArr[0]];
     
 //        //  理财
 //    CustomBaseViewController *productVc = [[CustomBaseViewController alloc] init];

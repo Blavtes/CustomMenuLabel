@@ -56,7 +56,7 @@
 
 - (void)configData
 {
-    _dataArray = @[@[@"添加菜单", @"查询菜单", @"系统公告"], @[@"帮助中心", @"意见反馈"], @[@"推荐有奖", @"关于我们", @"我要评分"]];
+    _dataArray = @[@[@"添加菜单", @"查询菜单"]];
     _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter"], @[@"more_helpCenter", @"more_feedback"], @[@"more_recommend", @"more_aboutUs", @"more_score"]];
 }
 
