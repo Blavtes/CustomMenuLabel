@@ -20,36 +20,6 @@
 		571D64941EA495AC00BD6D15 /* GJSPanBackTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60971EA495AB00BD6D15 /* GJSPanBackTool.m */; };
 		571D64951EA495AC00BD6D15 /* GJSSwipeBackTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60991EA495AB00BD6D15 /* GJSSwipeBackTool.m */; };
 		571D64961EA495AC00BD6D15 /* HUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D609C1EA495AB00BD6D15 /* HUDTool.m */; };
-		571D64971EA495AC00BD6D15 /* JPCFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60A21EA495AB00BD6D15 /* JPCFunction.m */; };
-		571D64981EA495AC00BD6D15 /* JPMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60A41EA495AB00BD6D15 /* JPMemory.m */; };
-		571D64991EA495AC00BD6D15 /* JPStructPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60A61EA495AB00BD6D15 /* JPStructPointer.m */; };
-		571D649A1EA495AC00BD6D15 /* ffi_arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D60BB1EA495AB00BD6D15 /* ffi_arm64.c */; };
-		571D649B1EA495AC00BD6D15 /* sysv_arm64.S in Sources */ = {isa = PBXBuildFile; fileRef = 571D60BC1EA495AB00BD6D15 /* sysv_arm64.S */; };
-		571D649C1EA495AC00BD6D15 /* ffi_armv7.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D60BE1EA495AB00BD6D15 /* ffi_armv7.c */; };
-		571D649D1EA495AC00BD6D15 /* sysv_armv7.S in Sources */ = {isa = PBXBuildFile; fileRef = 571D60BF1EA495AB00BD6D15 /* sysv_armv7.S */; };
-		571D649E1EA495AC00BD6D15 /* trampoline_armv7.S in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C01EA495AB00BD6D15 /* trampoline_armv7.S */; };
-		571D649F1EA495AC00BD6D15 /* prep_cif.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C21EA495AB00BD6D15 /* prep_cif.c */; };
-		571D64A01EA495AC00BD6D15 /* raw_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C31EA495AB00BD6D15 /* raw_api.c */; };
-		571D64A11EA495AC00BD6D15 /* types.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C41EA495AB00BD6D15 /* types.c */; };
-		571D64A21EA495AC00BD6D15 /* darwin64_x86_64.S in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C61EA495AB00BD6D15 /* darwin64_x86_64.S */; };
-		571D64A31EA495AC00BD6D15 /* darwin_i386.S in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C71EA495AB00BD6D15 /* darwin_i386.S */; };
-		571D64A41EA495AC00BD6D15 /* ffi64_x86_64.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C81EA495AB00BD6D15 /* ffi64_x86_64.c */; };
-		571D64A51EA495AC00BD6D15 /* ffi_i386.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D60C91EA495AB00BD6D15 /* ffi_i386.c */; };
-		571D64A61EA495AC00BD6D15 /* win32_i386.S in Sources */ = {isa = PBXBuildFile; fileRef = 571D60CA1EA495AB00BD6D15 /* win32_i386.S */; };
-		571D64A71EA495AC00BD6D15 /* JPCGBitmapContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60CE1EA495AB00BD6D15 /* JPCGBitmapContext.m */; };
-		571D64A81EA495AC00BD6D15 /* JPCGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60D01EA495AB00BD6D15 /* JPCGColor.m */; };
-		571D64A91EA495AC00BD6D15 /* JPCGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60D21EA495AB00BD6D15 /* JPCGContext.m */; };
-		571D64AA1EA495AC00BD6D15 /* JPCGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60D41EA495AB00BD6D15 /* JPCGGeometry.m */; };
-		571D64AB1EA495AC00BD6D15 /* JPCGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60D61EA495AB00BD6D15 /* JPCGImage.m */; };
-		571D64AC1EA495AC00BD6D15 /* JPCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60D81EA495AB00BD6D15 /* JPCGPath.m */; };
-		571D64AD1EA495AC00BD6D15 /* JPCGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60DA1EA495AB00BD6D15 /* JPCGTransform.m */; };
-		571D64AE1EA495AC00BD6D15 /* JPCoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60DC1EA495AB00BD6D15 /* JPCoreGraphics.m */; };
-		571D64AF1EA495AC00BD6D15 /* JPUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60DF1EA495AB00BD6D15 /* JPUIGeometry.m */; };
-		571D64B01EA495AC00BD6D15 /* JPUIGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60E11EA495AB00BD6D15 /* JPUIGraphics.m */; };
-		571D64B11EA495AC00BD6D15 /* JPUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60E31EA495AB00BD6D15 /* JPUIImage.m */; };
-		571D64B21EA495AC00BD6D15 /* JPUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60E51EA495AB00BD6D15 /* JPUIKit.m */; };
-		571D64B31EA495AC00BD6D15 /* JPLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60E71EA495AB00BD6D15 /* JPLocker.m */; };
-		571D64B41EA495AC00BD6D15 /* JPSpecialInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60E91EA495AB00BD6D15 /* JPSpecialInit.m */; };
 		571D64B51EA495AC00BD6D15 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D60EA1EA495AB00BD6D15 /* JSPatchPlatform.framework */; };
 		571D64B61EA495AC00BD6D15 /* JSPatchTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60EC1EA495AB00BD6D15 /* JSPatchTool.m */; };
 		571D64B71EA495AC00BD6D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60EF1EA495AB00BD6D15 /* AppDelegate.m */; };
@@ -269,69 +239,6 @@
 		571D60991EA495AB00BD6D15 /* GJSSwipeBackTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJSSwipeBackTool.m; sourceTree = "<group>"; };
 		571D609B1EA495AB00BD6D15 /* HUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDTool.h; sourceTree = "<group>"; };
 		571D609C1EA495AB00BD6D15 /* HUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDTool.m; sourceTree = "<group>"; };
-		571D60A11EA495AB00BD6D15 /* JPCFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCFunction.h; sourceTree = "<group>"; };
-		571D60A21EA495AB00BD6D15 /* JPCFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCFunction.m; sourceTree = "<group>"; };
-		571D60A31EA495AB00BD6D15 /* JPMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMemory.h; sourceTree = "<group>"; };
-		571D60A41EA495AB00BD6D15 /* JPMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMemory.m; sourceTree = "<group>"; };
-		571D60A51EA495AB00BD6D15 /* JPStructPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPStructPointer.h; sourceTree = "<group>"; };
-		571D60A61EA495AB00BD6D15 /* JPStructPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPStructPointer.m; sourceTree = "<group>"; };
-		571D60A91EA495AB00BD6D15 /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
-		571D60AA1EA495AB00BD6D15 /* ffi_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_arm64.h; sourceTree = "<group>"; };
-		571D60AB1EA495AB00BD6D15 /* ffi_armv7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_armv7.h; sourceTree = "<group>"; };
-		571D60AC1EA495AB00BD6D15 /* ffi_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_common.h; sourceTree = "<group>"; };
-		571D60AD1EA495AB00BD6D15 /* ffi_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_i386.h; sourceTree = "<group>"; };
-		571D60AE1EA495AB00BD6D15 /* ffi_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_x86_64.h; sourceTree = "<group>"; };
-		571D60AF1EA495AB00BD6D15 /* fficonfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig.h; sourceTree = "<group>"; };
-		571D60B01EA495AB00BD6D15 /* fficonfig_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_arm64.h; sourceTree = "<group>"; };
-		571D60B11EA495AB00BD6D15 /* fficonfig_armv7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_armv7.h; sourceTree = "<group>"; };
-		571D60B21EA495AB00BD6D15 /* fficonfig_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_i386.h; sourceTree = "<group>"; };
-		571D60B31EA495AB00BD6D15 /* fficonfig_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fficonfig_x86_64.h; sourceTree = "<group>"; };
-		571D60B41EA495AB00BD6D15 /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
-		571D60B51EA495AB00BD6D15 /* ffitarget_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_arm64.h; sourceTree = "<group>"; };
-		571D60B61EA495AB00BD6D15 /* ffitarget_armv7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_armv7.h; sourceTree = "<group>"; };
-		571D60B71EA495AB00BD6D15 /* ffitarget_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_i386.h; sourceTree = "<group>"; };
-		571D60B81EA495AB00BD6D15 /* ffitarget_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_x86_64.h; sourceTree = "<group>"; };
-		571D60BB1EA495AB00BD6D15 /* ffi_arm64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi_arm64.c; sourceTree = "<group>"; };
-		571D60BC1EA495AB00BD6D15 /* sysv_arm64.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sysv_arm64.S; sourceTree = "<group>"; };
-		571D60BE1EA495AB00BD6D15 /* ffi_armv7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi_armv7.c; sourceTree = "<group>"; };
-		571D60BF1EA495AB00BD6D15 /* sysv_armv7.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sysv_armv7.S; sourceTree = "<group>"; };
-		571D60C01EA495AB00BD6D15 /* trampoline_armv7.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = trampoline_armv7.S; sourceTree = "<group>"; };
-		571D60C21EA495AB00BD6D15 /* prep_cif.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prep_cif.c; sourceTree = "<group>"; };
-		571D60C31EA495AB00BD6D15 /* raw_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = raw_api.c; sourceTree = "<group>"; };
-		571D60C41EA495AB00BD6D15 /* types.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = types.c; sourceTree = "<group>"; };
-		571D60C61EA495AB00BD6D15 /* darwin64_x86_64.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = darwin64_x86_64.S; sourceTree = "<group>"; };
-		571D60C71EA495AB00BD6D15 /* darwin_i386.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = darwin_i386.S; sourceTree = "<group>"; };
-		571D60C81EA495AB00BD6D15 /* ffi64_x86_64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi64_x86_64.c; sourceTree = "<group>"; };
-		571D60C91EA495AB00BD6D15 /* ffi_i386.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi_i386.c; sourceTree = "<group>"; };
-		571D60CA1EA495AB00BD6D15 /* win32_i386.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = win32_i386.S; sourceTree = "<group>"; };
-		571D60CD1EA495AB00BD6D15 /* JPCGBitmapContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGBitmapContext.h; sourceTree = "<group>"; };
-		571D60CE1EA495AB00BD6D15 /* JPCGBitmapContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGBitmapContext.m; sourceTree = "<group>"; };
-		571D60CF1EA495AB00BD6D15 /* JPCGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGColor.h; sourceTree = "<group>"; };
-		571D60D01EA495AB00BD6D15 /* JPCGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGColor.m; sourceTree = "<group>"; };
-		571D60D11EA495AB00BD6D15 /* JPCGContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGContext.h; sourceTree = "<group>"; };
-		571D60D21EA495AB00BD6D15 /* JPCGContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGContext.m; sourceTree = "<group>"; };
-		571D60D31EA495AB00BD6D15 /* JPCGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGGeometry.h; sourceTree = "<group>"; };
-		571D60D41EA495AB00BD6D15 /* JPCGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGGeometry.m; sourceTree = "<group>"; };
-		571D60D51EA495AB00BD6D15 /* JPCGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGImage.h; sourceTree = "<group>"; };
-		571D60D61EA495AB00BD6D15 /* JPCGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGImage.m; sourceTree = "<group>"; };
-		571D60D71EA495AB00BD6D15 /* JPCGPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGPath.h; sourceTree = "<group>"; };
-		571D60D81EA495AB00BD6D15 /* JPCGPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGPath.m; sourceTree = "<group>"; };
-		571D60D91EA495AB00BD6D15 /* JPCGTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGTransform.h; sourceTree = "<group>"; };
-		571D60DA1EA495AB00BD6D15 /* JPCGTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGTransform.m; sourceTree = "<group>"; };
-		571D60DB1EA495AB00BD6D15 /* JPCoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCoreGraphics.h; sourceTree = "<group>"; };
-		571D60DC1EA495AB00BD6D15 /* JPCoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCoreGraphics.m; sourceTree = "<group>"; };
-		571D60DE1EA495AB00BD6D15 /* JPUIGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIGeometry.h; sourceTree = "<group>"; };
-		571D60DF1EA495AB00BD6D15 /* JPUIGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIGeometry.m; sourceTree = "<group>"; };
-		571D60E01EA495AB00BD6D15 /* JPUIGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIGraphics.h; sourceTree = "<group>"; };
-		571D60E11EA495AB00BD6D15 /* JPUIGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIGraphics.m; sourceTree = "<group>"; };
-		571D60E21EA495AB00BD6D15 /* JPUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIImage.h; sourceTree = "<group>"; };
-		571D60E31EA495AB00BD6D15 /* JPUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIImage.m; sourceTree = "<group>"; };
-		571D60E41EA495AB00BD6D15 /* JPUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIKit.h; sourceTree = "<group>"; };
-		571D60E51EA495AB00BD6D15 /* JPUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIKit.m; sourceTree = "<group>"; };
-		571D60E61EA495AB00BD6D15 /* JPLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLocker.h; sourceTree = "<group>"; };
-		571D60E71EA495AB00BD6D15 /* JPLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLocker.m; sourceTree = "<group>"; };
-		571D60E81EA495AB00BD6D15 /* JPSpecialInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSpecialInit.h; sourceTree = "<group>"; };
-		571D60E91EA495AB00BD6D15 /* JPSpecialInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSpecialInit.m; sourceTree = "<group>"; };
 		571D60EA1EA495AB00BD6D15 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		571D60EB1EA495AB00BD6D15 /* JSPatchTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPatchTool.h; sourceTree = "<group>"; };
 		571D60EC1EA495AB00BD6D15 /* JSPatchTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPatchTool.m; sourceTree = "<group>"; };
@@ -907,168 +814,9 @@
 		571D609E1EA495AB00BD6D15 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				571D609F1EA495AB00BD6D15 /* Extensions */,
 				571D60EA1EA495AB00BD6D15 /* JSPatchPlatform.framework */,
 			);
 			path = Framework;
-			sourceTree = "<group>";
-		};
-		571D609F1EA495AB00BD6D15 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				571D60A01EA495AB00BD6D15 /* JPCFunction */,
-				571D60CB1EA495AB00BD6D15 /* JPCFunctionBinder */,
-				571D60E61EA495AB00BD6D15 /* JPLocker.h */,
-				571D60E71EA495AB00BD6D15 /* JPLocker.m */,
-				571D60E81EA495AB00BD6D15 /* JPSpecialInit.h */,
-				571D60E91EA495AB00BD6D15 /* JPSpecialInit.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		571D60A01EA495AB00BD6D15 /* JPCFunction */ = {
-			isa = PBXGroup;
-			children = (
-				571D60A11EA495AB00BD6D15 /* JPCFunction.h */,
-				571D60A21EA495AB00BD6D15 /* JPCFunction.m */,
-				571D60A31EA495AB00BD6D15 /* JPMemory.h */,
-				571D60A41EA495AB00BD6D15 /* JPMemory.m */,
-				571D60A51EA495AB00BD6D15 /* JPStructPointer.h */,
-				571D60A61EA495AB00BD6D15 /* JPStructPointer.m */,
-				571D60A71EA495AB00BD6D15 /* libffi */,
-			);
-			path = JPCFunction;
-			sourceTree = "<group>";
-		};
-		571D60A71EA495AB00BD6D15 /* libffi */ = {
-			isa = PBXGroup;
-			children = (
-				571D60A81EA495AB00BD6D15 /* headers */,
-				571D60B91EA495AB00BD6D15 /* src */,
-			);
-			path = libffi;
-			sourceTree = "<group>";
-		};
-		571D60A81EA495AB00BD6D15 /* headers */ = {
-			isa = PBXGroup;
-			children = (
-				571D60A91EA495AB00BD6D15 /* ffi.h */,
-				571D60AA1EA495AB00BD6D15 /* ffi_arm64.h */,
-				571D60AB1EA495AB00BD6D15 /* ffi_armv7.h */,
-				571D60AC1EA495AB00BD6D15 /* ffi_common.h */,
-				571D60AD1EA495AB00BD6D15 /* ffi_i386.h */,
-				571D60AE1EA495AB00BD6D15 /* ffi_x86_64.h */,
-				571D60AF1EA495AB00BD6D15 /* fficonfig.h */,
-				571D60B01EA495AB00BD6D15 /* fficonfig_arm64.h */,
-				571D60B11EA495AB00BD6D15 /* fficonfig_armv7.h */,
-				571D60B21EA495AB00BD6D15 /* fficonfig_i386.h */,
-				571D60B31EA495AB00BD6D15 /* fficonfig_x86_64.h */,
-				571D60B41EA495AB00BD6D15 /* ffitarget.h */,
-				571D60B51EA495AB00BD6D15 /* ffitarget_arm64.h */,
-				571D60B61EA495AB00BD6D15 /* ffitarget_armv7.h */,
-				571D60B71EA495AB00BD6D15 /* ffitarget_i386.h */,
-				571D60B81EA495AB00BD6D15 /* ffitarget_x86_64.h */,
-			);
-			path = headers;
-			sourceTree = "<group>";
-		};
-		571D60B91EA495AB00BD6D15 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				571D60BA1EA495AB00BD6D15 /* aarch64 */,
-				571D60BD1EA495AB00BD6D15 /* arm */,
-				571D60C11EA495AB00BD6D15 /* common */,
-				571D60C51EA495AB00BD6D15 /* x86 */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		571D60BA1EA495AB00BD6D15 /* aarch64 */ = {
-			isa = PBXGroup;
-			children = (
-				571D60BB1EA495AB00BD6D15 /* ffi_arm64.c */,
-				571D60BC1EA495AB00BD6D15 /* sysv_arm64.S */,
-			);
-			path = aarch64;
-			sourceTree = "<group>";
-		};
-		571D60BD1EA495AB00BD6D15 /* arm */ = {
-			isa = PBXGroup;
-			children = (
-				571D60BE1EA495AB00BD6D15 /* ffi_armv7.c */,
-				571D60BF1EA495AB00BD6D15 /* sysv_armv7.S */,
-				571D60C01EA495AB00BD6D15 /* trampoline_armv7.S */,
-			);
-			path = arm;
-			sourceTree = "<group>";
-		};
-		571D60C11EA495AB00BD6D15 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				571D60C21EA495AB00BD6D15 /* prep_cif.c */,
-				571D60C31EA495AB00BD6D15 /* raw_api.c */,
-				571D60C41EA495AB00BD6D15 /* types.c */,
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
-		571D60C51EA495AB00BD6D15 /* x86 */ = {
-			isa = PBXGroup;
-			children = (
-				571D60C61EA495AB00BD6D15 /* darwin64_x86_64.S */,
-				571D60C71EA495AB00BD6D15 /* darwin_i386.S */,
-				571D60C81EA495AB00BD6D15 /* ffi64_x86_64.c */,
-				571D60C91EA495AB00BD6D15 /* ffi_i386.c */,
-				571D60CA1EA495AB00BD6D15 /* win32_i386.S */,
-			);
-			path = x86;
-			sourceTree = "<group>";
-		};
-		571D60CB1EA495AB00BD6D15 /* JPCFunctionBinder */ = {
-			isa = PBXGroup;
-			children = (
-				571D60CC1EA495AB00BD6D15 /* CoreGraphics */,
-				571D60DD1EA495AB00BD6D15 /* UIKit */,
-			);
-			path = JPCFunctionBinder;
-			sourceTree = "<group>";
-		};
-		571D60CC1EA495AB00BD6D15 /* CoreGraphics */ = {
-			isa = PBXGroup;
-			children = (
-				571D60CD1EA495AB00BD6D15 /* JPCGBitmapContext.h */,
-				571D60CE1EA495AB00BD6D15 /* JPCGBitmapContext.m */,
-				571D60CF1EA495AB00BD6D15 /* JPCGColor.h */,
-				571D60D01EA495AB00BD6D15 /* JPCGColor.m */,
-				571D60D11EA495AB00BD6D15 /* JPCGContext.h */,
-				571D60D21EA495AB00BD6D15 /* JPCGContext.m */,
-				571D60D31EA495AB00BD6D15 /* JPCGGeometry.h */,
-				571D60D41EA495AB00BD6D15 /* JPCGGeometry.m */,
-				571D60D51EA495AB00BD6D15 /* JPCGImage.h */,
-				571D60D61EA495AB00BD6D15 /* JPCGImage.m */,
-				571D60D71EA495AB00BD6D15 /* JPCGPath.h */,
-				571D60D81EA495AB00BD6D15 /* JPCGPath.m */,
-				571D60D91EA495AB00BD6D15 /* JPCGTransform.h */,
-				571D60DA1EA495AB00BD6D15 /* JPCGTransform.m */,
-				571D60DB1EA495AB00BD6D15 /* JPCoreGraphics.h */,
-				571D60DC1EA495AB00BD6D15 /* JPCoreGraphics.m */,
-			);
-			path = CoreGraphics;
-			sourceTree = "<group>";
-		};
-		571D60DD1EA495AB00BD6D15 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				571D60DE1EA495AB00BD6D15 /* JPUIGeometry.h */,
-				571D60DF1EA495AB00BD6D15 /* JPUIGeometry.m */,
-				571D60E01EA495AB00BD6D15 /* JPUIGraphics.h */,
-				571D60E11EA495AB00BD6D15 /* JPUIGraphics.m */,
-				571D60E21EA495AB00BD6D15 /* JPUIImage.h */,
-				571D60E31EA495AB00BD6D15 /* JPUIImage.m */,
-				571D60E41EA495AB00BD6D15 /* JPUIKit.h */,
-				571D60E51EA495AB00BD6D15 /* JPUIKit.m */,
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 		571D60ED1EA495AB00BD6D15 /* Main */ = {
@@ -2980,6 +2728,7 @@
 				TargetAttributes = {
 					571D60611EA494EF00BD6D15 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L2DL5RZ992;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3094,12 +2843,10 @@
 				571D64B71EA495AC00BD6D15 /* AppDelegate.m in Sources */,
 				571D65361EA495AC00BD6D15 /* CoreArchive.m in Sources */,
 				571D64EF1EA495AC00BD6D15 /* SFRequestService.m in Sources */,
-				571D64A41EA495AC00BD6D15 /* ffi64_x86_64.c in Sources */,
 				571D64B91EA495AC00BD6D15 /* NSDictionary+Extension.m in Sources */,
 				571D64EC1EA495AC00BD6D15 /* SFArchiverRequestService.m in Sources */,
 				571D64D31EA495AC00BD6D15 /* CheckUpdateAlertView.m in Sources */,
 				571D65121EA495AC00BD6D15 /* BadgeTool.m in Sources */,
-				571D64B41EA495AC00BD6D15 /* JPSpecialInit.m in Sources */,
 				571D64C81EA495AC00BD6D15 /* SafetyCrash.m in Sources */,
 				571D64901EA495AC00BD6D15 /* GJFaxKeyChainTool.m in Sources */,
 				571D64CC1EA495AC00BD6D15 /* UITextField+Judge.m in Sources */,
@@ -3110,7 +2857,6 @@
 				571D64C51EA495AC00BD6D15 /* NSObject+SafetyCrash.m in Sources */,
 				571D654A1EA495AC00BD6D15 /* SCPopView.m in Sources */,
 				571D64E51EA495AC00BD6D15 /* main.m in Sources */,
-				571D64B01EA495AC00BD6D15 /* JPUIGraphics.m in Sources */,
 				571D64C21EA495AC00BD6D15 /* NSMutableAttributedString+SafetyCrash.m in Sources */,
 				571D64CF1EA495AC00BD6D15 /* CustomBaseViewController.m in Sources */,
 				571D65401EA495AC00BD6D15 /* MCNumberKeyboardView.m in Sources */,
@@ -3119,9 +2865,7 @@
 				571D64CB1EA495AC00BD6D15 /* UIImage+Extension.m in Sources */,
 				571D65681EA495AC00BD6D15 /* WebViewJavascriptBridge.m in Sources */,
 				571D65391EA495AC00BD6D15 /* iToast.m in Sources */,
-				571D64AB1EA495AC00BD6D15 /* JPCGImage.m in Sources */,
 				571D65111EA495AC00BD6D15 /* ThreeDTouchTool.m in Sources */,
-				571D64AE1EA495AC00BD6D15 /* JPCoreGraphics.m in Sources */,
 				571D64E41EA495AC00BD6D15 /* NoDataOrNetworkView.m in Sources */,
 				571D64941EA495AC00BD6D15 /* GJSPanBackTool.m in Sources */,
 				571D65671EA495AC00BD6D15 /* UMEventIDManager.m in Sources */,
@@ -3131,7 +2875,6 @@
 				571D65301EA495AC00BD6D15 /* CLLockInfoView.m in Sources */,
 				571D64961EA495AC00BD6D15 /* HUDTool.m in Sources */,
 				571D64E81EA495AC00BD6D15 /* SFTableViewController.m in Sources */,
-				571D649A1EA495AC00BD6D15 /* ffi_arm64.c in Sources */,
 				571D64C61EA495AC00BD6D15 /* NSString+SafetyCrash.m in Sources */,
 				571D64FB1EA495AC00BD6D15 /* CryptUtil.m in Sources */,
 				571D64D71EA495AC00BD6D15 /* CustomerCountDownView.m in Sources */,
@@ -3140,21 +2883,16 @@
 				571D65161EA495AC00BD6D15 /* UpdateTool.m in Sources */,
 				571D64D41EA495AC00BD6D15 /* CustomADTipsView.m in Sources */,
 				C11DF3B21EE24F6500DEA7F8 /* FMDatabaseQueue.m in Sources */,
-				571D64971EA495AC00BD6D15 /* JPCFunction.m in Sources */,
 				571D64BA1EA495AC00BD6D15 /* NSObject+Additions.m in Sources */,
 				571D64931EA495AC00BD6D15 /* UserInfoUtil.m in Sources */,
-				571D64A91EA495AC00BD6D15 /* JPCGContext.m in Sources */,
 				571D64CD1EA495AC00BD6D15 /* UIView+Extension.m in Sources */,
-				571D64A71EA495AC00BD6D15 /* JPCGBitmapContext.m in Sources */,
 				571D65291EA495AC00BD6D15 /* ASProgressPopUpView.m in Sources */,
-				571D64A81EA495AC00BD6D15 /* JPCGColor.m in Sources */,
 				571D64911EA495AC00BD6D15 /* LoginInfoModel.m in Sources */,
 				571D653A1EA495AC00BD6D15 /* KeychainItemWrapper.m in Sources */,
 				571D64DE1EA495AC00BD6D15 /* CustomPWDAlertView.m in Sources */,
 				571D65001EA495AC00BD6D15 /* NSArray+ExceptionExtension.m in Sources */,
 				571D653F1EA495AC00BD6D15 /* MCKeyboardAccessoryView.m in Sources */,
 				571D65411EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.m in Sources */,
-				571D64A31EA495AC00BD6D15 /* darwin_i386.S in Sources */,
 				571D65131EA495AC00BD6D15 /* GuidePageViewController.m in Sources */,
 				571D65601EA495AC00BD6D15 /* TBCityCoreTextAttribute.m in Sources */,
 				571D65281EA495AC00BD6D15 /* ASPopUpView.m in Sources */,
@@ -3162,16 +2900,13 @@
 				571D65691EA495AC00BD6D15 /* WebViewJavascriptBridge_JS.m in Sources */,
 				571D64F31EA495AC00BD6D15 /* GjFaxCgiErrorCollection.m in Sources */,
 				571D65611EA495AC00BD6D15 /* TBCityCoreTextLabel.m in Sources */,
-				571D649C1EA495AC00BD6D15 /* ffi_armv7.c in Sources */,
 				571D64D51EA495AC00BD6D15 /* CustomAlertView.m in Sources */,
 				571D651B1EA495AC00BD6D15 /* MyGetRewardInfoService.m in Sources */,
-				571D64B31EA495AC00BD6D15 /* JPLocker.m in Sources */,
 				571D64E21EA495AC00BD6D15 /* FoldListSubTitleView.m in Sources */,
 				571D64C01EA495AC00BD6D15 /* NSDictionary+SafetyCrash.m in Sources */,
 				571D65371EA495AC00BD6D15 /* GJSNumKeyBoardField.m in Sources */,
 				571D64C91EA495AC00BD6D15 /* UIBarButtonItem+Extension.m in Sources */,
 				C11DF3CE1EE2894B00DEA7F8 /* RadomViewController.m in Sources */,
-				571D64A51EA495AC00BD6D15 /* ffi_i386.c in Sources */,
 				571D65341EA495AC00BD6D15 /* CLLockView.m in Sources */,
 				571D64E11EA495AC00BD6D15 /* CustomTopHeaderView.m in Sources */,
 				571D64F01EA495AC00BD6D15 /* SFArchiverFileManager.m in Sources */,
@@ -3181,46 +2916,36 @@
 				571D64DB1EA495AC00BD6D15 /* CustomImgBgLabel.m in Sources */,
 				571D65011EA495AC00BD6D15 /* FPSObserver.m in Sources */,
 				571D64DF1EA495AC00BD6D15 /* CustomSecondRateButton.m in Sources */,
-				571D649E1EA495AC00BD6D15 /* trampoline_armv7.S in Sources */,
 				571D65481EA495AC00BD6D15 /* SCNavTabBarController.m in Sources */,
 				571D64EB1EA495AC00BD6D15 /* SFTableViewCellModel.m in Sources */,
 				571D64BF1EA495AC00BD6D15 /* NSAttributedString+SafetyCrash.m in Sources */,
-				571D64AC1EA495AC00BD6D15 /* JPCGPath.m in Sources */,
 				571D65331EA495AC00BD6D15 /* CLLockMainView.m in Sources */,
 				571D64BB1EA495AC00BD6D15 /* NSObject+Extension.m in Sources */,
 				571D64CA1EA495AC00BD6D15 /* UIButton+Extention.m in Sources */,
 				C11DF3B61EE2510B00DEA7F8 /* RMTBdReportBufferManager.m in Sources */,
-				571D64981EA495AC00BD6D15 /* JPMemory.m in Sources */,
 				571D65101EA495AC00BD6D15 /* MorePageViewController.m in Sources */,
 				571D64951EA495AC00BD6D15 /* GJSSwipeBackTool.m in Sources */,
 				571D64F61EA495AC00BD6D15 /* HttpParamsSetting.m in Sources */,
-				571D64A11EA495AC00BD6D15 /* types.c in Sources */,
 				571D64F41EA495AC00BD6D15 /* GjFaxCgiErrorModel.m in Sources */,
 				571D64F21EA495AC00BD6D15 /* BaseNetworkingClient.m in Sources */,
-				571D64A01EA495AC00BD6D15 /* raw_api.c in Sources */,
 				571D653B1EA495AC00BD6D15 /* MCCharacterKeyboardView.m in Sources */,
 				571D64D91EA495AC00BD6D15 /* CustomerProgressView.m in Sources */,
 				571D651A1EA495AC00BD6D15 /* MyGetRewardInfo.m in Sources */,
-				571D64B11EA495AC00BD6D15 /* JPUIImage.m in Sources */,
 				571D65621EA495AC00BD6D15 /* TBCityCoreTextManager.m in Sources */,
 				571D64EE1EA495AC00BD6D15 /* SFRequestListService.m in Sources */,
-				571D64AA1EA495AC00BD6D15 /* JPCGGeometry.m in Sources */,
 				571D65431EA495AC00BD6D15 /* SafeKeyBoardField.m in Sources */,
-				571D649B1EA495AC00BD6D15 /* sysv_arm64.S in Sources */,
 				571D65171EA495AC00BD6D15 /* WebViewController.m in Sources */,
 				571D65021EA495AC00BD6D15 /* NSObject+ExceptionExtension.m in Sources */,
 				571D64EA1EA495AC00BD6D15 /* SFBaseModel.m in Sources */,
 				571D653E1EA495AC00BD6D15 /* MCKeyboardAccessoryBtn.m in Sources */,
 				571D64E61EA495AC00BD6D15 /* CommonMethod.m in Sources */,
 				571D64DC1EA495AC00BD6D15 /* CustomNavigationBarButtonItem.m in Sources */,
-				571D64AD1EA495AC00BD6D15 /* JPCGTransform.m in Sources */,
 				C11DF3B91EE2518800DEA7F8 /* RMTFileUtils.m in Sources */,
 				571D64E31EA495AC00BD6D15 /* FoldListView.m in Sources */,
 				C11DF3AF1EE24F6500DEA7F8 /* FMDatabase.m in Sources */,
 				571D64DD1EA495AC00BD6D15 /* CustomNavTopView.m in Sources */,
 				571D64BD1EA495AC00BD6D15 /* NSString+Judgement.m in Sources */,
 				571D64D81EA495AC00BD6D15 /* CustomerIncomeCaculateView.m in Sources */,
-				571D64A21EA495AC00BD6D15 /* darwin64_x86_64.S in Sources */,
 				571D65151EA495AC00BD6D15 /* SigninRequestService.m in Sources */,
 				571D64FA1EA495AC00BD6D15 /* RefreshTool.m in Sources */,
 				571D64FD1EA495AC00BD6D15 /* NSData+CommonCrypto.m in Sources */,
@@ -3231,23 +2956,17 @@
 				571D64C31EA495AC00BD6D15 /* NSMutableDictionary+SafetyCrash.m in Sources */,
 				571D64C71EA495AC00BD6D15 /* NSTimer+Safety.m in Sources */,
 				C11DF3B11EE24F6500DEA7F8 /* FMDatabasePool.m in Sources */,
-				571D64A61EA495AC00BD6D15 /* win32_i386.S in Sources */,
-				571D64B21EA495AC00BD6D15 /* JPUIKit.m in Sources */,
 				571D648F1EA495AC00BD6D15 /* GjfaxKeyChain.m in Sources */,
-				571D649D1EA495AC00BD6D15 /* sysv_armv7.S in Sources */,
 				571D656B1EA495AC00BD6D15 /* WKWebViewJavascriptBridge.m in Sources */,
 				571D65351EA495AC00BD6D15 /* NSString+File.m in Sources */,
 				571D64FC1EA495AC00BD6D15 /* NSData+Base64.m in Sources */,
 				571D65321EA495AC00BD6D15 /* CLLockLabel.m in Sources */,
 				571D64E71EA495AC00BD6D15 /* SFRefreshTableViewController.m in Sources */,
 				571D64F71EA495AC00BD6D15 /* HttpTool.m in Sources */,
-				571D64AF1EA495AC00BD6D15 /* JPUIGeometry.m in Sources */,
-				571D64991EA495AC00BD6D15 /* JPStructPointer.m in Sources */,
 				571D64D11EA495AC00BD6D15 /* CustomTabBarViewController.m in Sources */,
 				571D65641EA495AC00BD6D15 /* GeTuiManager.m in Sources */,
 				571D64C41EA495AC00BD6D15 /* NSMutableString+SafetyCrash.m in Sources */,
 				571D64BE1EA495AC00BD6D15 /* NSArray+SafetyCrash.m in Sources */,
-				571D649F1EA495AC00BD6D15 /* prep_cif.c in Sources */,
 				571D65631EA495AC00BD6D15 /* TBCityCoreTextParser.m in Sources */,
 				571D64B61EA495AC00BD6D15 /* JSPatchTool.m in Sources */,
 				571D64F81EA495AC00BD6D15 /* NetWorkingStatusModel.m in Sources */,
@@ -3390,6 +3109,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = L2DL5RZ992;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CustomApp/Classes/BaseFrame/JSPacthTool/Framework",
@@ -3420,6 +3141,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = L2DL5RZ992;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CustomApp/Classes/BaseFrame/JSPacthTool/Framework",
