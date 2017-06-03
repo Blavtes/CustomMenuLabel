@@ -1,0 +1,93 @@
+//
+//  PrefixHeader.pch
+//  Gjfax_ios
+//
+//  Created by litao on 15/8/5.
+//  Copyright (c) 2015年 ZXH. All rights reserved.
+//
+
+#ifndef Gjfax_ios_PrefixHeader_pch
+#define Gjfax_ios_PrefixHeader_pch
+
+#ifdef __OBJC__
+//  只添加扩展 和 最基本定义
+#import "NSObject+Extension.h"
+#import "UIImage+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIView+Extension.h"
+#import "UIButton+Extention.h"
+#import "NSDictionary+Extension.h"
+#import "NSString+Extension.h"
+#import <UIImageView+WebCache.h>
+#import "NSDate+CalendarExtension.h"
+#import "UITextField+Judge.h"
+#import "NSString+Judgement.h"
+#import "NSString+Base64.h"
+#import "NSString+MD5.h"
+#import "NSData+Base64.h"
+#import "NSData+CommonCrypto.h"
+#import "NSObject+Additions.h"
+#import "NSArray+ExceptionExtension.h"
+#import "PhoneCodeTypeDefine.h"
+#import "NoDataOrNetworkView.h"
+#import "HostSetting.h"
+#import "BadgeTool.h"
+#import "RefreshTool.h"
+#import "CustomBaseViewController.h"
+#import "JSONKit.h"
+#import "HUDTool.h"
+#import "CustomFirstRateButton.h"
+
+#import "FontSizeDefine.h"
+#import "ColorDefine.h"
+#import "SpecialErrorCodeDefine.h"
+#import "SpecialLogicErrorTool.h"
+#import "CommonDefine.h"
+#import "CommonMethod.h"
+#import "iToast.h"
+
+#import "WebViewInfoModel.h"
+#import <tingyunApp/NBSAppAgent.h>
+#pragma mark - 定义通用引用头文件
+#import "CgiDefine.h"
+#import "HttpTool.h"
+#import "HUDTool.h"
+//#import "DataModelTool.h"
+#import "RefreshTool.h"
+
+
+
+
+
+#import "BadgeTool.h"
+#import "UpdateTool.h"
+//#import "ProductConfigTool.h"
+#import "UserInfoUtil.h"
+#import "MJRefresh.h"
+
+//#import "PhoneCodeTypeDefine.h"
+#import "TBCityCoreTextLabel.h"
+
+#import "NoDataOrNetworkView.h"
+#import "CustomTextField.h"
+#import "CustomAlertView.h"
+#import "CustomPWDAlertView.h"
+#import "CustomImgBgLabel.h"
+#import "CustomADTipsView.h"
+#import "CustomTopHeaderView.h"
+#import "CustomNavigationBarButtonItem.h"
+#import "CommonMethod.h"
+#import "CustomSecondRateButton.h"
+#import "CustomFirstRateButton.h"
+#import "CustomNavTopView.h"
+#import "CustomBaseViewController.h"
+
+#import "AppDelegate.h"
+
+#import "UMEventDefine.h"
+#import "UMEventIDManager.h"
+#import <Bugly/Bugly.h>
+#import "BuglyTool.h"
+#import "UIViewController+PresentVC.h"
+#endif
+#endif

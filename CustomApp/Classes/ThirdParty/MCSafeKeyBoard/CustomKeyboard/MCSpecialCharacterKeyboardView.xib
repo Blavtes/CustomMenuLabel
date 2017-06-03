@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NpJ-4v-IaO" userLabel="specialCharacter Keyboard View" customClass="MCSpecialCharacterKeyboardView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="851" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoZ-Z7-831" customClass="MCImageButton">
+                    <rect key="frame" x="5" y="3" width="30" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="a3G-l7-0ay"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="!" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="852" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJn-iL-5DF" customClass="MCImageButton">
+                    <rect key="frame" x="42" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="@" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="853" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvf-uQ-VUD" customClass="MCImageButton">
+                    <rect key="frame" x="79" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="#" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="854" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRn-P0-IaL" customClass="MCImageButton">
+                    <rect key="frame" x="117" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="$" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="855" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJS-tD-MPf" customClass="MCImageButton">
+                    <rect key="frame" x="154" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="%" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="856" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-ZN-U4J" customClass="MCImageButton">
+                    <rect key="frame" x="191" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="^" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="857" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-4d-QnZ" customClass="MCImageButton">
+                    <rect key="frame" x="229" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="&amp;" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="858" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFI-JJ-pGz" customClass="MCImageButton">
+                    <rect key="frame" x="266" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="*" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="859" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YL5-M7-DwD" customClass="MCImageButton">
+                    <rect key="frame" x="303" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="(" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="860" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBY-uH-xxD" customClass="MCImageButton">
+                    <rect key="frame" x="340" y="3" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title=")" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="861" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4y-Ht-7SN" customClass="MCImageButton">
+                    <rect key="frame" x="5" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="'" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="862" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ3-pW-Djt" customClass="MCImageButton">
+                    <rect key="frame" x="42" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="&quot;" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="863" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dw-Eo-2OH" customClass="MCImageButton">
+                    <rect key="frame" x="79" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="=" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="864" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1di-5m-1x1" customClass="MCImageButton">
+                    <rect key="frame" x="117" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="_" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="865" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-vp-C8O" customClass="MCImageButton">
+                    <rect key="frame" x="153" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title=":" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="866" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kz6-MJ-TvF" customClass="MCImageButton">
+                    <rect key="frame" x="191" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title=";" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="867" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-OV-CsC" customClass="MCImageButton">
+                    <rect key="frame" x="229" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="?" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="868" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaR-RJ-SV7" customClass="MCImageButton">
+                    <rect key="frame" x="266" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="~" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="869" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-wY-28A" customClass="MCImageButton">
+                    <rect key="frame" x="303" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="|" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="870" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsa-AH-qfr" customClass="MCImageButton">
+                    <rect key="frame" x="340" y="63" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="•" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.32156862749999998" green="0.33725490200000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="871" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sM-8r-UvG" customClass="MCImageButton">
+                    <rect key="frame" x="23" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="+" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="872" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7r-hH-9OK" customClass="MCImageButton">
+                    <rect key="frame" x="61" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="-" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="873" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNQ-O4-AcA" customClass="MCImageButton">
+                    <rect key="frame" x="98" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="\" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="874" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-3T-Umv" customClass="MCImageButton">
+                    <rect key="frame" x="135" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="/" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="875" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7e-lM-RkY" customClass="MCImageButton">
+                    <rect key="frame" x="173" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="[" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="876" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuY-yL-fja" customClass="MCImageButton">
+                    <rect key="frame" x="210" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="]" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="877" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t9-RG-nzX" customClass="MCImageButton">
+                    <rect key="frame" x="247" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="{" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="878" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giT-aX-x8B" customClass="MCImageButton">
+                    <rect key="frame" x="284" y="123" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="}" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon"/>
+                </button>
+                <button opaque="NO" tag="879" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQA-jA-77e" userLabel="删除">
+                    <rect key="frame" x="321" y="123" width="50" height="50"/>
+                    <state key="normal" image="CharacterKeyBoard_Back_Normal">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" image="CharacterKeyBoard_Back_TouchDown"/>
+                </button>
+                <button opaque="NO" tag="880" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeM-Hn-rOD">
+                    <rect key="frame" x="4" y="183" width="50" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="123" backgroundImage="NumberKeyBoard_Number_GrayBackground">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="NumberKeyBoard_Number_TouchDown">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="881" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-os-Zbr" customClass="MCImageButton">
+                    <rect key="frame" x="61" y="183" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="," backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="882" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2K-iK-yTK" customClass="MCImageButton">
+                    <rect key="frame" x="98" y="183" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="." backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="883" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSq-Oh-wcw" customClass="MCImageButton">
+                    <rect key="frame" x="135" y="183" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="&lt;" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="884" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BJ-qo-NTe" customClass="MCImageButton">
+                    <rect key="frame" x="173" y="183" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="&gt;" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="885" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dah-lM-8JR" customClass="MCImageButton">
+                    <rect key="frame" x="210" y="183" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="€" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="886" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLr-Sz-QIe" customClass="MCImageButton">
+                    <rect key="frame" x="247" y="183" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="£" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="887" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHR-FF-3rW" customClass="MCImageButton">
+                    <rect key="frame" x="284" y="183" width="30" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="¥" backgroundImage="CharacterKeyBoard_WhiteBackground">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="Custom_CharacterKeyBoard_TouchDown_Icon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="888" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-4D-tfb">
+                    <rect key="frame" x="321" y="183" width="50" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="ABC" backgroundImage="NumberKeyBoard_Number_GrayBackground">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="NumberKeyBoard_Number_TouchDown">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.81568627450980391" green="0.84705882352941175" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="k7r-hH-9OK" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="151:375" id="0wN-LD-YoC"/>
+                <constraint firstItem="1Rb-vp-C8O" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="0xg-bm-eFA"/>
+                <constraint firstItem="zuY-yL-fja" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="10I-qQ-x4h"/>
+                <constraint firstItem="BHe-4D-tfb" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="691.5:375" id="1kA-Go-Bv3"/>
+                <constraint firstItem="Do0-OV-CsC" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="1nh-HF-lwY"/>
+                <constraint firstItem="dMi-4d-QnZ" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="1pr-3c-7X1"/>
+                <constraint firstItem="g4I-wY-28A" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="20n-PO-K43"/>
+                <constraint firstItem="GoZ-Z7-831" firstAttribute="top" secondItem="NpJ-4v-IaO" secondAttribute="top" constant="3" id="2MJ-Pa-NFs"/>
+                <constraint firstItem="Nvf-uQ-VUD" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="2gL-7V-4Po"/>
+                <constraint firstItem="kz6-MJ-TvF" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="412:375" id="34S-c1-yqO"/>
+                <constraint firstItem="rDe-ZN-U4J" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="4FH-lx-QPN"/>
+                <constraint firstItem="fLr-Sz-QIe" firstAttribute="height" secondItem="jZl-os-Zbr" secondAttribute="height" id="4ng-0o-5uB"/>
+                <constraint firstItem="FNQ-O4-AcA" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="225.5:375" id="5ED-hn-Th0"/>
+                <constraint firstItem="Dah-lM-8JR" firstAttribute="width" secondItem="jZl-os-Zbr" secondAttribute="width" id="5be-b4-UPb"/>
+                <constraint firstItem="GoZ-Z7-831" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="39.5:375" id="6R0-U3-509"/>
+                <constraint firstItem="h7e-lM-RkY" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="6fe-W8-fjN"/>
+                <constraint firstItem="TBY-uH-xxD" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="6n8-4S-t5y"/>
+                <constraint firstItem="dMi-4d-QnZ" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="72w-6w-5f7"/>
+                <constraint firstItem="GaR-RJ-SV7" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="869-IP-c9G"/>
+                <constraint firstItem="FNQ-O4-AcA" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="8fZ-Bd-XO9"/>
+                <constraint firstItem="7BJ-qo-NTe" firstAttribute="width" secondItem="jZl-os-Zbr" secondAttribute="width" id="8qe-Iv-16M"/>
+                <constraint firstItem="qRn-P0-IaL" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="263:375" id="94y-94-ijB"/>
+                <constraint firstItem="xIb-3T-Umv" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="300:375" id="9ZP-f8-CeG"/>
+                <constraint firstItem="nSq-Oh-wcw" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="300:375" id="9jR-7x-t14"/>
+                <constraint firstItem="sFI-JJ-pGz" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="9kW-Ms-vO6"/>
+                <constraint firstItem="vJS-tD-MPf" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="Aq3-AB-zYu"/>
+                <constraint firstItem="dMi-4d-QnZ" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="BAw-c0-1O2"/>
+                <constraint firstItem="kz6-MJ-TvF" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="BQS-Tp-PLe"/>
+                <constraint firstItem="EZ3-pW-Djt" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="Bis-un-44f"/>
+                <constraint firstItem="BHe-4D-tfb" firstAttribute="width" secondItem="QeM-Hn-rOD" secondAttribute="width" id="CXu-1C-WVI"/>
+                <constraint firstItem="Nvf-uQ-VUD" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="188.5:375" id="Cow-5i-AWw"/>
+                <constraint firstItem="QeM-Hn-rOD" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="58.5:375" id="DDf-bi-Sah"/>
+                <constraint firstItem="Y4y-Ht-7SN" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="DDu-P7-dWB"/>
+                <constraint firstItem="rDe-ZN-U4J" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="DQk-oJ-HNY"/>
+                <constraint firstItem="xIb-3T-Umv" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="DTh-gw-5TK"/>
+                <constraint firstItem="sFI-JJ-pGz" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="DZr-lO-Oc9"/>
+                <constraint firstItem="1Rb-vp-C8O" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="337.5:375" id="E0h-4d-05B"/>
+                <constraint firstItem="Nvf-uQ-VUD" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="E66-eB-gZa"/>
+                <constraint firstItem="EZ3-pW-Djt" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="EVo-hB-EfA"/>
+                <constraint firstItem="Do0-OV-CsC" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="EVy-CG-jjE"/>
+                <constraint firstItem="0t9-RG-nzX" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="EYt-xo-KjR"/>
+                <constraint firstItem="vJS-tD-MPf" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="Efq-XX-m41"/>
+                <constraint firstItem="giT-aX-x8B" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="598:375" id="Fnz-uU-y8Y"/>
+                <constraint firstItem="QeM-Hn-rOD" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="bottom" constant="10" id="Frb-RK-8DP"/>
+                <constraint firstItem="dMi-4d-QnZ" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="486.5:375" id="G6g-na-V3y"/>
+                <constraint firstItem="YL5-M7-DwD" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="635.5:375" id="GJ0-Sr-fo9"/>
+                <constraint firstItem="qRn-P0-IaL" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="GNc-Oi-wHi"/>
+                <constraint firstItem="jZl-os-Zbr" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="H8M-kV-s31"/>
+                <constraint firstItem="k7r-hH-9OK" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="Hbf-aB-vVc"/>
+                <constraint firstItem="MQA-jA-77e" firstAttribute="width" secondItem="NpJ-4v-IaO" secondAttribute="width" multiplier="100:750" id="Htt-cs-EAo"/>
+                <constraint firstItem="h7e-lM-RkY" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="Iq0-7e-McT"/>
+                <constraint firstItem="k7r-hH-9OK" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="JXm-9f-re4"/>
+                <constraint firstItem="1di-5m-1x1" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="JYa-M4-Qf2"/>
+                <constraint firstItem="0t9-RG-nzX" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="JZB-Y0-LBC"/>
+                <constraint firstItem="GHR-FF-3rW" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="598.5:375" id="Kq2-l4-A6r"/>
+                <constraint firstItem="Y4y-Ht-7SN" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="39.5:375" id="L5s-U2-6jo"/>
+                <constraint firstItem="YL5-M7-DwD" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="LnW-Pg-CML"/>
+                <constraint firstItem="4sM-8r-UvG" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="76.5:375" id="M6u-4Z-ADL"/>
+                <constraint firstItem="kz6-MJ-TvF" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="MF7-T3-VXD"/>
+                <constraint firstItem="zuY-yL-fja" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="MM8-MN-6d1"/>
+                <constraint firstItem="Y4y-Ht-7SN" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="bottom" constant="10" id="MTv-yo-aby"/>
+                <constraint firstItem="7BJ-qo-NTe" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="374.5:375" id="NSC-U7-iyW"/>
+                <constraint firstItem="GoZ-Z7-831" firstAttribute="width" secondItem="NpJ-4v-IaO" secondAttribute="width" multiplier="60:750" id="Nii-tK-LV2"/>
+                <constraint firstItem="7dw-Eo-2OH" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="Nkk-hT-hvn"/>
+                <constraint firstItem="Y4y-Ht-7SN" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="OW9-eQ-Ldm"/>
+                <constraint firstItem="YL5-M7-DwD" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="Pxa-w6-wh5"/>
+                <constraint firstItem="vJS-tD-MPf" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="RQW-Rn-6Nz"/>
+                <constraint firstItem="jZl-os-Zbr" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="151:375" id="S1C-VA-tOD"/>
+                <constraint firstItem="7dw-Eo-2OH" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="SHM-bJ-EcR"/>
+                <constraint firstItem="Qsa-AH-qfr" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="SXw-Go-BkH"/>
+                <constraint firstItem="zuY-yL-fja" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="St4-gE-4fV"/>
+                <constraint firstItem="h7e-lM-RkY" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="374.5:375" id="V0I-tX-Cte"/>
+                <constraint firstItem="xJn-iL-5DF" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="V2b-hh-acc"/>
+                <constraint firstItem="xJn-iL-5DF" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="V6m-3k-lHU"/>
+                <constraint firstItem="Qsa-AH-qfr" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="VFM-5B-rx0"/>
+                <constraint firstItem="1Rb-vp-C8O" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="VZU-R5-GFJ"/>
+                <constraint firstItem="vJS-tD-MPf" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="337.5:375" id="VgS-Lb-Jlg"/>
+                <constraint firstItem="kz6-MJ-TvF" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="W4J-Oa-GXB"/>
+                <constraint firstItem="nSq-Oh-wcw" firstAttribute="width" secondItem="jZl-os-Zbr" secondAttribute="width" id="WqF-db-iZx"/>
+                <constraint firstItem="sFI-JJ-pGz" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="561:375" id="Y8I-M0-Dlp"/>
+                <constraint firstItem="fLr-Sz-QIe" firstAttribute="width" secondItem="jZl-os-Zbr" secondAttribute="width" id="YYc-4Q-aaj"/>
+                <constraint firstItem="1di-5m-1x1" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="263:375" id="Yca-sB-eDx"/>
+                <constraint firstItem="FNQ-O4-AcA" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="Yec-RU-Lp5"/>
+                <constraint firstItem="sFI-JJ-pGz" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="Zxm-rq-Egw"/>
+                <constraint firstItem="GHR-FF-3rW" firstAttribute="height" secondItem="jZl-os-Zbr" secondAttribute="height" id="ahY-3q-H5D"/>
+                <constraint firstItem="QeM-Hn-rOD" firstAttribute="width" secondItem="NpJ-4v-IaO" secondAttribute="width" multiplier="100:750" id="avE-XI-hj1"/>
+                <constraint firstItem="xIb-3T-Umv" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="ayc-Fe-O4N"/>
+                <constraint firstItem="EZ3-pW-Djt" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="114:375" id="bC4-BU-Ps6"/>
+                <constraint firstItem="4sM-8r-UvG" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="bottom" constant="10" id="cGA-rc-VHK"/>
+                <constraint firstItem="D2K-iK-yTK" firstAttribute="top" secondItem="jZl-os-Zbr" secondAttribute="top" id="cJv-aN-g28"/>
+                <constraint firstItem="GaR-RJ-SV7" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="561:375" id="cKS-L7-YhU"/>
+                <constraint firstItem="g4I-wY-28A" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="cXQ-JU-bFS"/>
+                <constraint firstItem="GHR-FF-3rW" firstAttribute="top" secondItem="jZl-os-Zbr" secondAttribute="top" id="cbd-Ov-HB7"/>
+                <constraint firstItem="1Rb-vp-C8O" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="clO-VB-PYT"/>
+                <constraint firstItem="giT-aX-x8B" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="cu1-ez-80C"/>
+                <constraint firstItem="Qsa-AH-qfr" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="d3B-zw-0IK"/>
+                <constraint firstItem="rDe-ZN-U4J" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="dSw-KP-fTj"/>
+                <constraint firstItem="nSq-Oh-wcw" firstAttribute="height" secondItem="jZl-os-Zbr" secondAttribute="height" id="eF4-e8-R1L"/>
+                <constraint firstItem="g4I-wY-28A" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="635.5:375" id="fAp-lS-yKj"/>
+                <constraint firstItem="7dw-Eo-2OH" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="fBD-OP-tJQ"/>
+                <constraint firstItem="Do0-OV-CsC" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="fEl-ok-XFc"/>
+                <constraint firstItem="Nvf-uQ-VUD" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="fmk-KX-vKQ"/>
+                <constraint firstItem="Dah-lM-8JR" firstAttribute="top" secondItem="jZl-os-Zbr" secondAttribute="top" id="fvZ-Ec-2tt"/>
+                <constraint firstItem="MQA-jA-77e" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="g29-Sn-FFC"/>
+                <constraint firstItem="D2K-iK-yTK" firstAttribute="width" secondItem="jZl-os-Zbr" secondAttribute="width" id="g3d-KU-UU4"/>
+                <constraint firstItem="D2K-iK-yTK" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="225.5:375" id="gWN-1Z-tHq"/>
+                <constraint firstItem="GaR-RJ-SV7" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="glm-81-Dca"/>
+                <constraint firstItem="FNQ-O4-AcA" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="hC1-V4-c44"/>
+                <constraint firstItem="7BJ-qo-NTe" firstAttribute="height" secondItem="jZl-os-Zbr" secondAttribute="height" id="iSV-Yr-fst"/>
+                <constraint firstItem="xIb-3T-Umv" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="iac-2l-0Ua"/>
+                <constraint firstItem="1di-5m-1x1" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="ilI-7t-u7g"/>
+                <constraint firstItem="4sM-8r-UvG" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="jNa-w2-bU1"/>
+                <constraint firstItem="giT-aX-x8B" firstAttribute="top" secondItem="4sM-8r-UvG" secondAttribute="top" id="kBK-hq-mgT"/>
+                <constraint firstItem="QeM-Hn-rOD" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="kPK-I6-Tm9"/>
+                <constraint firstItem="EZ3-pW-Djt" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="kU4-a4-cSu"/>
+                <constraint firstItem="GaR-RJ-SV7" firstAttribute="top" secondItem="Y4y-Ht-7SN" secondAttribute="top" id="kZ4-DW-cG5"/>
+                <constraint firstItem="YL5-M7-DwD" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="kou-hD-PwA"/>
+                <constraint firstItem="jZl-os-Zbr" firstAttribute="top" secondItem="QeM-Hn-rOD" secondAttribute="top" id="lR0-lq-Eb2"/>
+                <constraint firstItem="Qsa-AH-qfr" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="710:375" id="lff-vR-auw"/>
+                <constraint firstItem="D2K-iK-yTK" firstAttribute="height" secondItem="jZl-os-Zbr" secondAttribute="height" id="lpm-Un-WZM"/>
+                <constraint firstItem="Do0-OV-CsC" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="486.5:375" id="m64-gw-bCQ"/>
+                <constraint firstItem="fLr-Sz-QIe" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="523.5:375" id="mNi-58-zCE"/>
+                <constraint firstItem="MQA-jA-77e" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="moI-M4-tNX"/>
+                <constraint firstItem="TBY-uH-xxD" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="mzq-8I-QUU"/>
+                <constraint firstItem="BHe-4D-tfb" firstAttribute="height" secondItem="QeM-Hn-rOD" secondAttribute="height" id="niV-e2-6X5"/>
+                <constraint firstItem="BHe-4D-tfb" firstAttribute="top" secondItem="QeM-Hn-rOD" secondAttribute="top" id="oD5-ax-fNV"/>
+                <constraint firstItem="MQA-jA-77e" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="691.5:375" id="oS8-iJ-Vfd"/>
+                <constraint firstItem="jZl-os-Zbr" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="out-he-xlm"/>
+                <constraint firstItem="g4I-wY-28A" firstAttribute="width" secondItem="Y4y-Ht-7SN" secondAttribute="width" id="pWD-7r-osm"/>
+                <constraint firstItem="0t9-RG-nzX" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="523.5:375" id="qBP-aI-Rce"/>
+                <constraint firstItem="h7e-lM-RkY" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="qJK-Nm-a7S"/>
+                <constraint firstItem="1di-5m-1x1" firstAttribute="height" secondItem="Y4y-Ht-7SN" secondAttribute="height" id="rB8-12-OtM"/>
+                <constraint firstItem="xJn-iL-5DF" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="sAA-nQ-U8e"/>
+                <constraint firstItem="TBY-uH-xxD" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="710:375" id="sNv-md-8B9"/>
+                <constraint firstItem="TBY-uH-xxD" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="soe-R6-lZk"/>
+                <constraint firstItem="xJn-iL-5DF" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="114:375" id="t47-tf-FCX"/>
+                <constraint firstItem="qRn-P0-IaL" firstAttribute="top" secondItem="GoZ-Z7-831" secondAttribute="top" id="tEB-SZ-5z9"/>
+                <constraint firstItem="Dah-lM-8JR" firstAttribute="height" secondItem="jZl-os-Zbr" secondAttribute="height" id="tgE-5o-gi0"/>
+                <constraint firstItem="rDe-ZN-U4J" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="412:375" id="u3r-hr-Z1Q"/>
+                <constraint firstItem="GHR-FF-3rW" firstAttribute="width" secondItem="jZl-os-Zbr" secondAttribute="width" id="uCj-nW-aUR"/>
+                <constraint firstItem="k7r-hH-9OK" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="ug0-Pz-2GN"/>
+                <constraint firstItem="7dw-Eo-2OH" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="188.5:375" id="uwu-6M-ZQ7"/>
+                <constraint firstItem="0t9-RG-nzX" firstAttribute="height" secondItem="4sM-8r-UvG" secondAttribute="height" id="v9K-y7-s7g"/>
+                <constraint firstItem="7BJ-qo-NTe" firstAttribute="top" secondItem="jZl-os-Zbr" secondAttribute="top" id="vav-2d-3iS"/>
+                <constraint firstItem="4sM-8r-UvG" firstAttribute="width" secondItem="GoZ-Z7-831" secondAttribute="width" id="wAU-7a-oFM"/>
+                <constraint firstItem="fLr-Sz-QIe" firstAttribute="top" secondItem="jZl-os-Zbr" secondAttribute="top" id="wyQ-LR-Qpy"/>
+                <constraint firstItem="Dah-lM-8JR" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="449.5:375" id="x1V-TA-OKZ"/>
+                <constraint firstItem="zuY-yL-fja" firstAttribute="centerX" secondItem="NpJ-4v-IaO" secondAttribute="centerX" multiplier="449:375" id="xE9-QP-Moi"/>
+                <constraint firstItem="qRn-P0-IaL" firstAttribute="height" secondItem="GoZ-Z7-831" secondAttribute="height" id="xmF-B6-Slc"/>
+                <constraint firstItem="nSq-Oh-wcw" firstAttribute="top" secondItem="jZl-os-Zbr" secondAttribute="top" id="yN2-9y-azS"/>
+                <constraint firstItem="giT-aX-x8B" firstAttribute="width" secondItem="4sM-8r-UvG" secondAttribute="width" id="yk7-Fc-5Sc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="356" y="303"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CharacterKeyBoard_Back_Normal" width="51" height="49"/>
+        <image name="CharacterKeyBoard_Back_TouchDown" width="51" height="49"/>
+        <image name="CharacterKeyBoard_WhiteBackground" width="32" height="49"/>
+        <image name="Custom_CharacterKeyBoard_TouchDown_Icon" width="36" height="54"/>
+        <image name="NumberKeyBoard_Number_GrayBackground" width="117" height="53"/>
+        <image name="NumberKeyBoard_Number_TouchDown" width="117" height="53"/>
+    </resources>
+</document>

@@ -1,0 +1,67 @@
+PODS:
+  - AFMInfoBanner (1.2.1):
+    - CVKHierarchySearcher (~> 0.2)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CVKHierarchySearcher (0.2.0)
+  - GTSDK (1.6.2.0)
+  - IQKeyboardManager (3.3.7)
+  - JSONKit-NoWarning (1.2)
+  - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
+  - Reachability (3.2)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SVProgressHUD (2.1.2)
+  - UMengAnalytics-NO-IDFA (4.2.5)
+
+DEPENDENCIES:
+  - AFMInfoBanner
+  - AFNetworking
+  - GTSDK (~> 1.6.2.0)
+  - IQKeyboardManager
+  - JSONKit-NoWarning
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - Reachability
+  - SDWebImage
+  - SVProgressHUD
+  - UMengAnalytics-NO-IDFA
+
+SPEC CHECKSUMS:
+  AFMInfoBanner: a7bcfd409faa624f043e604ae4fb789c84b22815
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CVKHierarchySearcher: 7be8d3bcbcc6f86ff07f785e6c632b5e40da2553
+  GTSDK: 6089897a86579d4a7d66eb4245f2c8639c2e5e8f
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+
+PODFILE CHECKSUM: caa99dc3c9c80cb65730fe7f342f6141fd4c1113
+
+COCOAPODS: 1.2.0

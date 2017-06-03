@@ -1,0 +1,78 @@
+//  备份
+//  HostSetting.h
+//  HX_GJS
+//
+//  Created by litao on 16/1/5.
+//  Copyright © 2016年 GjFax. All rights reserved.
+//
+
+#ifndef HostSetting_h
+#define HostSetting_h
+
+
+#endif /* HostSetting_h */
+
+#pragma mark - 环境配置
+
+/*
+ 用户测试环境（外网）：http://218.17.205.130:18284/APP_SERVER/
+ 集成测试环境（外网）：http://218.17.205.130:18285/APP_SERVER/
+ 正式环境（外网）：https://app.gjfax.com/APP_SERVER/
+ 开发环境（外网）：http://218.17.205.130:18293/APP_SERVER
+ 
+ 用户WAP页面地址：http://218.17.205.130:8107/
+ 集成WAP页面地址：http://218.17.205.130:18286/FTS_MOBILE/
+ 正式环境WAP页面地址：https://m.gjfax.com/
+ 
+ 测试环境基金权益PDF：http://10.50.145.91/webfiles/staticfiles/html/fund/investorRight.pdf
+ 正式环境基金权益PDF：http://static.gjfax.com/webfiles/staticfiles/html/fund/investorRight.pdf
+ */
+
+#ifdef TestDebug
+    #define GJS_HOST_NAME @"http://218.17.205.130:18285/APP_SERVER/"
+    #define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:18286/FTS_MOBILE/"
+#else
+    #ifdef DEBUG
+
+        //  环境
+        //#define GJS_HOST_NAME @"http://10.100.156.20:7080/APP_SERVER"
+        //#define GJS_HOST_NAME @"http://10.100.156.5:7080/APP_SERVER"
+        //#define GJS_HOST_NAME @"http://218.17.205.130:18285/APP_SERVER/"
+        ////  WAP
+        //#define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:18286/FTS_MOBILE/"
+        ////  PDF
+        //#define GJS_FUND_INVESTORRIGHT @"http://10.50.145.91/webfiles/staticfiles/html/fund/investorRight.pdf"
+
+        // #define GJS_HOST_NAME @"http://10.50.145.113:8080/APP_SERVER/"              //正式环境APP SERVER主机地址
+        #define GJS_HOST_NAME @"http://218.17.205.130:18284/APP_SERVER/"
+        #define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:8107/"                //WAP手机网页版地址,用于公共页面及图片的获取
+        //   前海联合基金投资者权益须知 pdf
+        #define GJS_FUND_INVESTORRIGHT @"http://static.gjfax.com/webfiles/staticfiles/html/fund/investorRight.pdf"
+
+        #else
+
+        //#define GJS_HOST_NAME @"http://218.17.205.130:18285/APP_SERVER/"
+        ////  WAP
+        //#define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:18286/FTS_MOBILE/"
+        ////  PDF
+        //#define GJS_FUND_INVESTORRIGHT @"http://10.50.145.91/webfiles/staticfiles/html/fund/investorRight.pdf"
+
+        #define GJS_HOST_NAME @"https://app.gjfax.com/APP_SERVER/"              //正式环境APP SERVER主机地址[2016-03-30:V3.0.0]
+        #define GJS_WAP_SERVER_HOST_ADDR @"https://m.gjfax.com/"                //WAP手机网页版地址,用于公共页面及图片的获取
+        //   前海联合基金投资者权益须知 pdf
+        #define GJS_FUND_INVESTORRIGHT @"http://static.gjfax.com/webfiles/staticfiles/html/fund/investorRight.pdf"
+
+    #endif
+#endif
+
+#pragma mark - 平台
+//  来源(平台)
+static NSString * const Gjfax_iOS_PlatformStr = @"5";
+//  渠道
+static NSString * const Gjfax_iOS_ChannelStr = @"950";
+//  2级渠道
+static NSString * const Gjfax_iOS_subChannelStr = @"19";
+//  后台api版本号
+static NSString * const Gjfax_iOS_ApiVersion = @"1.3";
+//  appid
+static NSString * const Gjfax_iOS_AppId = @"985121286";
