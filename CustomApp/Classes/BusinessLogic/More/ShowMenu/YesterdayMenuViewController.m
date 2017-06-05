@@ -14,18 +14,41 @@
 @property (nonatomic, strong) NSArray *dataArr;
 @property (nonatomic, strong) NSMutableArray *timeArr;
 @property (nonatomic, strong) NSMutableArray *dictArr;
+@property (nonatomic, assign) NSInteger fontValue;
 @end
 
 @implementation YesterdayMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"昨天吃了啥";
+    //self.title = @"昨天吃了啥";
     _timeArr = [NSMutableArray arrayWithCapacity:1];
     self.dictArr = [NSMutableArray arrayWithCapacity:1];
-    
+    _fontValue = 14;
     [self queryData];
+    [self fontMore];
+    //[self.navTopView showRightTitle:@"字体+" rightHandle:^(UIButton *view) {
+        
+    //}];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)fontMore
+{
+    UIStepper *stp = [[UIStepper alloc] initWithFrame:CGRectMake(MAIN_SCREEN_WIDTH - 110, 25, 80, 30)];
+    stp.minimumValue = 14;
+    stp.maximumValue = 40;
+    stp.stepValue = 1;
+    stp.tintColor = [UIColor whiteColor];
+    [stp addTarget:self action:@selector(stepperAction:) forControlEvents:UIControlEventValueChanged];
+    [self.navTopView addSubview:stp];
+}
+
+- (void)stepperAction:(UIStepper *)stp
+{
+    DLog(@"stp %@",stp);
+    _fontValue = stp.value;
+    [_tableView reloadData];
 }
 
 - (void)queryData
@@ -108,7 +131,7 @@
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(20, 0, MAIN_SCREEN_WIDTH - 40, 30);
     label.text = _timeArr[section];
-    label.font = [UIFont systemFontOfSize:28];
+    label.font = [UIFont systemFontOfSize:_fontValue - 6];
     [view addSubview:label];
     return view;
 }
@@ -127,7 +150,7 @@
     cell.backgroundColor = [UIColor whiteColor];
     
     cell.textLabel.textColor = COMMON_BLACK_COLOR;
-    cell.textLabel.font = [UIFont systemFontOfSize:32];
+    cell.textLabel.font = [UIFont systemFontOfSize:_fontValue];
     NSDictionary *dict = _dictArr[indexPath.section][indexPath.row];
     //    if (indexPath.section == 0) {
     //        dict = _data1[indexPath.row];
@@ -169,7 +192,7 @@
     UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(20, 42, MAIN_SCREEN_WIDTH - 80, 80)];
     text.backgroundColor = [UIColor clearColor];
     [show.bgContentView addSubview:text];
-    text.font = [UIFont systemFontOfSize:14];
+    text.font = [UIFont systemFontOfSize:_fontValue];
     
     
     NSString *str = dict[BdTableTypeName];

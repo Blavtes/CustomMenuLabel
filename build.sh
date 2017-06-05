@@ -2,7 +2,7 @@
 # author Blavtes
 
 # 工程名
-SCHEMENAME=GjFax 
+SCHEMENAME=CustomMenuLabel
 BRANCHNAME=develop
 
 # $1表示传入的第一个参数，启动脚本传入Debug或者Release就可以
@@ -13,11 +13,7 @@ serverType=1
 
 #svn 更新
 
-svn update
-if [ $? -ne 0 ]; then
-	echo "svn up faild!!!"
-	exit 1
-fi
+
 
 if [ $MODE = "Release" ]; then
 	# 删除pod
@@ -60,33 +56,6 @@ SOURCEPATH=$( cd "$( dirname $0 )" && pwd)
 IPAPATH=/Users/`whoami`/Documents/AutoBuildIPA/$BRANCHNAME/$MODE/$DATE
 IPANAME=$SCHEMENAME_$DATE.ipa
 
-echo "cp hostSetting file...."
-
-HostFile=/Users/`whoami`/Documents/AutoBuildIPA/HostSetting.h
-echo "host " + $HostFile
-if [ -f $HostFile ]; then 
-	 
- 	echo "have Host File to Build mk...."
-else
-	cp -r /$SOURCEPATH/HX_GJS/Classes/BaseFrame/Networking/HostSetting.txt $HostFile
-	if [ $? -ne 0 ]; then
-		echo "cp back-up  txt->HostSetting.h faild!!!"
-		exit 1
-	fi
-	cp -r /$SOURCEPATH/HX_GJS/Classes/BaseFrame/Networking/HostSetting.h /Users/`whoami`/Documents/AutoBuildIPA/HostSetting.txt
-	if [ $? -ne 0 ]; then
-		echo "cp back-up  HostSetting.h->txt faild!!!"
-		exit 1
-	fi
-	echo "copy Host File to Build mk...."
-fi
-
-cp -r $HostFile /$SOURCEPATH/HX_GJS/Classes/BaseFrame/Networking/HostSetting.h
-
-if [ $? -ne 0 ]; then
-		echo "cp  HostSetting.h faild!!!"
-		exit 1
-fi
 
 echo "path : " + $IPAPATH
 
@@ -96,8 +65,6 @@ if [ $MODE = "Release" ]; then
 	-workspace $SOURCEPATH/$SCHEMENAME.xcworkspace \
 	-scheme $SCHEMENAME \
 	-configuration $MODE \
-	CODE_SIGN_IDENTITY="iPhone Developer: rui zhang (HK36TJZ8XU)" \
-	PROVISIONING_PROFILE="cd4f0784-efcc-4a4e-b9f8-3400eef49b99" \
 	clean \
 	build \
 	-derivedDataPath $IPAPATH
@@ -113,8 +80,6 @@ elif [ $MODE = "Debug" ]; then
 	-workspace $SOURCEPATH/$SCHEMENAME.xcworkspace \
 	-scheme $SCHEMENAME \
 	-configuration $MODE \
-	CODE_SIGN_IDENTITY="iPhone Developer: rui zhang (HK36TJZ8XU)" \
-	PROVISIONING_PROFILE="cd4f0784-efcc-4a4e-b9f8-3400eef49b99" \
 	clean \
 	build \
 	-derivedDataPath $IPAPATH
@@ -130,8 +95,6 @@ else
 	-workspace $SOURCEPATH/$SCHEMENAME.xcworkspace \
 	-scheme $SCHEMENAME \
 	-configuration $MODE \
-	CODE_SIGN_IDENTITY="iPhone Developer: rui zhang (HK36TJZ8XU)" \
-	PROVISIONING_PROFILE="cd4f0784-efcc-4a4e-b9f8-3400eef49b99" \
 	clean \
 	build \
 	-derivedDataPath $IPAPATH
@@ -164,11 +127,7 @@ else
 	echo "\n====================================\n\n\n"
 fi
 
-cp -r /Users/`whoami`/Documents/AutoBuildIPA/HostSetting.txt /$SOURCEPATH/HX_GJS/Classes/BaseFrame/Networking/HostSetting.h 
-if [ $? -ne 0 ]; then
-	echo "cp recover  txt-> HostSetting.h faild!!!"
-	exit 1
-fi
+
 # 启动模拟器
 # xcrun instruments -w 'iPhone 6s'
 
