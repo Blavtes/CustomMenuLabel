@@ -49,7 +49,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-CustomApp.xcscheme</key>
+		<key>Pods-CustomMenuLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -82,11 +82,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22E33B0FB065017CA6106AB096BF7FDA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
 		<dict>
 			<key>primary</key>
@@ -97,12 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70D5B8F101B9162BA892448A779D5FB2</key>
+		<key>69FC5192B6103AE1C7B782E1C5EB8B1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7938FF8D27D453B74A9C3CC69FF7F6FE</key>
+		<key>6D20C4C9BDE119FACBA8D8390428D4BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8AE2484B5A247105AF405DD9116D7D0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,17 +122,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADAC08126B20C56799DCD1E8703CC028</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BB2AB6C3F17512F8687B187A905D5DB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E3A308A7A78FD1C720C0CA8EA4C96625</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDCC14A15E73DBC7D12C806CF4DB6279</key>
 		<dict>
 			<key>primary</key>
 			<true/>

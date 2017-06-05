@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		253611A87B56923600BE2932 /* libPods-CustomApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA09018C80D359033AA3DAC /* libPods-CustomApp.a */; };
+		17A0392AB9A493B776C6F77B /* libPods-CustomMenuLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */; };
 		571D60701EA494EF00BD6D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D606E1EA494EF00BD6D15 /* Main.storyboard */; };
 		571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60801EA495AB00BD6D15 /* AudioUtil.m */; };
 		571D648D1EA495AC00BD6D15 /* BuglyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60831EA495AB00BD6D15 /* BuglyTool.m */; };
@@ -212,9 +212,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DA09018C80D359033AA3DAC /* libPods-CustomApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		49215C2A1E9D83FE1A52F182 /* Pods-CustomApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomApp/Pods-CustomApp.debug.xcconfig"; sourceTree = "<group>"; };
-		571D60621EA494EF00BD6D15 /* CustomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		571D60621EA494EF00BD6D15 /* CustomMenuLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomMenuLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571D606F1EA494EF00BD6D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		571D60761EA494EF00BD6D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571D607F1EA495AB00BD6D15 /* AudioUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUtil.h; sourceTree = "<group>"; };
@@ -569,7 +567,8 @@
 		571D65831EA49A6B00BD6D15 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		571D65851EA49A7300BD6D15 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		8AAE19CCE86F30DFD3504F95 /* Pods-CustomApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomApp/Pods-CustomApp.release.xcconfig"; sourceTree = "<group>"; };
+		768EF575564BF9000FB62568 /* Pods-CustomMenuLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomMenuLabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomMenuLabel/Pods-CustomMenuLabel.debug.xcconfig"; sourceTree = "<group>"; };
+		9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomMenuLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11DF3A41EE24F6500DEA7F8 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		C11DF3A51EE24F6500DEA7F8 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		C11DF3A61EE24F6500DEA7F8 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -597,6 +596,7 @@
 		C176E9131EE2E6D100D83EB2 /* YesterdayMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YesterdayMenuViewController.h; sourceTree = "<group>"; };
 		C176E9141EE2E6D100D83EB2 /* YesterdayMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YesterdayMenuViewController.m; sourceTree = "<group>"; };
 		C176E9151EE2E6D100D83EB2 /* YesterdayMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesterdayMenuViewController.xib; sourceTree = "<group>"; };
+		DD4D4C92FCE4FDEBF7C9F387 /* Pods-CustomMenuLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomMenuLabel.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomMenuLabel/Pods-CustomMenuLabel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -635,7 +635,7 @@
 				571D654C1EA495AC00BD6D15 /* QZoneConnection.framework in Frameworks */,
 				571D65501EA495AC00BD6D15 /* WeChatConnection.framework in Frameworks */,
 				571D655A1EA495AC00BD6D15 /* libWeChatSDK.a in Frameworks */,
-				253611A87B56923600BE2932 /* libPods-CustomApp.a in Frameworks */,
+				17A0392AB9A493B776C6F77B /* libPods-CustomMenuLabel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +658,7 @@
 				571D65711EA499DD00BD6D15 /* MapKit.framework */,
 				571D656F1EA499CA00BD6D15 /* CoreLocation.framework */,
 				571D656D1EA499C500BD6D15 /* SystemConfiguration.framework */,
-				2DA09018C80D359033AA3DAC /* libPods-CustomApp.a */,
+				9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -666,7 +666,7 @@
 		571D60591EA494EF00BD6D15 = {
 			isa = PBXGroup;
 			children = (
-				571D60641EA494EF00BD6D15 /* CustomApp */,
+				571D60641EA494EF00BD6D15 /* CustomMenuLabel */,
 				571D60631EA494EF00BD6D15 /* Products */,
 				7AE10B9DFFB464FE1840AB41 /* Pods */,
 				0B98182084AEA4F78A5ED8CA /* Frameworks */,
@@ -676,12 +676,12 @@
 		571D60631EA494EF00BD6D15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				571D60621EA494EF00BD6D15 /* CustomApp.app */,
+				571D60621EA494EF00BD6D15 /* CustomMenuLabel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		571D60641EA494EF00BD6D15 /* CustomApp */ = {
+		571D60641EA494EF00BD6D15 /* CustomMenuLabel */ = {
 			isa = PBXGroup;
 			children = (
 				571D607C1EA495AB00BD6D15 /* Classes */,
@@ -692,6 +692,7 @@
 				571D60761EA494EF00BD6D15 /* Info.plist */,
 				571D60651EA494EF00BD6D15 /* Supporting Files */,
 			);
+			name = CustomMenuLabel;
 			path = CustomApp;
 			sourceTree = "<group>";
 		};
@@ -2652,8 +2653,8 @@
 		7AE10B9DFFB464FE1840AB41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				49215C2A1E9D83FE1A52F182 /* Pods-CustomApp.debug.xcconfig */,
-				8AAE19CCE86F30DFD3504F95 /* Pods-CustomApp.release.xcconfig */,
+				768EF575564BF9000FB62568 /* Pods-CustomMenuLabel.debug.xcconfig */,
+				DD4D4C92FCE4FDEBF7C9F387 /* Pods-CustomMenuLabel.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2705,9 +2706,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		571D60611EA494EF00BD6D15 /* CustomApp */ = {
+		571D60611EA494EF00BD6D15 /* CustomMenuLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 571D60791EA494EF00BD6D15 /* Build configuration list for PBXNativeTarget "CustomApp" */;
+			buildConfigurationList = 571D60791EA494EF00BD6D15 /* Build configuration list for PBXNativeTarget "CustomMenuLabel" */;
 			buildPhases = (
 				4B5DE9B0EE7588257A557B24 /* [CP] Check Pods Manifest.lock */,
 				571D605E1EA494EF00BD6D15 /* Sources */,
@@ -2720,9 +2721,9 @@
 			);
 			dependencies = (
 			);
-			name = CustomApp;
+			name = CustomMenuLabel;
 			productName = CustomApp;
-			productReference = 571D60621EA494EF00BD6D15 /* CustomApp.app */;
+			productReference = 571D60621EA494EF00BD6D15 /* CustomMenuLabel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2736,12 +2737,12 @@
 				TargetAttributes = {
 					571D60611EA494EF00BD6D15 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = L2DL5RZ992;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = DB9U584EMR;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = 571D605D1EA494EF00BD6D15 /* Build configuration list for PBXProject "CustomApp" */;
+			buildConfigurationList = 571D605D1EA494EF00BD6D15 /* Build configuration list for PBXProject "CustomMenuLabel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2757,7 +2758,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				571D60611EA494EF00BD6D15 /* CustomApp */,
+				571D60611EA494EF00BD6D15 /* CustomMenuLabel */,
 			);
 		};
 /* End PBXProject section */
@@ -2820,7 +2821,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomApp/Pods-CustomApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomMenuLabel/Pods-CustomMenuLabel-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1C5FC5C9C62C7666C2C5AD4 /* [CP] Embed Pods Frameworks */ = {
@@ -2835,7 +2836,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomApp/Pods-CustomApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomMenuLabel/Pods-CustomMenuLabel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3115,12 +3116,12 @@
 		};
 		571D607A1EA494EF00BD6D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49215C2A1E9D83FE1A52F182 /* Pods-CustomApp.debug.xcconfig */;
+			baseConfigurationReference = 768EF575564BF9000FB62568 /* Pods-CustomMenuLabel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L2DL5RZ992;
+				DEVELOPMENT_TEAM = DB9U584EMR;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3141,21 +3142,21 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomMenuLabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "7f090878-2791-4ea1-b2ab-36e083deaaf2";
+				PROVISIONING_PROFILE_SPECIFIER = gjfaxApp_Dev_0603;
 			};
 			name = Debug;
 		};
 		571D607B1EA494EF00BD6D15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AAE19CCE86F30DFD3504F95 /* Pods-CustomApp.release.xcconfig */;
+			baseConfigurationReference = DD4D4C92FCE4FDEBF7C9F387 /* Pods-CustomMenuLabel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L2DL5RZ992;
+				DEVELOPMENT_TEAM = DB9U584EMR;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3176,17 +3177,17 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomMenuLabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "7f090878-2791-4ea1-b2ab-36e083deaaf2";
+				PROVISIONING_PROFILE_SPECIFIER = gjfaxApp_Dev_0603;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		571D605D1EA494EF00BD6D15 /* Build configuration list for PBXProject "CustomApp" */ = {
+		571D605D1EA494EF00BD6D15 /* Build configuration list for PBXProject "CustomMenuLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				571D60771EA494EF00BD6D15 /* Debug */,
@@ -3195,7 +3196,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		571D60791EA494EF00BD6D15 /* Build configuration list for PBXNativeTarget "CustomApp" */ = {
+		571D60791EA494EF00BD6D15 /* Build configuration list for PBXNativeTarget "CustomMenuLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				571D607A1EA494EF00BD6D15 /* Debug */,

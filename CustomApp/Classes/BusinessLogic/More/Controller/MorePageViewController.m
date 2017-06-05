@@ -51,7 +51,7 @@
     [self configData];
     [self initBaseView];
     [self.navTopView hideBack];
-    
+    self.title  = @"吃啥";
 }
 
 - (void)configData

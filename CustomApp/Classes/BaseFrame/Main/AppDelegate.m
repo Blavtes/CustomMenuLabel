@@ -23,7 +23,8 @@
 
 #import "WebViewController.h"
 
-
+#import "MorePageViewController.h"
+#import "CustomNavigationController.h"
 
 #import "NetWorkingStatusModel.h"   //  网络状态model
 #import "JSPatchTool.h"
@@ -163,8 +164,14 @@ static float const kLaunchSleepTime = 1.5f;
 
 - (void)loadTabBarViewController
 {
-    _customTabBarVc = [[CustomTabBarViewController alloc] init];
-    self.window.rootViewController = _customTabBarVc;
+    MorePageViewController *vc = [[MorePageViewController alloc] init];
+    
+    CustomNavigationController *nav = [[CustomNavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+    
+   // _customTabBarVc = [[CustomTabBarViewController alloc] init];
+   // self.window.rootViewController = _customTabBarVc;
+    
         //  设置窗口为主窗口
     [self.window makeKeyAndVisible];
 }

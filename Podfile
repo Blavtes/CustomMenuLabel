@@ -1,5 +1,5 @@
 platform :ios, '7.0'
-target “CustomApp” do
+target “CustomMenuLabel” do
     pod 'AFNetworking'
     
     pod 'SDWebImage'
