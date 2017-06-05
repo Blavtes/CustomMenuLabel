@@ -77,7 +77,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40;
+    return 50;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -93,7 +93,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 30;
+    return 35;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -106,8 +106,9 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MAIN_SCREEN_WIDTH, 30)];
     
     UILabel *label = [[UILabel alloc] init];
-    label.frame = CGRectMake(20, 0, 100, 30);
+    label.frame = CGRectMake(20, 0, MAIN_SCREEN_WIDTH - 40, 30);
     label.text = _timeArr[section];
+    label.font = [UIFont systemFontOfSize:28];
     [view addSubview:label];
     return view;
 }
@@ -126,7 +127,7 @@
     cell.backgroundColor = [UIColor whiteColor];
     
     cell.textLabel.textColor = COMMON_BLACK_COLOR;
-    cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeDetail_16];
+    cell.textLabel.font = [UIFont systemFontOfSize:32];
     NSDictionary *dict = _dictArr[indexPath.section][indexPath.row];
     //    if (indexPath.section == 0) {
     //        dict = _data1[indexPath.row];
@@ -168,7 +169,7 @@
     UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(20, 42, MAIN_SCREEN_WIDTH - 80, 80)];
     text.backgroundColor = [UIColor clearColor];
     [show.bgContentView addSubview:text];
-    
+    text.font = [UIFont systemFontOfSize:14];
     
     
     NSString *str = dict[BdTableTypeName];

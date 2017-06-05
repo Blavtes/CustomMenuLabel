@@ -82,7 +82,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40;
+    return 50;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -131,7 +131,7 @@
     cell.backgroundColor = [UIColor whiteColor];
     
     cell.textLabel.textColor = COMMON_BLACK_COLOR;
-    cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeDetail_16];
+    cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeTitle_18];
     NSDictionary *dict = _arrData[indexPath.section][indexPath.row];
 //    if (indexPath.section == 0) {
 //        dict = _data1[indexPath.row];
@@ -174,7 +174,7 @@
     text.backgroundColor = [UIColor clearColor];
     [show.bgContentView addSubview:text];
     
-    
+    text.font = [UIFont systemFontOfSize:18];
     
     NSString *str = dict[BdTableTypeName];
     show.confirmBtnTitle = @"确定";
