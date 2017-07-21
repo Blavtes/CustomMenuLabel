@@ -2738,6 +2738,7 @@
 					571D60611EA494EF00BD6D15 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = DB9U584EMR;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -2806,7 +2807,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B7D52C5FCFCAF0464EF75C15 /* [CP] Copy Pods Resources */ = {
@@ -3146,6 +3147,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7f090878-2791-4ea1-b2ab-36e083deaaf2";
 				PROVISIONING_PROFILE_SPECIFIER = gjfaxApp_Dev_0603;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -3181,6 +3183,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7f090878-2791-4ea1-b2ab-36e083deaaf2";
 				PROVISIONING_PROFILE_SPECIFIER = gjfaxApp_Dev_0603;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

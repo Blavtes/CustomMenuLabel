@@ -16,6 +16,25 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AVOSCloud (4.2.0)
+  - AVOSCloudCrashReporting (4.2.0):
+    - AVOSCloud (= 4.2.0)
+    - AVOSCloudCrashReporting/_ARC (= 4.2.0)
+    - AVOSCloudCrashReporting/_NOARC (= 4.2.0)
+  - AVOSCloudCrashReporting/_ARC (4.2.0):
+    - AVOSCloud (= 4.2.0)
+    - AVOSCloudCrashReporting/_NOARC (= 4.2.0)
+  - AVOSCloudCrashReporting/_NOARC (4.2.0):
+    - AVOSCloud (= 4.2.0)
+  - AVOSCloudIM (4.2.0):
+    - AVOSCloud (= 4.2.0)
+    - AVOSCloudIM/_ARC (= 4.2.0)
+    - AVOSCloudIM/_NOARC (= 4.2.0)
+  - AVOSCloudIM/_ARC (4.2.0):
+    - AVOSCloud (= 4.2.0)
+    - AVOSCloudIM/_NOARC (= 4.2.0)
+  - AVOSCloudIM/_NOARC (4.2.0):
+    - AVOSCloud (= 4.2.0)
   - CVKHierarchySearcher (0.2.0)
   - GTSDK (1.6.2.0)
   - IQKeyboardManager (3.3.7)
@@ -34,6 +53,9 @@ PODS:
 DEPENDENCIES:
   - AFMInfoBanner
   - AFNetworking
+  - AVOSCloud
+  - AVOSCloudCrashReporting
+  - AVOSCloudIM
   - GTSDK (~> 1.6.2.0)
   - IQKeyboardManager
   - JSONKit-NoWarning
@@ -49,6 +71,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFMInfoBanner: a7bcfd409faa624f043e604ae4fb789c84b22815
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AVOSCloud: 5446ad0320f4942cce1a036d131992cd1115db99
+  AVOSCloudCrashReporting: d7ab96935498000477076e35b17849abfa716652
+  AVOSCloudIM: 69df8e8517247f3c2585e321f24e777d5b398843
   CVKHierarchySearcher: 7be8d3bcbcc6f86ff07f785e6c632b5e40da2553
   GTSDK: 6089897a86579d4a7d66eb4245f2c8639c2e5e8f
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
@@ -62,6 +87,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
 
-PODFILE CHECKSUM: 88d6b747102afb3d88166aa004be383df0b174d4
+PODFILE CHECKSUM: '0348df58f7179ea22552a8c7da2b5bad7655a2c7'
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

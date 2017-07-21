@@ -14,6 +14,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AVOSCloud.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AVOSCloudCrashReporting.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AVOSCloudIM.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CVKHierarchySearcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,6 +97,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>28AFBC0E511B8F40FE4F8AB64E3F6F22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5015B472E58613A37A44F4E09B4316C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
 		<dict>
 			<key>primary</key>
@@ -92,17 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69FC5192B6103AE1C7B782E1C5EB8B1E</key>
+		<key>61417B41CB0DBA629DA5AE1C1BBF2AF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D20C4C9BDE119FACBA8D8390428D4BD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8AE2484B5A247105AF405DD9116D7D0B</key>
+		<key>82CA472C54474A3DCD2B0B62A702AB79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +137,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A165A09D40D3A2A4670926DF28354B36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B952A5217EA83678754BC044D9DFAD7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,12 +157,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3A308A7A78FD1C720C0CA8EA4C96625</key>
+		<key>D191A8A803107E83834473F06011C3F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EDCC14A15E73DBC7D12C806CF4DB6279</key>
+		<key>E3A308A7A78FD1C720C0CA8EA4C96625</key>
 		<dict>
 			<key>primary</key>
 			<true/>
