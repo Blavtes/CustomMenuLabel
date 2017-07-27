@@ -46,6 +46,8 @@ extern NSString *const BdTableTypeName;
 extern NSString *const BdOldTableName;
 extern NSString *const BDOleMenuTimeTable;
 
+extern NSString *const BdNotificationTableName;
+extern NSString *const BdNotificationConstentName;
 
 @interface RMTBdReportBufferManager : NSObject
 
@@ -124,4 +126,9 @@ extern NSString *const BDOleMenuTimeTable;
                       tableKey:(NSString *)key
                          value:(NSString *)value // 插入table的信息对应的key值
                         result:(void (^)(id result))block;
+
+- (void)insertNotificaitonIntoTableForConstent:(NSString *)constent
+                        result:(void (^)(id result))block;
+
+- (void)queryNotificaitonConstentCallBackResult:(void (^)(NSArray* seqsArray,id result))block;
 @end

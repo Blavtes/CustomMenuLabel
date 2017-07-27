@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17A0392AB9A493B776C6F77B /* libPods-CustomMenuLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */; };
+		570D37671F29E192008E9FC6 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570D37651F29E192008E9FC6 /* NotificationViewController.m */; };
+		570D37681F29E192008E9FC6 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570D37661F29E192008E9FC6 /* NotificationViewController.xib */; };
 		571D60701EA494EF00BD6D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D606E1EA494EF00BD6D15 /* Main.storyboard */; };
 		571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60801EA495AB00BD6D15 /* AudioUtil.m */; };
 		571D648D1EA495AC00BD6D15 /* BuglyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60831EA495AB00BD6D15 /* BuglyTool.m */; };
@@ -212,6 +214,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		570D37641F29E192008E9FC6 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		570D37651F29E192008E9FC6 /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		570D37661F29E192008E9FC6 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
 		571D60621EA494EF00BD6D15 /* CustomMenuLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomMenuLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571D606F1EA494EF00BD6D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		571D60761EA494EF00BD6D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -663,6 +668,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		570D37631F29E16E008E9FC6 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				570D37641F29E192008E9FC6 /* NotificationViewController.h */,
+				570D37651F29E192008E9FC6 /* NotificationViewController.m */,
+				570D37661F29E192008E9FC6 /* NotificationViewController.xib */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		571D60591EA494EF00BD6D15 = {
 			isa = PBXGroup;
 			children = (
@@ -718,7 +733,6 @@
 			children = (
 				571D607E1EA495AB00BD6D15 /* AudioUtil */,
 				571D60811EA495AB00BD6D15 /* BuglyTool */,
-				571D60841EA495AB00BD6D15 /* DataCollectionUtil */,
 				571D60861EA495AB00BD6D15 /* DataModelTool */,
 				571D60951EA495AB00BD6D15 /* GestureTool */,
 				571D609A1EA495AB00BD6D15 /* HUDTool */,
@@ -749,21 +763,6 @@
 				571D60831EA495AB00BD6D15 /* BuglyTool.m */,
 			);
 			path = BuglyTool;
-			sourceTree = "<group>";
-		};
-		571D60841EA495AB00BD6D15 /* DataCollectionUtil */ = {
-			isa = PBXGroup;
-			children = (
-				571D60851EA495AB00BD6D15 /* Model */,
-			);
-			path = DataCollectionUtil;
-			sourceTree = "<group>";
-		};
-		571D60851EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		571D60861EA495AB00BD6D15 /* DataModelTool */ = {
@@ -1166,9 +1165,7 @@
 				571D61B11EA495AB00BD6D15 /* Home */,
 				571D61E81EA495AB00BD6D15 /* More */,
 				571D61F81EA495AB00BD6D15 /* Newfeature */,
-				571D62131EA495AB00BD6D15 /* Products */,
 				571D62771EA495AB00BD6D15 /* PublicInterface */,
-				571D627F1EA495AB00BD6D15 /* UserCenter */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -1185,6 +1182,7 @@
 		571D61E81EA495AB00BD6D15 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				570D37631F29E16E008E9FC6 /* Notification */,
 				C11DF3BA1EE2533200DEA7F8 /* AddMenu */,
 				C11DF3BB1EE2533200DEA7F8 /* ShowMenu */,
 				571D61E91EA495AB00BD6D15 /* Controller */,
@@ -1301,805 +1299,6 @@
 			path = WebViewInfoModel;
 			sourceTree = "<group>";
 		};
-		571D62131EA495AB00BD6D15 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				571D62141EA495AB00BD6D15 /* BaseModel */,
-				571D62151EA495AB00BD6D15 /* BaseView */,
-				571D62161EA495AB00BD6D15 /* BaseViewModel */,
-				571D62171EA495AB00BD6D15 /* Business */,
-				571D621C1EA495AB00BD6D15 /* Current */,
-				571D62211EA495AB00BD6D15 /* Fixed */,
-				571D62261EA495AB00BD6D15 /* GjfaxEvaluation */,
-				571D622B1EA495AB00BD6D15 /* Harbor_A */,
-				571D623A1EA495AB00BD6D15 /* Insurance */,
-				571D62401EA495AB00BD6D15 /* Monthly */,
-				571D62451EA495AB00BD6D15 /* ProductConfig */,
-				571D62461EA495AB00BD6D15 /* ProductNavi */,
-				571D624A1EA495AB00BD6D15 /* Transfer */,
-				571D624F1EA495AB00BD6D15 /* YMFund */,
-			);
-			path = Products;
-			sourceTree = "<group>";
-		};
-		571D62141EA495AB00BD6D15 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseModel;
-			sourceTree = "<group>";
-		};
-		571D62151EA495AB00BD6D15 /* BaseView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseView;
-			sourceTree = "<group>";
-		};
-		571D62161EA495AB00BD6D15 /* BaseViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseViewModel;
-			sourceTree = "<group>";
-		};
-		571D62171EA495AB00BD6D15 /* Business */ = {
-			isa = PBXGroup;
-			children = (
-				571D62181EA495AB00BD6D15 /* Controller */,
-				571D62191EA495AB00BD6D15 /* Model */,
-				571D621A1EA495AB00BD6D15 /* View */,
-				571D621B1EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = Business;
-			sourceTree = "<group>";
-		};
-		571D62181EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62191EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D621A1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D621B1EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D621C1EA495AB00BD6D15 /* Current */ = {
-			isa = PBXGroup;
-			children = (
-				571D621D1EA495AB00BD6D15 /* Controller */,
-				571D621E1EA495AB00BD6D15 /* Model */,
-				571D621F1EA495AB00BD6D15 /* View */,
-				571D62201EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = Current;
-			sourceTree = "<group>";
-		};
-		571D621D1EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D621E1EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D621F1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62201EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D62211EA495AB00BD6D15 /* Fixed */ = {
-			isa = PBXGroup;
-			children = (
-				571D62221EA495AB00BD6D15 /* Controller */,
-				571D62231EA495AB00BD6D15 /* Model */,
-				571D62241EA495AB00BD6D15 /* View */,
-				571D62251EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = Fixed;
-			sourceTree = "<group>";
-		};
-		571D62221EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62231EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62241EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62251EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D62261EA495AB00BD6D15 /* GjfaxEvaluation */ = {
-			isa = PBXGroup;
-			children = (
-				571D62271EA495AB00BD6D15 /* Controller */,
-				571D62281EA495AB00BD6D15 /* Model */,
-				571D62291EA495AB00BD6D15 /* RequestService */,
-				571D622A1EA495AB00BD6D15 /* View */,
-			);
-			path = GjfaxEvaluation;
-			sourceTree = "<group>";
-		};
-		571D62271EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62281EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62291EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D622A1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D622B1EA495AB00BD6D15 /* Harbor_A */ = {
-			isa = PBXGroup;
-			children = (
-				571D622C1EA495AB00BD6D15 /* ProductDetail */,
-				571D62311EA495AB00BD6D15 /* ProductInvestment */,
-				571D62361EA495AB00BD6D15 /* ProductList */,
-			);
-			path = Harbor_A;
-			sourceTree = "<group>";
-		};
-		571D622C1EA495AB00BD6D15 /* ProductDetail */ = {
-			isa = PBXGroup;
-			children = (
-				571D622D1EA495AB00BD6D15 /* Controller */,
-				571D622E1EA495AB00BD6D15 /* Model */,
-				571D622F1EA495AB00BD6D15 /* RequestService */,
-				571D62301EA495AB00BD6D15 /* View */,
-			);
-			path = ProductDetail;
-			sourceTree = "<group>";
-		};
-		571D622D1EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D622E1EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D622F1EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D62301EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62311EA495AB00BD6D15 /* ProductInvestment */ = {
-			isa = PBXGroup;
-			children = (
-				571D62321EA495AB00BD6D15 /* Controller */,
-				571D62331EA495AB00BD6D15 /* Model */,
-				571D62341EA495AB00BD6D15 /* RequestService */,
-				571D62351EA495AB00BD6D15 /* View */,
-			);
-			path = ProductInvestment;
-			sourceTree = "<group>";
-		};
-		571D62321EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62331EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62341EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D62351EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62361EA495AB00BD6D15 /* ProductList */ = {
-			isa = PBXGroup;
-			children = (
-				571D62371EA495AB00BD6D15 /* Model */,
-				571D62381EA495AB00BD6D15 /* View */,
-				571D62391EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = ProductList;
-			sourceTree = "<group>";
-		};
-		571D62371EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62381EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62391EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D623A1EA495AB00BD6D15 /* Insurance */ = {
-			isa = PBXGroup;
-			children = (
-				571D623B1EA495AB00BD6D15 /* ProductList */,
-			);
-			path = Insurance;
-			sourceTree = "<group>";
-		};
-		571D623B1EA495AB00BD6D15 /* ProductList */ = {
-			isa = PBXGroup;
-			children = (
-				571D623C1EA495AB00BD6D15 /* Controller */,
-				571D623D1EA495AB00BD6D15 /* Model */,
-				571D623E1EA495AB00BD6D15 /* View */,
-				571D623F1EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = ProductList;
-			sourceTree = "<group>";
-		};
-		571D623C1EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D623D1EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D623E1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D623F1EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D62401EA495AB00BD6D15 /* Monthly */ = {
-			isa = PBXGroup;
-			children = (
-				571D62411EA495AB00BD6D15 /* Controller */,
-				571D62421EA495AB00BD6D15 /* Model */,
-				571D62431EA495AB00BD6D15 /* View */,
-				571D62441EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = Monthly;
-			sourceTree = "<group>";
-		};
-		571D62411EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62421EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62431EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62441EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D62451EA495AB00BD6D15 /* ProductConfig */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProductConfig;
-			sourceTree = "<group>";
-		};
-		571D62461EA495AB00BD6D15 /* ProductNavi */ = {
-			isa = PBXGroup;
-			children = (
-				571D62471EA495AB00BD6D15 /* Model */,
-				571D62481EA495AB00BD6D15 /* View */,
-				571D62491EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = ProductNavi;
-			sourceTree = "<group>";
-		};
-		571D62471EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62481EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62491EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D624A1EA495AB00BD6D15 /* Transfer */ = {
-			isa = PBXGroup;
-			children = (
-				571D624B1EA495AB00BD6D15 /* Controller */,
-				571D624C1EA495AB00BD6D15 /* Model */,
-				571D624D1EA495AB00BD6D15 /* View */,
-				571D624E1EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = Transfer;
-			sourceTree = "<group>";
-		};
-		571D624B1EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D624C1EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D624D1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D624E1EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D624F1EA495AB00BD6D15 /* YMFund */ = {
-			isa = PBXGroup;
-			children = (
-				571D62501EA495AB00BD6D15 /* YMFundDetail */,
-				571D62561EA495AB00BD6D15 /* YMFundInvest */,
-				571D625B1EA495AB00BD6D15 /* YMFundList */,
-				571D62601EA495AB00BD6D15 /* YMFundOpenAccount */,
-				571D62701EA495AB00BD6D15 /* YMFundRedeem */,
-				571D62751EA495AB00BD6D15 /* YMFundSerach */,
-			);
-			path = YMFund;
-			sourceTree = "<group>";
-		};
-		571D62501EA495AB00BD6D15 /* YMFundDetail */ = {
-			isa = PBXGroup;
-			children = (
-				571D62511EA495AB00BD6D15 /* Controller */,
-				571D62521EA495AB00BD6D15 /* Model */,
-				571D62531EA495AB00BD6D15 /* RequestService */,
-				571D62541EA495AB00BD6D15 /* View */,
-			);
-			path = YMFundDetail;
-			sourceTree = "<group>";
-		};
-		571D62511EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62521EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62531EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D62541EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				571D62551EA495AB00BD6D15 /* YMChartLineView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62551EA495AB00BD6D15 /* YMChartLineView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = YMChartLineView;
-			sourceTree = "<group>";
-		};
-		571D62561EA495AB00BD6D15 /* YMFundInvest */ = {
-			isa = PBXGroup;
-			children = (
-				571D62571EA495AB00BD6D15 /* Controller */,
-				571D62581EA495AB00BD6D15 /* Model */,
-				571D62591EA495AB00BD6D15 /* RequestService */,
-				571D625A1EA495AB00BD6D15 /* View */,
-			);
-			path = YMFundInvest;
-			sourceTree = "<group>";
-		};
-		571D62571EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62581EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62591EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D625A1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D625B1EA495AB00BD6D15 /* YMFundList */ = {
-			isa = PBXGroup;
-			children = (
-				571D625C1EA495AB00BD6D15 /* Controller */,
-				571D625D1EA495AB00BD6D15 /* Model */,
-				571D625E1EA495AB00BD6D15 /* RequestService */,
-				571D625F1EA495AB00BD6D15 /* View */,
-			);
-			path = YMFundList;
-			sourceTree = "<group>";
-		};
-		571D625C1EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D625D1EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D625E1EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D625F1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62601EA495AB00BD6D15 /* YMFundOpenAccount */ = {
-			isa = PBXGroup;
-			children = (
-				571D62611EA495AB00BD6D15 /* YMFundOpenAccountFirstStep */,
-				571D626A1EA495AB00BD6D15 /* YMFundOpenAccountGuide */,
-				571D626F1EA495AB00BD6D15 /* YMFundOpenAccountSecondStep */,
-			);
-			path = YMFundOpenAccount;
-			sourceTree = "<group>";
-		};
-		571D62611EA495AB00BD6D15 /* YMFundOpenAccountFirstStep */ = {
-			isa = PBXGroup;
-			children = (
-				571D62621EA495AB00BD6D15 /* Controller */,
-				571D62631EA495AB00BD6D15 /* Model */,
-				571D62641EA495AB00BD6D15 /* ViewModel */,
-				571D62651EA495AB00BD6D15 /* YMBankList */,
-			);
-			path = YMFundOpenAccountFirstStep;
-			sourceTree = "<group>";
-		};
-		571D62621EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62631EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62641EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D62651EA495AB00BD6D15 /* YMBankList */ = {
-			isa = PBXGroup;
-			children = (
-				571D62661EA495AB00BD6D15 /* Controller */,
-				571D62671EA495AB00BD6D15 /* Model */,
-				571D62681EA495AB00BD6D15 /* View */,
-				571D62691EA495AB00BD6D15 /* ViewModel */,
-			);
-			path = YMBankList;
-			sourceTree = "<group>";
-		};
-		571D62661EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62671EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62681EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62691EA495AB00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		571D626A1EA495AB00BD6D15 /* YMFundOpenAccountGuide */ = {
-			isa = PBXGroup;
-			children = (
-				571D626B1EA495AB00BD6D15 /* Controller */,
-				571D626C1EA495AB00BD6D15 /* Model */,
-				571D626D1EA495AB00BD6D15 /* RequestService */,
-				571D626E1EA495AB00BD6D15 /* View */,
-			);
-			path = YMFundOpenAccountGuide;
-			sourceTree = "<group>";
-		};
-		571D626B1EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D626C1EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D626D1EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D626E1EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D626F1EA495AB00BD6D15 /* YMFundOpenAccountSecondStep */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = YMFundOpenAccountSecondStep;
-			sourceTree = "<group>";
-		};
-		571D62701EA495AB00BD6D15 /* YMFundRedeem */ = {
-			isa = PBXGroup;
-			children = (
-				571D62711EA495AB00BD6D15 /* Controller */,
-				571D62721EA495AB00BD6D15 /* Model */,
-				571D62731EA495AB00BD6D15 /* RequestService */,
-				571D62741EA495AB00BD6D15 /* View */,
-			);
-			path = YMFundRedeem;
-			sourceTree = "<group>";
-		};
-		571D62711EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		571D62721EA495AB00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D62731EA495AB00BD6D15 /* RequestService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestService;
-			sourceTree = "<group>";
-		};
-		571D62741EA495AB00BD6D15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		571D62751EA495AB00BD6D15 /* YMFundSerach */ = {
-			isa = PBXGroup;
-			children = (
-				571D62761EA495AB00BD6D15 /* Controller */,
-			);
-			path = YMFundSerach;
-			sourceTree = "<group>";
-		};
-		571D62761EA495AB00BD6D15 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		571D62771EA495AB00BD6D15 /* PublicInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -2133,45 +1332,6 @@
 				571D627E1EA495AB00BD6D15 /* MyGetRewardInfoService.m */,
 			);
 			path = GetRewardInfoService;
-			sourceTree = "<group>";
-		};
-		571D627F1EA495AB00BD6D15 /* UserCenter */ = {
-			isa = PBXGroup;
-			children = (
-				571D63DA1EA495AC00BD6D15 /* UserUtil */,
-			);
-			path = UserCenter;
-			sourceTree = "<group>";
-		};
-		571D63DA1EA495AC00BD6D15 /* UserUtil */ = {
-			isa = PBXGroup;
-			children = (
-				571D63DB1EA495AC00BD6D15 /* GjfaxKeyChain */,
-				571D63DC1EA495AC00BD6D15 /* Model */,
-				571D63DD1EA495AC00BD6D15 /* ViewModel */,
-			);
-			path = UserUtil;
-			sourceTree = "<group>";
-		};
-		571D63DB1EA495AC00BD6D15 /* GjfaxKeyChain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GjfaxKeyChain;
-			sourceTree = "<group>";
-		};
-		571D63DC1EA495AC00BD6D15 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		571D63DD1EA495AC00BD6D15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		571D63DE1EA495AC00BD6D15 /* ThirdParty */ = {
@@ -2775,6 +1935,7 @@
 				571D655C1EA495AC00BD6D15 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				571D65181EA495AC00BD6D15 /* WebViewController.xib in Resources */,
 				571D65521EA495AC00BD6D15 /* ShareSDKLocalizable.strings in Resources */,
+				570D37681F29E192008E9FC6 /* NotificationViewController.xib in Resources */,
 				C176E9171EE2E6D100D83EB2 /* YesterdayMenuViewController.xib in Resources */,
 				571D65471EA495AC00BD6D15 /* SCNavTabBar.bundle in Resources */,
 				C11DF3CF1EE2894B00DEA7F8 /* RadomViewController.xib in Resources */,
@@ -2926,6 +2087,7 @@
 				571D64F91EA495AC00BD6D15 /* SpecialLogicErrorTool.m in Sources */,
 				571D656A1EA495AC00BD6D15 /* WebViewJavascriptBridgeBase.m in Sources */,
 				571D64DB1EA495AC00BD6D15 /* CustomImgBgLabel.m in Sources */,
+				570D37671F29E192008E9FC6 /* NotificationViewController.m in Sources */,
 				571D65011EA495AC00BD6D15 /* FPSObserver.m in Sources */,
 				571D64DF1EA495AC00BD6D15 /* CustomSecondRateButton.m in Sources */,
 				571D65481EA495AC00BD6D15 /* SCNavTabBarController.m in Sources */,
@@ -3065,7 +2227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -3107,7 +2269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

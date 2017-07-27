@@ -38,6 +38,9 @@ NSString *const BdTableTypeName = @"BDMenuTypeTable";
 NSString *const BdOldTableName = @"BDOldMenuTable";
 NSString *const BDOleMenuTimeTable = @"BDOleMenuTimeTable";
 
+NSString *const BdNotificationTableName = @"BdNotificationTableName";
+NSString *const BdNotificationConstentName = @"BdNotificationConstentName";
+
 @interface RMTBdReportBufferManager ()
 @property (nonatomic, strong)FMDatabase *dataBase;
 
@@ -574,4 +577,86 @@ NSString *const BDOleMenuTimeTable = @"BDOleMenuTimeTable";
     return NO;
 }
 
+- (void)insertNotificaitonIntoTableForConstent:(NSString *)constent
+                                        result:(void (^)(id))block
+{
+    if([_dataBase open])
+    {
+          NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' INTEGER PRIMARY KEY AUTOINCREMENT, '%@' TEXT)", BdNotificationTableName, BdReportPrimaryKey, BdNotificationConstentName];
+        if([_dataBase executeUpdate:sqlCreateTable])
+        {
+            // 创建表成功
+            
+            NSString *sqlInsert = [NSString stringWithFormat:@"INSERT INTO '%@' ('%@') VALUES ('%@')", BdNotificationTableName, BdNotificationConstentName, constent];
+            
+            
+            if(constent != nil)
+            {
+                if([_dataBase executeUpdate:sqlInsert])
+                {
+                    // 插入表格成功
+                    block(nil);
+                }
+                else
+                {
+                    NSLog(@"insert into bdreport table %@ failed %@", BdNotificationTableName, [_dataBase lastError]);
+                    block([_dataBase lastError]);
+                }
+            }
+            else
+            {
+                block([NSError errorWithDomain:@"nil error" code:-1 userInfo:@{@"userInfo":@"bdreport try to insert nil"}]);
+            }
+        }
+        else
+        {
+            NSLog(@"创建 %@ failed %@", BdNotificationTableName, [_dataBase lastError]);
+            block([_dataBase lastError]);
+        }
+        
+        [_dataBase close];
+    }
+    
+}
+
+- (void)queryNotificaitonConstentCallBackResult:(void (^)(NSArray* seqsArray,id result))block
+{
+    if([_dataBase open])
+    {
+        NSString *sqlQuery = [NSString stringWithFormat:@"SELECT * FROM %@ LIMIT %@", BdNotificationTableName, @(5000)];
+        NSMutableArray *seqsArray = [NSMutableArray array];
+        
+        FMResultSet *resultSets = [_dataBase executeQuery:sqlQuery];
+        
+        NSInteger cachedReportNumber = 0;
+        while ([resultSets next])
+        {
+            cachedReportNumber++;
+            
+            NSString *seqString = [resultSets stringForColumn:BdNotificationConstentName];
+           
+            
+            NSString *idNumber = [resultSets stringForColumn:BdReportPrimaryKey];
+            NSString *seqStringF8 = [NSString stringWithString:[seqString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+         
+            
+            {
+                NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
+                [dict setObject:idNumber forKey:BdReportPrimaryKey];
+                [dict setObject:seqStringF8 forKey:BdNotificationConstentName];
+                [seqsArray addObject:dict];
+            }
+        }
+        
+        NSLog(@"query bdrepport %ld", (unsigned long)seqsArray.count);
+        
+        
+        block(seqsArray, nil);
+        
+        
+        
+        [_dataBase close];
+    }
+    
+}
 @end
