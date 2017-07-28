@@ -675,6 +675,7 @@ NSString *const BdNotificationHistoryKeyName = @"BdNotificationHistoryKeyName";
         NSString *sqlDelete = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = '%@'", BdNotificationTableName, key, value];
         if([_dataBase executeUpdate:sqlDelete])
         {
+            DLog(@"delete ");
             // 删除成功
             block(nil);
         }

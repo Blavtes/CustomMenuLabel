@@ -13,7 +13,7 @@
 @interface NotificationViewController () <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-
+#define LOCAL_NOTIFY_SCHEDULE_ID @"LOCAL_NOTIFY_SCHEDULE_ID"
 @end
 
 @implementation NotificationViewController
@@ -26,25 +26,34 @@
     _datePicker.date = [NSDate dateWithTimeIntervalSinceNow:0];
     _datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:0];
     __weak typeof(self) weakSelf = self;
-    [self.navTopView showRightTitle:@"记录" rightHandle:^(UIButton *view) {
+    [self.navTopView showRightTitle:@"查看" rightHandle:^(UIButton *view) {
         NotificationRecordListViewController *vc = [NotificationRecordListViewController new];
         [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
+    
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)resestClick:(id)sender {
+    self.textView.text = @"";
+}
+
 
 - (IBAction)addClick:(id)sender {
     if (self.textView.text.length <= 0) {
         Show_iToast(@"蠢货，你加了内容了吗~")
         return;
     }
+    [_textView resignFirstResponder];
     NSString *content = self.textView.text;
     NSString *key = [content MD5Sum];
+    __weak typeof(self) weakSelf = self;
     RMTBdReportBufferManager *manage = [[RMTBdReportBufferManager alloc] init];
     [manage insertNotificaitonIntoTableForConstent:content
                                                key:key
                                             result:^(id result) {
         DLog(@"instert");
+                                                weakSelf.textView.text = @"";
+                                                
     }];
 }
 
@@ -53,12 +62,122 @@
 }
 
 - (IBAction)openNotification:(id)sender {
-    [self queryNotificationData];
+//    [self queryNotificationData];
+    [NotificationViewController cancelAllNotificaiton];
+
+    [self setRemindTime];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)setRemindTime
+{
+    
+    //取得系统的时间，并将其一个个赋值给变量
+    NSDate* now = [NSDate date];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay |kCFCalendarUnitWeek| NSCalendarUnitWeekday |
+    NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+   
+    
+    
+    //    int hour = [comps hour];
+    //    int min = [comps minute];
+    //    int sec = [comps second];
+    
+    NSArray *arr = @[@(9),@(12),@(15),@(16),@(19),@(21)];
+    
+    for (int newWeekDay =2; newWeekDay<=6; newWeekDay++) {
+        
+      
+        
+        for (int i = 0; i < arr.count; i++) {
+            int temp = 0;
+            int days = 0;
+            NSDateComponents *comps = [[NSDateComponents alloc] init];
+            comps = [calendar components:unitFlags fromDate:now];
+            
+            temp = newWeekDay - comps.weekday;
+            days = (temp >= 0 ? temp : temp + 7);
+            
+            [comps setHour:[arr[i] intValue]];
+            [comps setMinute:0];
+            [comps setSecond:0];
+            NSDate *newFireDate2 = [[[NSCalendar currentCalendar] dateFromComponents:comps] dateByAddingTimeInterval:3600 * 24 * days];
+            [self scheduleNotificationWithItem:@"" fireDate:newFireDate2];
+        }
+    }
+    
+}
+
+- (void)scheduleNotificationWithItem:(NSString *)alertItem fireDate:(NSDate*)date
+{
+    RMTBdReportBufferManager *manager = [[RMTBdReportBufferManager alloc] init];
+    [manager queryNotificaitonConstentCallBackResult:^(NSArray *seqsArray, id result) {
+        DLog(@"seq %@",seqsArray);
+        NSInteger count = seqsArray.count;
+        
+        if (count > 0) {
+            if ( count > 1) {
+                count =  arc4random() % count;
+            } else {
+                count = 0;
+            }
+            
+            DLog(@"count %ld",count);
+            NSDictionary *infoDic = seqsArray[count];
+            
+            //初始化
+            UILocalNotification *locationNotification = [[UILocalNotification alloc]init];
+            locationNotification.fireDate =date;
+            //NSLog(@"推送时间%@",locationNotification.fireDate);
+            locationNotification.timeZone = [NSTimeZone defaultTimeZone];
+            //设置重复周期
+            locationNotification.repeatInterval = kCFCalendarUnitWeek;
+            //设置通知的音乐
+            locationNotification.soundName = UILocalNotificationDefaultSoundName;
+            //设置通知内容
+//            locationNotification.alertBody = alertItem;
+            
+            locationNotification.userInfo = infoDic;
+            //执行本地推送
+            [[UIApplication sharedApplication] scheduleLocalNotification:locationNotification];
+        } else {
+            Show_iToast(@"先添加消息~");
+        }
+        
+    }];
+    //[[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    
+}
+
+-(void)cancelNotification
+{
+    //取消通知
+    
+    //获取当前所有的本地通知
+    NSArray *notificaitons = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    if (!notificaitons || notificaitons.count <= 0)
+    {
+        return;
+    }
+    //取消一个特定的通知
+    for (UILocalNotification *notify in notificaitons)
+    {
+        
+        if ([[notify.userInfo objectForKey:@"id"] isEqualToString:LOCAL_NOTIFY_SCHEDULE_ID])
+        {
+            [[UIApplication sharedApplication] cancelLocalNotification:notify];
+            
+        }
+    }
+    
 }
 
 /*
@@ -204,14 +323,56 @@
         // 更新显示的徽章个数
         [NotificationViewController cancelLocalNotificationWithKey:dict[BdNotificationKeyName]];
         
-        [NotificationViewController repeatNotificaiton:dict nextTime:2 * 60 * 60];
+        
+        RMTBdReportBufferManager *manager = [[RMTBdReportBufferManager alloc] init];
+        [manager queryNotificaitonConstentCallBackResult:^(NSArray *seqsArray, id result) {
+            DLog(@"seq %@",seqsArray);
+            NSInteger count = seqsArray.count;
+
+            if (count > 0) {
+                if ( count > 1) {
+                    count =  arc4random() % count;
+                } else {
+                    count = 0;
+                }
+                
+                DLog(@"count %ld",count);
+                NSDictionary *dic = seqsArray[count];
+                [NotificationViewController repeatNotificaiton:dic nextTime:2 * 60 * 60];
+                
+            } else {
+                Show_iToast(@"先添加消息~");
+            }
+            
+        }];
+        
 
     }];
     
     UIAlertAction *yes = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [NotificationViewController cancelLocalNotificationWithKey:dict[BdNotificationKeyName]];
-      
-        [NotificationViewController repeatNotificaiton:dict nextTime:4 * 60 * 60];
+        
+        RMTBdReportBufferManager *manager = [[RMTBdReportBufferManager alloc] init];
+        [manager queryNotificaitonConstentCallBackResult:^(NSArray *seqsArray, id result) {
+            DLog(@"seq %@",seqsArray);
+            NSInteger count = seqsArray.count;
+            
+            if (count > 0) {
+                if ( count > 1) {
+                    count =  arc4random() % count;
+                } else {
+                    count = 0;
+                }
+                
+                DLog(@"count %ld",count);
+                NSDictionary *dic = seqsArray[count];
+                [NotificationViewController repeatNotificaiton:dic nextTime:4 * 60 * 60];
+
+            } else {
+                Show_iToast(@"先添加消息~");
+            }
+            
+        }];
         
     }];
     [vc addAction:no];
