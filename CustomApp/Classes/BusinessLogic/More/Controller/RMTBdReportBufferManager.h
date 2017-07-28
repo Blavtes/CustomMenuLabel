@@ -48,6 +48,11 @@ extern NSString *const BDOleMenuTimeTable;
 
 extern NSString *const BdNotificationTableName;
 extern NSString *const BdNotificationConstentName;
+extern NSString *const BdNotificationKeyName;
+
+extern NSString *const BdNotificationHistoryTableName;
+extern NSString *const BdNotificationHistoryConstentName;
+extern NSString *const BdNotificationHistoryKeyName;
 
 @interface RMTBdReportBufferManager : NSObject
 
@@ -127,8 +132,22 @@ extern NSString *const BdNotificationConstentName;
                          value:(NSString *)value // 插入table的信息对应的key值
                         result:(void (^)(id result))block;
 
+//通知信息本
 - (void)insertNotificaitonIntoTableForConstent:(NSString *)constent
+                                           key:(NSString *)key
                         result:(void (^)(id result))block;
-
+//通知信息查询
 - (void)queryNotificaitonConstentCallBackResult:(void (^)(NSArray* seqsArray,id result))block;
+//删除通知样本
+- (void)deleteNotificaitonIntoFromTableKey:(NSString *)key
+                                     value:(NSString *)value // 插入table的信息对应的key值
+                                    result:(void (^)(id result))block;
+//添加通知
+- (void)insertHistoryNotificaitonIntoTableForConstent:(NSString *)constent
+                                                  key:(NSString *)key
+                                        result:(void (^)(id result))block;
+//通知信息查询
+- (void)queryHistoryNotificaitonConstentCallBackResult:(void (^)(NSArray* seqsArray,id result))block;
+//删除 通知消息
+- (void)deleteHistoryNotificaitonIntoFromTableKey:(NSString *)key value:(NSString *)value result:(void (^)(id))block;
 @end

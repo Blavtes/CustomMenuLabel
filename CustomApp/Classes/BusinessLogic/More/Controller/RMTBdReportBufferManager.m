@@ -40,6 +40,11 @@ NSString *const BDOleMenuTimeTable = @"BDOleMenuTimeTable";
 
 NSString *const BdNotificationTableName = @"BdNotificationTableName";
 NSString *const BdNotificationConstentName = @"BdNotificationConstentName";
+NSString *const BdNotificationKeyName = @"BdNotificationKeyName";
+
+NSString *const BdNotificationHistoryTableName = @"BdNotificationHistoryTableName";
+NSString *const BdNotificationHistoryConstentName = @"BdNotificationHistoryConstentName";
+NSString *const BdNotificationHistoryKeyName = @"BdNotificationHistoryKeyName";
 
 @interface RMTBdReportBufferManager ()
 @property (nonatomic, strong)FMDatabase *dataBase;
@@ -578,16 +583,17 @@ NSString *const BdNotificationConstentName = @"BdNotificationConstentName";
 }
 
 - (void)insertNotificaitonIntoTableForConstent:(NSString *)constent
+                                           key:(NSString *)key
                                         result:(void (^)(id))block
 {
     if([_dataBase open])
     {
-          NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' INTEGER PRIMARY KEY AUTOINCREMENT, '%@' TEXT)", BdNotificationTableName, BdReportPrimaryKey, BdNotificationConstentName];
+          NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' INTEGER PRIMARY KEY AUTOINCREMENT, '%@' TEXT,'%@' TEXT)", BdNotificationTableName, BdReportPrimaryKey,BdNotificationKeyName, BdNotificationConstentName];
         if([_dataBase executeUpdate:sqlCreateTable])
         {
             // 创建表成功
             
-            NSString *sqlInsert = [NSString stringWithFormat:@"INSERT INTO '%@' ('%@') VALUES ('%@')", BdNotificationTableName, BdNotificationConstentName, constent];
+            NSString *sqlInsert = [NSString stringWithFormat:@"INSERT INTO '%@' ('%@','%@') VALUES ('%@','%@')", BdNotificationTableName,BdNotificationKeyName, BdNotificationConstentName ,key,constent];
             
             
             if(constent != nil)
@@ -634,16 +640,17 @@ NSString *const BdNotificationConstentName = @"BdNotificationConstentName";
             cachedReportNumber++;
             
             NSString *seqString = [resultSets stringForColumn:BdNotificationConstentName];
-           
+           NSString *key = [resultSets stringForColumn:BdNotificationKeyName];
             
             NSString *idNumber = [resultSets stringForColumn:BdReportPrimaryKey];
             NSString *seqStringF8 = [NSString stringWithString:[seqString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-         
+           NSString *keyF8 = [NSString stringWithString:[key stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
             
             {
                 NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
                 [dict setObject:idNumber forKey:BdReportPrimaryKey];
                 [dict setObject:seqStringF8 forKey:BdNotificationConstentName];
+                [dict setObject:keyF8 forKey:BdNotificationKeyName];
                 [seqsArray addObject:dict];
             }
         }
@@ -659,4 +666,135 @@ NSString *const BdNotificationConstentName = @"BdNotificationConstentName";
     }
     
 }
+
+- (void)deleteNotificaitonIntoFromTableKey:(NSString *)key value:(NSString *)value result:(void (^)(id))block
+{
+    
+    if([_dataBase open])
+    {
+        NSString *sqlDelete = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = '%@'", BdNotificationTableName, key, value];
+        if([_dataBase executeUpdate:sqlDelete])
+        {
+            // 删除成功
+            block(nil);
+        }
+        else
+        {
+            NSLog(@"delete from bdreport table %@ single failed %@", BdNotificationTableName, [_dataBase lastError]);
+            block([_dataBase lastError]);
+        }
+        
+        [_dataBase close];
+    }
+}
+
+- (void)insertHistoryNotificaitonIntoTableForConstent:(NSString *)constent
+                                                  key:(NSString *)key
+                                        result:(void (^)(id))block
+{
+    if([_dataBase open])
+    {
+        NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' INTEGER PRIMARY KEY AUTOINCREMENT, '%@' TEXT,'%@' TEXT)", BdNotificationHistoryTableName, BdReportPrimaryKey, BdNotificationHistoryKeyName,BdNotificationHistoryConstentName];
+        if([_dataBase executeUpdate:sqlCreateTable])
+        {
+            // 创建表成功
+            
+            NSString *sqlInsert = [NSString stringWithFormat:@"INSERT INTO '%@' ('%@','%@') VALUES ('%@','%@')", BdNotificationHistoryTableName, BdNotificationHistoryKeyName,BdNotificationHistoryConstentName,key, constent];
+            
+            
+            if(constent != nil)
+            {
+                if([_dataBase executeUpdate:sqlInsert])
+                {
+                    // 插入表格成功
+                    block(nil);
+                }
+                else
+                {
+                    NSLog(@"insert into bdreport table %@ failed %@", BdNotificationTableName, [_dataBase lastError]);
+                    block([_dataBase lastError]);
+                }
+            }
+            else
+            {
+                block([NSError errorWithDomain:@"nil error" code:-1 userInfo:@{@"userInfo":@"bdreport try to insert nil"}]);
+            }
+        }
+        else
+        {
+            NSLog(@"创建 %@ failed %@", BdNotificationTableName, [_dataBase lastError]);
+            block([_dataBase lastError]);
+        }
+        
+        [_dataBase close];
+    }
+    
+}
+
+- (void)queryHistoryNotificaitonConstentCallBackResult:(void (^)(NSArray* seqsArray,id result))block
+{
+    if([_dataBase open])
+    {
+        NSString *sqlQuery = [NSString stringWithFormat:@"SELECT * FROM %@ LIMIT %@", BdNotificationHistoryTableName, @(5000)];
+        NSMutableArray *seqsArray = [NSMutableArray array];
+        
+        FMResultSet *resultSets = [_dataBase executeQuery:sqlQuery];
+        
+        NSInteger cachedReportNumber = 0;
+        while ([resultSets next])
+        {
+            cachedReportNumber++;
+            
+            NSString *seqStringKey = [resultSets stringForColumn:BdNotificationHistoryKeyName];
+            NSString *seqString = [resultSets stringForColumn:BdNotificationHistoryConstentName];
+
+            
+            NSString *idNumber = [resultSets stringForColumn:BdReportPrimaryKey];
+            
+            NSString *seqStringF8 = [NSString stringWithString:[seqString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            
+            NSString *seqStringF8key = [NSString stringWithString:[seqStringKey stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            
+            {
+                NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
+                [dict setObject:idNumber forKey:BdReportPrimaryKey];
+                [dict setObject:seqStringF8 forKey:BdNotificationHistoryConstentName];
+                [dict setObject:seqStringF8key forKey:BdNotificationHistoryKeyName];
+                [seqsArray addObject:dict];
+            }
+        }
+        
+        NSLog(@"query bdrepport %ld", (unsigned long)seqsArray.count);
+        
+        
+        block(seqsArray, nil);
+        
+        
+        
+        [_dataBase close];
+    }
+    
+}
+
+- (void)deleteHistoryNotificaitonIntoFromTableKey:(NSString *)key value:(NSString *)value result:(void (^)(id))block
+{
+    
+    if([_dataBase open])
+    {
+        NSString *sqlDelete = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = '%@'", BdNotificationHistoryTableName, key, value];
+        if([_dataBase executeUpdate:sqlDelete])
+        {
+            // 删除成功
+            block(nil);
+        }
+        else
+        {
+            NSLog(@"delete from bdreport table %@ single failed %@", BdNotificationHistoryTableName, [_dataBase lastError]);
+            block([_dataBase lastError]);
+        }
+        
+        [_dataBase close];
+    }
+}
+
 @end
