@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Notification/NotificationViewController.m"
-            timestampString = "522928730.557486"
+            timestampString = "523261854.142657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-openNotification:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Notification/NotificationViewController.m"
-            timestampString = "522928730.557486"
+            timestampString = "523261854.142657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-openNotification:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Notification/NotificationViewController.m"
-            timestampString = "522929398.927076"
+            timestampString = "523261854.142657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
             landmarkName = "-addNotificationInfo:"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Notification/NotificationViewController.m"
-            timestampString = "522928730.557486"
+            timestampString = "523261854.142657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "-addClick:"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Notification/NotificationRecordListViewController.m"
-            timestampString = "522924312.809754"
+            timestampString = "523183381.10437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Notification/NotificationRecordListViewController.m"
-            timestampString = "522927538.537144"
+            timestampString = "523183381.10437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
             <Actions>
@@ -297,6 +297,22 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/Notification/NotificationViewController.m"
+            timestampString = "523261854.142657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

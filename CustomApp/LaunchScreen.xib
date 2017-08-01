@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,10 +15,26 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-ic-gAb">
+                    <rect key="frame" x="208.5" y="208" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="AbS-ic-gAb" secondAttribute="height" id="cSf-aK-AkR"/>
+                        <constraint firstAttribute="width" constant="64" id="tuF-33-ylU"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="AbS-ic-gAb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DBG-r2-H06"/>
+                <constraint firstItem="AbS-ic-gAb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PGx-r8-VCL"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="AppIcon" width="16" height="16"/>
+    </resources>
 </document>

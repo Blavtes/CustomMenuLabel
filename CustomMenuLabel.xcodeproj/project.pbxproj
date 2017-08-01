@@ -195,6 +195,7 @@
 		571D65821EA49A6400BD6D15 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D65811EA49A6400BD6D15 /* libz.tbd */; };
 		571D65841EA49A6B00BD6D15 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D65831EA49A6B00BD6D15 /* libicucore.tbd */; };
 		571D65861EA49A7300BD6D15 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D65851EA49A7300BD6D15 /* libstdc++.tbd */; };
+		574715981F3054E4009B0BB4 /* LocalPushCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 574715971F3054E4009B0BB4 /* LocalPushCenter.m */; };
 		579F2F4F1EA49F6100DD2CCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */; };
 		57A4F1311F2B12AB0014378E /* NotificationRecordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */; };
 		57A4F1321F2B12AB0014378E /* NotificationRecordListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A4F1301F2B12AB0014378E /* NotificationRecordListViewController.xib */; };
@@ -573,6 +574,8 @@
 		571D65811EA49A6400BD6D15 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		571D65831EA49A6B00BD6D15 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		571D65851EA49A7300BD6D15 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		574715961F3054E4009B0BB4 /* LocalPushCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPushCenter.h; sourceTree = "<group>"; };
+		574715971F3054E4009B0BB4 /* LocalPushCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalPushCenter.m; sourceTree = "<group>"; };
 		579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		57A4F12E1F2B12AB0014378E /* NotificationRecordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRecordListViewController.h; sourceTree = "<group>"; };
 		57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRecordListViewController.m; sourceTree = "<group>"; };
@@ -676,6 +679,8 @@
 		570D37631F29E16E008E9FC6 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				574715961F3054E4009B0BB4 /* LocalPushCenter.h */,
+				574715971F3054E4009B0BB4 /* LocalPushCenter.m */,
 				570D37641F29E192008E9FC6 /* NotificationViewController.h */,
 				570D37651F29E192008E9FC6 /* NotificationViewController.m */,
 				570D37661F29E192008E9FC6 /* NotificationViewController.xib */,
@@ -2069,6 +2074,7 @@
 				571D64931EA495AC00BD6D15 /* UserInfoUtil.m in Sources */,
 				571D64CD1EA495AC00BD6D15 /* UIView+Extension.m in Sources */,
 				571D65291EA495AC00BD6D15 /* ASProgressPopUpView.m in Sources */,
+				574715981F3054E4009B0BB4 /* LocalPushCenter.m in Sources */,
 				571D64911EA495AC00BD6D15 /* LoginInfoModel.m in Sources */,
 				571D653A1EA495AC00BD6D15 /* KeychainItemWrapper.m in Sources */,
 				571D64DE1EA495AC00BD6D15 /* CustomPWDAlertView.m in Sources */,

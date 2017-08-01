@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationViewController">
             <connections>
+                <outlet property="closeNotiBtn" destination="h0t-TG-m9e" id="6kY-x8-Ug1"/>
                 <outlet property="datePicker" destination="207-Lk-5tf" id="rXb-ux-4Rg"/>
                 <outlet property="textView" destination="AED-Zu-ZnU" id="aKq-bD-4Qz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -48,7 +49,7 @@
                                 <constraint firstAttribute="height" constant="30" id="qC3-g7-fHV"/>
                             </constraints>
                             <state key="normal" title="添加">
-                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="addClick:" destination="-1" eventType="touchUpInside" id="2mL-vF-FLJ"/>
@@ -62,7 +63,7 @@
                                 <constraint firstAttribute="height" constant="30" id="wpM-1l-XiY"/>
                             </constraints>
                             <state key="normal" title="开启">
-                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="openNotification:" destination="-1" eventType="touchUpInside" id="mWT-AR-Fqk"/>
@@ -76,7 +77,7 @@
                                 <constraint firstAttribute="width" constant="60" id="qXB-HP-79R"/>
                             </constraints>
                             <state key="normal" title="重置">
-                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="resestClick:" destination="-1" eventType="touchUpInside" id="sgc-jh-wIb"/>
@@ -96,7 +97,7 @@
                                 <constraint firstAttribute="width" constant="60" id="Z2Q-pS-QSs"/>
                             </constraints>
                             <state key="normal" title="关闭">
-                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="closeNotificaiton:" destination="-1" eventType="touchUpInside" id="aVs-fB-bKh"/>

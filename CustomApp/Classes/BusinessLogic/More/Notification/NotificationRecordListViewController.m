@@ -130,10 +130,11 @@
     view.backgroundColor = COMMON_GREY_WHITE_COLOR;
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 100, 30)];
     label.backgroundColor = [UIColor clearColor];
+    label.textColor = COMMON_BLACK_COLOR;
     if (section == 0) {
-        label.text = @"消息记录";
+        label.text = @"减肥语录";
     } else {
-        label.text = @"通知记录";
+        label.text = @"提醒设置";
     }
     [view addSubview:label];
     return view;
@@ -157,30 +158,41 @@
     
     cell.backgroundColor = [UIColor whiteColor];
     
-    cell.textLabel.textColor = COMMON_BLACK_COLOR;
-    cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
-    cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeTitle_18];
+//    cell.textLabel.textColor = COMMON_BLACK_COLOR;
+//    cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
+//    cell.textLabel.font = [UIFont systemFontOfSize:kCommonFontSizeTitle_18];
     NSDictionary *dict = _dataArray[indexPath.section][indexPath.row];
    
     DLog(@"cell....");
   
     if (indexPath.section == 1) {
-          cell.textLabel.text = dict[@"user"][BdNotificationConstentName];
+        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, MAIN_SCREEN_WIDTH - 120, 40)];
+        title.text = dict[@"user"][BdNotificationConstentName];
+        title.font = [UIFont systemFontOfSize:kCommonFontSizeDetail_16];
+        title.textColor = COMMON_BLACK_COLOR;
+        [cell.contentView addSubview:title];
+        
         if (((NSArray*)_dataArray[indexPath.section]).count > 1) {
             UILabel *detail = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, MAIN_SCREEN_WIDTH - 120, 40)];
             detail.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
+            detail.textColor = COMMON_BLACK_COLOR;
             detail.textAlignment = NSTextAlignmentRight;
             NSDate *date = dict[@"time"];
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
-            [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; //每次启动后都保存一个新的日志文件中
+            [formatter setDateFormat:@"MM-dd HH:mm"]; //每次启动后都保存一个新的日志文件中
             NSString *dateStr = [formatter stringFromDate:date];
             detail.text = dateStr;
             [cell.contentView addSubview:detail];
         }
        
     } else {
-          cell.textLabel.text = dict[BdNotificationConstentName];
+//          cell.textLabel.text = dict[BdNotificationConstentName];
+        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, MAIN_SCREEN_WIDTH - 120, 40)];
+        title.text = dict[BdNotificationConstentName];
+        title.font = [UIFont systemFontOfSize:kCommonFontSizeDetail_16];
+        title.textColor = COMMON_BLACK_COLOR;
+        [cell.contentView addSubview:title];
     }
 
     cell.selectionStyle = UITableViewCellSelectionStyleGray;

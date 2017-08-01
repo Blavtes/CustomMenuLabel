@@ -54,6 +54,8 @@ static float const kLaunchSleepTime = 1.5f;
 //  告诉代理启动基本完成程序准备开始运行
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+  
+    
     //  显示状态栏
     application.statusBarHidden = NO;
     //  延迟启动页显示时间
@@ -62,11 +64,11 @@ static float const kLaunchSleepTime = 1.5f;
     [_window makeKeyAndVisible];
     
     //开启bugly
-    [BuglyTool setupBuglyConfig];
+//    [BuglyTool setupBuglyConfig];
     
     //开启JSPatch
     
-    [JSPatchTool startJSPatch];
+//    [JSPatchTool startJSPatch];
     //  设置根控制器
     [self addRootWindowVc];
     
@@ -79,7 +81,7 @@ static float const kLaunchSleepTime = 1.5f;
     //[self initCoreSpotlight];
     
     //  注册分享
-    [GJSShareSDKManager regeistShareSDK];
+//    [GJSShareSDKManager regeistShareSDK];
     
 #pragma mark - 发送采集数据
     
@@ -212,7 +214,6 @@ static float const kLaunchSleepTime = 1.5f;
 #else
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeBadge |UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
 #endif
-    
 }
 
 //  禁止横屏
@@ -222,23 +223,23 @@ static float const kLaunchSleepTime = 1.5f;
 }
 
 
-- (BOOL)application:(UIApplication *)application
-      handleOpenURL:(NSURL *)url
-{
-    return [ShareSDK handleOpenURL:url
-                        wxDelegate:self];
-}
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return [ShareSDK handleOpenURL:url
-                 sourceApplication:sourceApplication
-                        annotation:annotation
-                        wxDelegate:self];
-}
+//- (BOOL)application:(UIApplication *)application
+//      handleOpenURL:(NSURL *)url
+//{
+//    return [ShareSDK handleOpenURL:url
+//                        wxDelegate:self];
+//}
+//
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication
+//         annotation:(id)annotation
+//{
+//    return [ShareSDK handleOpenURL:url
+//                 sourceApplication:sourceApplication
+//                        annotation:annotation
+//                        wxDelegate:self];
+//}
 
 #pragma mark - 启动页
 - (void)launchView
@@ -374,10 +375,10 @@ static float const kLaunchSleepTime = 1.5f;
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     //  当应用程序入活动状态执行，这个刚好跟上面那个方法相反
     //清空所有通知，置为0，将icon上的红点消失
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
+    
     // [EXT] 重新上线
-    [GeTuiManager starGeTuiSDK];
+//    [GeTuiManager starGeTuiSDK];
     
 }
 
@@ -385,7 +386,7 @@ static float const kLaunchSleepTime = 1.5f;
     //  当程序被推送到后台的时候调用。所以要设置后台继续运行，则在这个函数里面设置即可
     
     // [EXT] APP进入后台时，通知个推SDK进入后台
-    [GeTuiManager enterBackGroud];
+//    [GeTuiManager enterBackGroud];
     
 }
 
@@ -401,12 +402,12 @@ static float const kLaunchSleepTime = 1.5f;
     NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
     DLog(@"消息推送号 ＝＝＝ %@",token);
-    [GeTuiManager registerDeviceToken:token];
+
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    [GeTuiManager registerDeviceToken:@""];
+    
     DLog(@"didFailToRegisterForRemoteNotificationsWithError Registfail:%@\n", [error localizedDescription]);
 }
 
@@ -430,7 +431,7 @@ static float const kLaunchSleepTime = 1.5f;
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     //[5] Background Fetch 恢复SDK 运行
-    [GeTuiManager GeTuiBackGroudFetchResume];
+    
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
