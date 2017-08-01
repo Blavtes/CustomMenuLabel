@@ -36,9 +36,9 @@
 
 #pragma mark ----------- bugly --------
 #ifdef DEBUG
-#define BUGLY_APP_ID @"b96681cfef"
+#define BUGLY_APP_ID @""
 #else
-#define BUGLY_APP_ID @"e284de6781"
+#define BUGLY_APP_ID @""
 #endif
 
 @implementation BuglyTool

@@ -15,10 +15,10 @@
 
 #import "PreCommonHeader.h"
 
-#import "GeTuiManager.h"
-#import "GJSShareSDKManager.h"
+//#import "GeTuiManager.h"
+//#import "GJSShareSDKManager.h"
 
-#import <ShareSDK/ShareSDK.h>
+//#import <ShareSDK/ShareSDK.h>
 #import "ThreeDTouchTool.h"
 
 #import "WebViewController.h"

@@ -7,7 +7,7 @@
 //
 
 #import "WebViewController.h"
-#import "GJSShareSDKManager.h"
+//#import "GJSShareSDKManager.h"
 
 #import "GJSSwipeBackTool.h"
 #import "WebViewJavascriptBridge.h"
@@ -440,79 +440,79 @@
 #pragma mark 分享事件触发
 - (void)showShareSheet
 {
-    [UMEventIDManager sendEvent:E_ID_More_ActivityCenter_Click_Shared_Btn];
-    
-    UIImage *image = [UIImage imageWithName:@"icon80x80"];
-    id<ISSCAttachment> imageUrl = nil;
-    
-    if (self.imageView) {
-        NSString *strUrl = ObjectForKeySafety(self.shareParams, @"logopath");
-        NSString *ulrStr = ObjectForKeySafety(self.shareParams, @"shareLogoUrl");
-        if (strUrl && ![strUrl isNullStr]) {
-            imageUrl = [ShareSDK imageWithUrl:ObjectForKeySafety(self.shareParams, @"logopath")];
-        } else if (ulrStr && ![ulrStr isNullStr]) {
-            imageUrl = [ShareSDK imageWithUrl:ObjectForKeySafety(self.shareParams, @"shareLogoUrl")];
-        }
-    }else {
-        imageUrl = [ShareSDK jpegImageWithImage:image quality:1.0];
-    }
-    
-    if (_isShareInfo) {
-        id<ISSContent> shareDic = [ShareSDK content:[WebViewInfoModel manager].getShareInfo.shareContent
-                                     defaultContent:@"分享有惊喜哦!"
-                                              image:[ShareSDK imageWithUrl:[WebViewInfoModel manager].getShareInfo.shareLogoUrl]
-                                              title:[WebViewInfoModel manager].getShareInfo.shareTitle
-                                                url:[WebViewInfoModel manager].getShareInfo.shareUrl
-                                        description:nil
-                                          mediaType:SSPublishContentMediaTypeNews];
-        
-        [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
-    } else if (_logopathKey && ![_logopathKey isNullStr]) {
-        id<ISSContent> shareDic = [ShareSDK content:ObjectForKeySafety(self.shareParams, @"content")
-                                     defaultContent:@"分享有惊喜哦!"
-                                              image:imageUrl
-                                              title:ObjectForKeySafety(self.shareParams, @"title")
-                                                url:ObjectForKeySafety(self.shareParams, @"url")
-                                        description:ObjectForKeySafety(self.shareParams, @"desc")
-                                          mediaType:SSPublishContentMediaTypeNews];
-        
-        [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
-    } else if (_shareLogoUrlKey && ![_shareLogoUrlKey isNullStr]) {
-        id<ISSContent> shareDic = [ShareSDK content:ObjectForKeySafety(self.shareParams, @"shareContent")
-                                     defaultContent:@"分享有惊喜哦!"
-                                              image:imageUrl
-                                              title:ObjectForKeySafety(self.shareParams, @"shareTitle")
-                                                url:ObjectForKeySafety(self.shareParams, @"shareUrl")
-                                        description:ObjectForKeySafety(self.shareParams, @"title")
-                                          mediaType:SSPublishContentMediaTypeNews];
-        
-        [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
-    }
+//    [UMEventIDManager sendEvent:E_ID_More_ActivityCenter_Click_Shared_Btn];
+//    
+//    UIImage *image = [UIImage imageWithName:@"icon80x80"];
+//    id<ISSCAttachment> imageUrl = nil;
+//    
+//    if (self.imageView) {
+//        NSString *strUrl = ObjectForKeySafety(self.shareParams, @"logopath");
+//        NSString *ulrStr = ObjectForKeySafety(self.shareParams, @"shareLogoUrl");
+//        if (strUrl && ![strUrl isNullStr]) {
+//            imageUrl = [ShareSDK imageWithUrl:ObjectForKeySafety(self.shareParams, @"logopath")];
+//        } else if (ulrStr && ![ulrStr isNullStr]) {
+//            imageUrl = [ShareSDK imageWithUrl:ObjectForKeySafety(self.shareParams, @"shareLogoUrl")];
+//        }
+//    }else {
+//        imageUrl = [ShareSDK jpegImageWithImage:image quality:1.0];
+//    }
+//    
+//    if (_isShareInfo) {
+//        id<ISSContent> shareDic = [ShareSDK content:[WebViewInfoModel manager].getShareInfo.shareContent
+//                                     defaultContent:@"分享有惊喜哦!"
+//                                              image:[ShareSDK imageWithUrl:[WebViewInfoModel manager].getShareInfo.shareLogoUrl]
+//                                              title:[WebViewInfoModel manager].getShareInfo.shareTitle
+//                                                url:[WebViewInfoModel manager].getShareInfo.shareUrl
+//                                        description:nil
+//                                          mediaType:SSPublishContentMediaTypeNews];
+//        
+//        [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
+//    } else if (_logopathKey && ![_logopathKey isNullStr]) {
+//        id<ISSContent> shareDic = [ShareSDK content:ObjectForKeySafety(self.shareParams, @"content")
+//                                     defaultContent:@"分享有惊喜哦!"
+//                                              image:imageUrl
+//                                              title:ObjectForKeySafety(self.shareParams, @"title")
+//                                                url:ObjectForKeySafety(self.shareParams, @"url")
+//                                        description:ObjectForKeySafety(self.shareParams, @"desc")
+//                                          mediaType:SSPublishContentMediaTypeNews];
+//        
+//        [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
+//    } else if (_shareLogoUrlKey && ![_shareLogoUrlKey isNullStr]) {
+//        id<ISSContent> shareDic = [ShareSDK content:ObjectForKeySafety(self.shareParams, @"shareContent")
+//                                     defaultContent:@"分享有惊喜哦!"
+//                                              image:imageUrl
+//                                              title:ObjectForKeySafety(self.shareParams, @"shareTitle")
+//                                                url:ObjectForKeySafety(self.shareParams, @"shareUrl")
+//                                        description:ObjectForKeySafety(self.shareParams, @"title")
+//                                          mediaType:SSPublishContentMediaTypeNews];
+//        
+//        [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
+//    }
 }
 
 - (void)showShareSheetShareContent:(NSString *)shareContent withShareTitle:(NSString *)shareTitle withshareUrl:(NSString *)shareUrl withImageUrl:(NSString *)imageLogoPath
 {
-    UIImageView *shareImageView = [[UIImageView alloc] init];
-    [shareImageView sd_setImageWithURL:[NSURL URLWithString:imageLogoPath]];
-    UIImage *image = [UIImage imageWithName:@"icon80x80"];
-    id<ISSCAttachment> imageUrl = nil;
-    //微博对https 图片制约，只能先将logo下载至内存中
-    if (shareImageView) {
-//        imageUrl = [ShareSDK jpegImageWithImage:shareImageView.image quality:1.0];
-        imageUrl = [ShareSDK imageWithUrl:imageLogoPath];
-    }else {
-        imageUrl = [ShareSDK jpegImageWithImage:image quality:1.0];
-    }
-    
-    id<ISSContent> shareDic = [ShareSDK content:shareContent
-                                 defaultContent:@"分享有惊喜哦!"
-                                          image:imageUrl
-                                          title:shareTitle
-                                            url:shareUrl
-                                    description:@""
-                                      mediaType:SSPublishContentMediaTypeNews];
-    
-    [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
+//    UIImageView *shareImageView = [[UIImageView alloc] init];
+//    [shareImageView sd_setImageWithURL:[NSURL URLWithString:imageLogoPath]];
+//    UIImage *image = [UIImage imageWithName:@"icon80x80"];
+//    id<ISSCAttachment> imageUrl = nil;
+//    //微博对https 图片制约，只能先将logo下载至内存中
+//    if (shareImageView) {
+////        imageUrl = [ShareSDK jpegImageWithImage:shareImageView.image quality:1.0];
+//        imageUrl = [ShareSDK imageWithUrl:imageLogoPath];
+//    }else {
+//        imageUrl = [ShareSDK jpegImageWithImage:image quality:1.0];
+//    }
+//    
+//    id<ISSContent> shareDic = [ShareSDK content:shareContent
+//                                 defaultContent:@"分享有惊喜哦!"
+//                                          image:imageUrl
+//                                          title:shareTitle
+//                                            url:shareUrl
+//                                    description:@""
+//                                      mediaType:SSPublishContentMediaTypeNews];
+//    
+//    [GJSShareSDKManager activityCenterstartShareSheet:self shareParams:shareDic];
 }
 
 
