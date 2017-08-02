@@ -175,7 +175,7 @@
     NSString *logErrorMessage = [NSString stringWithFormat:@"\n\n%@\n\n%@\n%@\n%@\n%@\n\n%@\n\n%@\n\n",SafetyCrashSeparatorWithFlag, errorName, errorReason, errorPlace, defaultToDo, SafetyCrashSeparator,callStackSymbolsArr];
     
     
-    [BuglyTool reportSafetyException:logErrorMessage];
+//    [BuglyTool reportSafetyException:logErrorMessage];
     
     /******NSDictionary *errorInfoDic = @{
                                    key_errorName        : errorName,
@@ -194,7 +194,7 @@
 
 + (void)noteErrorExceptionSelectorCallStackMsg
 {    
-    [BuglyTool reportSelectorException:[NSThread callStackSymbols]];
+//    [BuglyTool reportSelectorException:[NSThread callStackSymbols]];
 }
 
 @end

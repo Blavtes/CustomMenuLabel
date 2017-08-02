@@ -133,7 +133,7 @@
 
                 return resut;
             }
-            BLYLogWarn(@"cmd %@ %@",[self class],NSStringFromSelector(aSelector));
+//            BLYLogWarn(@"cmd %@ %@",[self class],NSStringFromSelector(aSelector));
             [SafetyCrash noteErrorExceptionSelectorCallStackMsg];
             return [[kclass alloc] init];
         

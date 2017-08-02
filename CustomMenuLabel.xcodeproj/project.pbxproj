@@ -12,7 +12,6 @@
 		570D37681F29E192008E9FC6 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570D37661F29E192008E9FC6 /* NotificationViewController.xib */; };
 		571D60701EA494EF00BD6D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D606E1EA494EF00BD6D15 /* Main.storyboard */; };
 		571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60801EA495AB00BD6D15 /* AudioUtil.m */; };
-		571D648D1EA495AC00BD6D15 /* BuglyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60831EA495AB00BD6D15 /* BuglyTool.m */; };
 		571D648E1EA495AC00BD6D15 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60881EA495AB00BD6D15 /* BaseViewModel.m */; };
 		571D648F1EA495AC00BD6D15 /* GjfaxKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D608A1EA495AB00BD6D15 /* GjfaxKeyChain.m */; };
 		571D64901EA495AC00BD6D15 /* GJFaxKeyChainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D608C1EA495AB00BD6D15 /* GJFaxKeyChainTool.m */; };
@@ -22,8 +21,6 @@
 		571D64941EA495AC00BD6D15 /* GJSPanBackTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60971EA495AB00BD6D15 /* GJSPanBackTool.m */; };
 		571D64951EA495AC00BD6D15 /* GJSSwipeBackTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60991EA495AB00BD6D15 /* GJSSwipeBackTool.m */; };
 		571D64961EA495AC00BD6D15 /* HUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D609C1EA495AB00BD6D15 /* HUDTool.m */; };
-		571D64B51EA495AC00BD6D15 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D60EA1EA495AB00BD6D15 /* JSPatchPlatform.framework */; };
-		571D64B61EA495AC00BD6D15 /* JSPatchTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60EC1EA495AB00BD6D15 /* JSPatchTool.m */; };
 		571D64B71EA495AC00BD6D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60EF1EA495AB00BD6D15 /* AppDelegate.m */; };
 		571D64B81EA495AC00BD6D15 /* NSDate+CalendarExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60F21EA495AB00BD6D15 /* NSDate+CalendarExtension.m */; };
 		571D64B91EA495AC00BD6D15 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60F41EA495AB00BD6D15 /* NSDictionary+Extension.m */; };
@@ -115,7 +112,6 @@
 		571D651B1EA495AC00BD6D15 /* MyGetRewardInfoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D627E1EA495AB00BD6D15 /* MyGetRewardInfoService.m */; };
 		571D65281EA495AC00BD6D15 /* ASPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D63E11EA495AC00BD6D15 /* ASPopUpView.m */; };
 		571D65291EA495AC00BD6D15 /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D63E31EA495AC00BD6D15 /* ASProgressPopUpView.m */; };
-		571D652A1EA495AC00BD6D15 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D63E51EA495AC00BD6D15 /* Bugly.framework */; };
 		571D652B1EA495AC00BD6D15 /* CLLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D63E91EA495AC00BD6D15 /* CLLockVC.m */; };
 		571D652C1EA495AC00BD6D15 /* CLLockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571D63EA1EA495AC00BD6D15 /* CLLockVC.xib */; };
 		571D652D1EA495AC00BD6D15 /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D63EE1EA495AC00BD6D15 /* CALayer+Anim.m */; };
@@ -198,8 +194,6 @@
 		571D60761EA494EF00BD6D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571D607F1EA495AB00BD6D15 /* AudioUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUtil.h; sourceTree = "<group>"; };
 		571D60801EA495AB00BD6D15 /* AudioUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUtil.m; sourceTree = "<group>"; };
-		571D60821EA495AB00BD6D15 /* BuglyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuglyTool.h; sourceTree = "<group>"; };
-		571D60831EA495AB00BD6D15 /* BuglyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuglyTool.m; sourceTree = "<group>"; };
 		571D60871EA495AB00BD6D15 /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
 		571D60881EA495AB00BD6D15 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
 		571D60891EA495AB00BD6D15 /* GjfaxKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GjfaxKeyChain.h; sourceTree = "<group>"; };
@@ -220,9 +214,6 @@
 		571D60991EA495AB00BD6D15 /* GJSSwipeBackTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJSSwipeBackTool.m; sourceTree = "<group>"; };
 		571D609B1EA495AB00BD6D15 /* HUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDTool.h; sourceTree = "<group>"; };
 		571D609C1EA495AB00BD6D15 /* HUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDTool.m; sourceTree = "<group>"; };
-		571D60EA1EA495AB00BD6D15 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
-		571D60EB1EA495AB00BD6D15 /* JSPatchTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPatchTool.h; sourceTree = "<group>"; };
-		571D60EC1EA495AB00BD6D15 /* JSPatchTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPatchTool.m; sourceTree = "<group>"; };
 		571D60EE1EA495AB00BD6D15 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		571D60EF1EA495AB00BD6D15 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		571D60F11EA495AB00BD6D15 /* NSDate+CalendarExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CalendarExtension.h"; sourceTree = "<group>"; };
@@ -409,7 +400,6 @@
 		571D63E11EA495AC00BD6D15 /* ASPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopUpView.m; sourceTree = "<group>"; };
 		571D63E21EA495AC00BD6D15 /* ASProgressPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASProgressPopUpView.h; sourceTree = "<group>"; };
 		571D63E31EA495AC00BD6D15 /* ASProgressPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASProgressPopUpView.m; sourceTree = "<group>"; };
-		571D63E51EA495AC00BD6D15 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
 		571D63E81EA495AC00BD6D15 /* CLLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLockVC.h; sourceTree = "<group>"; };
 		571D63E91EA495AC00BD6D15 /* CLLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLockVC.m; sourceTree = "<group>"; };
 		571D63EA1EA495AC00BD6D15 /* CLLockVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLLockVC.xib; sourceTree = "<group>"; };
@@ -555,8 +545,6 @@
 				571D65721EA499DE00BD6D15 /* MapKit.framework in Frameworks */,
 				571D65701EA499CA00BD6D15 /* CoreLocation.framework in Frameworks */,
 				571D656E1EA499C500BD6D15 /* SystemConfiguration.framework in Frameworks */,
-				571D652A1EA495AC00BD6D15 /* Bugly.framework in Frameworks */,
-				571D64B51EA495AC00BD6D15 /* JSPatchPlatform.framework in Frameworks */,
 				17A0392AB9A493B776C6F77B /* libPods-CustomMenuLabel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,11 +642,9 @@
 			isa = PBXGroup;
 			children = (
 				571D607E1EA495AB00BD6D15 /* AudioUtil */,
-				571D60811EA495AB00BD6D15 /* BuglyTool */,
 				571D60861EA495AB00BD6D15 /* DataModelTool */,
 				571D60951EA495AB00BD6D15 /* GestureTool */,
 				571D609A1EA495AB00BD6D15 /* HUDTool */,
-				571D609D1EA495AB00BD6D15 /* JSPacthTool */,
 				571D60ED1EA495AB00BD6D15 /* Main */,
 				571D61581EA495AB00BD6D15 /* MSVC */,
 				571D61751EA495AB00BD6D15 /* Networking */,
@@ -676,15 +662,6 @@
 				571D60801EA495AB00BD6D15 /* AudioUtil.m */,
 			);
 			path = AudioUtil;
-			sourceTree = "<group>";
-		};
-		571D60811EA495AB00BD6D15 /* BuglyTool */ = {
-			isa = PBXGroup;
-			children = (
-				571D60821EA495AB00BD6D15 /* BuglyTool.h */,
-				571D60831EA495AB00BD6D15 /* BuglyTool.m */,
-			);
-			path = BuglyTool;
 			sourceTree = "<group>";
 		};
 		571D60861EA495AB00BD6D15 /* DataModelTool */ = {
@@ -726,24 +703,6 @@
 				571D609C1EA495AB00BD6D15 /* HUDTool.m */,
 			);
 			path = HUDTool;
-			sourceTree = "<group>";
-		};
-		571D609D1EA495AB00BD6D15 /* JSPacthTool */ = {
-			isa = PBXGroup;
-			children = (
-				571D609E1EA495AB00BD6D15 /* Framework */,
-				571D60EB1EA495AB00BD6D15 /* JSPatchTool.h */,
-				571D60EC1EA495AB00BD6D15 /* JSPatchTool.m */,
-			);
-			path = JSPacthTool;
-			sourceTree = "<group>";
-		};
-		571D609E1EA495AB00BD6D15 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				571D60EA1EA495AB00BD6D15 /* JSPatchPlatform.framework */,
-			);
-			path = Framework;
 			sourceTree = "<group>";
 		};
 		571D60ED1EA495AB00BD6D15 /* Main */ = {
@@ -1262,7 +1221,6 @@
 				574715991F305C36009B0BB4 /* TBCityCoreText */,
 				C11DF3A31EE24F6500DEA7F8 /* fmdb */,
 				571D63DF1EA495AC00BD6D15 /* ASProgressPopUpView */,
-				571D63E41EA495AC00BD6D15 /* Bugly */,
 				571D63E61EA495AC00BD6D15 /* CoreLock */,
 				571D64091EA495AC00BD6D15 /* CustomKeyboard */,
 				571D640E1EA495AC00BD6D15 /* GeTuiSDK */,
@@ -1285,14 +1243,6 @@
 				571D63E31EA495AC00BD6D15 /* ASProgressPopUpView.m */,
 			);
 			path = ASProgressPopUpView;
-			sourceTree = "<group>";
-		};
-		571D63E41EA495AC00BD6D15 /* Bugly */ = {
-			isa = PBXGroup;
-			children = (
-				571D63E51EA495AC00BD6D15 /* Bugly.framework */,
-			);
-			path = Bugly;
 			sourceTree = "<group>";
 		};
 		571D63E61EA495AC00BD6D15 /* CoreLock */ = {
@@ -1892,13 +1842,11 @@
 				571D64D11EA495AC00BD6D15 /* CustomTabBarViewController.m in Sources */,
 				571D64C41EA495AC00BD6D15 /* NSMutableString+SafetyCrash.m in Sources */,
 				571D64BE1EA495AC00BD6D15 /* NSArray+SafetyCrash.m in Sources */,
-				571D64B61EA495AC00BD6D15 /* JSPatchTool.m in Sources */,
 				571D64F81EA495AC00BD6D15 /* NetWorkingStatusModel.m in Sources */,
 				C11DF3C91EE267EE00DEA7F8 /* SearchMenuViewController.m in Sources */,
 				571D64BC1EA495AC00BD6D15 /* NSString+Extension.m in Sources */,
 				571D65191EA495AC00BD6D15 /* WebViewInfoModel.m in Sources */,
 				571D65031EA495AC00BD6D15 /* HomePageViewController.m in Sources */,
-				571D648D1EA495AC00BD6D15 /* BuglyTool.m in Sources */,
 				571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */,
 				571D64FF1EA495AC00BD6D15 /* NSString+MD5.m in Sources */,
 				571D64921EA495AC00BD6D15 /* PhoneCodeViewModel.m in Sources */,

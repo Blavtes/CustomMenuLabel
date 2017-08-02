@@ -108,7 +108,7 @@
     // Ignore when no view controller is pushed into the navigation stack.
     if (self.childViewControllers.count <= 1) {
         // 表示用户在根控制器界面，就不需要触发滑动手势，
-        BLYLogWarn(@"gestureRecognizerShouldBegin 表示用户在根控制器界面，就不需要触发滑动手势");
+//        BLYLogWarn(@"gestureRecognizerShouldBegin 表示用户在根控制器界面，就不需要触发滑动手势");
         return NO;
     }
     
@@ -128,7 +128,7 @@
     for (int i = 0; i < _viewControllerStrArray.count; i++) {
         Class class = NSClassFromString(_viewControllerStrArray[i]) ;
         if ([vc isKindOfClass:class]) {
-            BLYLogWarn(@"gestureRecognizerShouldBegin 当前页面是显示结果页，不响应滑动手势");
+//            BLYLogWarn(@"gestureRecognizerShouldBegin 当前页面是显示结果页，不响应滑动手势");
             return NO;
         }
     }
@@ -233,7 +233,7 @@
 {
 #pragma mark - 处理动画问题 - 2017.3.13
     if (_curAnimating) {
-        [BuglyTool reportVCPushException:viewController];
+//        [BuglyTool reportVCPushException:viewController];
         return;
     } else if (animated) {
         _curAnimating = YES;
@@ -298,7 +298,7 @@
 #pragma mark - 处理动画问题 - 2017.3.13
     if (!_fromGesture) {
         if (_curAnimating) {
-            [BuglyTool reportVCPopException:self];
+//            [BuglyTool reportVCPopException:self];
             return nil;
         } else if (animated) {
             _curAnimating = YES;
@@ -325,7 +325,7 @@
 #pragma mark - 处理动画问题 - 2017.3.13
      _curAnimating = NO;
     
-    BLYLogWarn(@"popToRootViewControllerAnimated");
+//    BLYLogWarn(@"popToRootViewControllerAnimated");
 #pragma mark - 采集数据[只统计非启动加载 && 非tabbar切换]
     //  目标类
     NSString *curClassName = [NSString stringWithUTF8String:object_getClassName(self.topViewController)];

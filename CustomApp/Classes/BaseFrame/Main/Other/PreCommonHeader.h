@@ -43,8 +43,8 @@
 
 //#import "UMEventDefine.h"
 //#import "UMEventIDManager.h"
-#import <Bugly/Bugly.h>
-#import "BuglyTool.h"
+//#import <Bugly/Bugly.h>
+//#import "BuglyTool.h"
 #import "UIViewController+PresentVC.h"
 
 #endif

@@ -161,7 +161,7 @@
                 NSDictionary *retDic = [HttpParamsSetting dicFromServerRet:responseObject];
                 
                 if (retDic) {
-                    [BuglyTool reportGetDataNoSuccessResponse:retDic url:strUrl];
+//                    [BuglyTool reportGetDataNoSuccessResponse:retDic url:strUrl];
                     success(retDic);
                     
                 } else if (![[responseObject objectForKeyForSafetyValue:@"note"] isNilObj] &&
@@ -189,7 +189,7 @@
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             //  failure
-            [BuglyTool reportParseAPIError:error url:strUrl];
+//            [BuglyTool reportParseAPIError:error url:strUrl];
             //[self showNetworkError:error];
             if (failure) {
                 failure(error);
@@ -204,7 +204,7 @@
         //DLog(@"\n----PostTask----\n%@-->%@", task.currentRequest.URL.absoluteString, [[NSString alloc] initWithData:task.currentRequest.HTTPBody encoding:NSUTF8StringEncoding]);
     } else {
         //  无网络提示
-        [BuglyTool reportTimeOutUrl:strUrl];
+//        [BuglyTool reportTimeOutUrl:strUrl];
         failure(nil);
     }
 }

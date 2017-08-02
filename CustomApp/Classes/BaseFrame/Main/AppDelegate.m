@@ -27,7 +27,7 @@
 #import "CustomNavigationController.h"
 
 #import "NetWorkingStatusModel.h"   //  网络状态model
-#import "JSPatchTool.h"
+//#import "JSPatchTool.h"
 #import "NotificationViewController.h"
 
 NSString* const NotificationCategoryIdent  = @"ACTIONABLE";
@@ -36,7 +36,7 @@ NSString* const NotificationActionTwoIdent = @"ACTION_TWO";
 
 static float const kLaunchSleepTime = 1.5f;
 
-@interface AppDelegate ()  <BuglyDelegate>
+@interface AppDelegate ()  
 {
     //  启动页
     UIView *launchView;
