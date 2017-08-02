@@ -54,7 +54,7 @@ static float const kLaunchSleepTime = 1.5f;
 //  告诉代理启动基本完成程序准备开始运行
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-  
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
     //  显示状态栏
     application.statusBarHidden = NO;

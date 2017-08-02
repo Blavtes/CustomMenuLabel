@@ -68,6 +68,7 @@
                                             result:^(id result) {
         DLog(@"instert");
                                                 weakSelf.textView.text = @"";
+                                                [weakSelf openNotification:nil];
                                                 
     }];
 }
@@ -77,6 +78,7 @@
     [defa setBool:NO forKey:@"noti"];
     [defa synchronize];
     [NotificationViewController cancelAllNotificaiton];
+    _closeNotiBtn.hidden = YES;
 }
 
 - (IBAction)openNotification:(id)sender {
@@ -85,6 +87,7 @@
     [defa setBool:YES forKey:@"noti"];
     [defa synchronize];
     [NotificationViewController setRemindTime];
+    _closeNotiBtn.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,7 +113,7 @@
     //    int min = [comps minute];
     //    int sec = [comps second];
     
-    NSArray *arr = @[@(9),@(12),@(15),@(16),@(19),@(21)];
+    NSArray *arr = @[@(9),@(12),@(15),@(17),@(19),@(21)];
     
     for (int newWeekDay =2; newWeekDay<=6; newWeekDay++) {
         
@@ -124,9 +127,11 @@
             days = (temp >= 0 ? temp : temp + 7);
             
             [comps setHour:[arr[i] intValue]];
-            [comps setMinute:0];
+            [comps setMinute:32];
             [comps setSecond:0];
+//             NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
             NSDate *newFireDate2 = [[[NSCalendar currentCalendar] dateFromComponents:comps] dateByAddingTimeInterval:3600 * 24 * days];
+//            DLog(@"newFireDate2 %@ %@",newFireDate2,fireDate);
             [NotificationViewController scheduleNotificationWithItem:@"" fireDate:newFireDate2];
         }
     }
@@ -158,11 +163,12 @@
             //NSLog(@"推送时间%@",locationNotification.fireDate);
             locationNotification.timeZone = [NSTimeZone defaultTimeZone];
             //设置重复周期
-            locationNotification.repeatInterval = kCFCalendarUnitWeekday;
+            locationNotification.repeatInterval = kCFCalendarUnitWeek;
+            locationNotification.applicationIconBadgeNumber = 1;
             //设置通知的音乐
             locationNotification.soundName = UILocalNotificationDefaultSoundName;
             //设置通知内容
-//            locationNotification.alertBody = alertItem;
+            locationNotification.alertBody = infoDic;
             DLog(@"infoDic %@",infoDic);
             locationNotification.userInfo = [NSDictionary dictionaryWithObject:infoDic forKey:BdNotificationConstentName];
             //执行本地推送
@@ -171,6 +177,10 @@
                 UIUserNotificationType type =  UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
                 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
                 [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+                locationNotification.repeatInterval = kCFCalendarUnitDay;
+            } else {
+                // 通知重复提示的单位，可以是天、周、月
+                locationNotification.repeatInterval = kCFCalendarUnitDay;
             }
             
 #warning 注册完之后如果不删除，下次会继续存在，即使从模拟器卸载掉也会保留

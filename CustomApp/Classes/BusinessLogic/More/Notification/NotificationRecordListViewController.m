@@ -40,7 +40,7 @@
     // Do any additional setup after loading the view from its nib.
     [self queryNotificaitonInfo];
     
-    [self getAllNotificaiton];
+//    [self getAllNotificaiton];
 }
 
 - (void)queryNotificaitonInfo
@@ -104,7 +104,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
