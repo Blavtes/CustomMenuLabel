@@ -127,7 +127,7 @@
             days = (temp >= 0 ? temp : temp + 7);
             
             [comps setHour:[arr[i] intValue]];
-            [comps setMinute:32];
+            [comps setMinute:0];
             [comps setSecond:0];
 //             NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
             NSDate *newFireDate2 = [[[NSCalendar currentCalendar] dateFromComponents:comps] dateByAddingTimeInterval:3600 * 24 * days];
