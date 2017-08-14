@@ -177,10 +177,10 @@
                 UIUserNotificationType type =  UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
                 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
                 [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-                locationNotification.repeatInterval = kCFCalendarUnitDay;
+                locationNotification.repeatInterval = kCFCalendarUnitWeek;
             } else {
                 // 通知重复提示的单位，可以是天、周、月
-                locationNotification.repeatInterval = kCFCalendarUnitDay;
+                locationNotification.repeatInterval = kCFCalendarUnitWeek;
             }
             
 #warning 注册完之后如果不删除，下次会继续存在，即使从模拟器卸载掉也会保留
@@ -278,7 +278,7 @@
     // 时区
     notification.timeZone = [NSTimeZone defaultTimeZone];
     // 设置重复的间隔
-    notification.repeatInterval = kCFCalendarUnitSecond;
+    notification.repeatInterval = kCFCalendarUnitDay;
     
     // 通知内容
     notification.alertBody =  dict[BdNotificationConstentName];
