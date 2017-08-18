@@ -378,7 +378,7 @@
                 
                 DLog(@"count %ld",count);
                 NSDictionary *dic = seqsArray[count];
-                [NotificationViewController repeatNotificaiton:dic nextTime:2 * 60 * 60];
+//                [NotificationViewController repeatNotificaiton:dic nextTime:2 * 60 * 60];
                 
             } else {
                 Show_iToast(@"先添加消息~");
