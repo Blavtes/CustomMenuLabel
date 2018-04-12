@@ -27,25 +27,25 @@
  测试环境基金权益PDF：http://10.50.145.91/webfiles/staticfiles/html/fund/investorRight.pdf
  正式环境基金权益PDF：http://static.gjfax.com/webfiles/staticfiles/html/fund/investorRight.pdf
  */
-
-#ifdef DEBUG
-
-    //  环境
-    //#define GJS_HOST_NAME @"http://10.100.156.20:7080/APP_SERVER"
-    //#define GJS_HOST_NAME @"http://10.100.156.5:7080/APP_SERVER"
-    //#define GJS_HOST_NAME @"http://218.17.205.130:18285/APP_SERVER/"
-    ////  WAP
-    //#define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:18286/FTS_MOBILE/"
-    ////  PDF
-    //#define GJS_FUND_INVESTORRIGHT @"http://10.50.145.91/webfiles/staticfiles/html/fund/investorRight.pdf"
-
-    // #define GJS_HOST_NAME @"http://10.50.145.113:8080/APP_SERVER/"              //正式环境APP SERVER主机地址
-    #define GJS_HOST_NAME @"http://218.17.205.130:18284/APP_SERVER/"
-    #define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:8107/"                //WAP手机网页版地址,用于公共页面及图片的获取
-    //   前海联合基金投资者权益须知 pdf
-    #define GJS_FUND_INVESTORRIGHT @"http://static.gjfax.com/webfiles/staticfiles/html/fund/investorRight.pdf"
-
-    #else
+//
+//#ifdef DEBUG
+//
+//    //  环境
+//    //#define GJS_HOST_NAME @"http://10.100.156.20:7080/APP_SERVER"
+//    //#define GJS_HOST_NAME @"http://10.100.156.5:7080/APP_SERVER"
+//    //#define GJS_HOST_NAME @"http://218.17.205.130:18285/APP_SERVER/"
+//    ////  WAP
+//    //#define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:18286/FTS_MOBILE/"
+//    ////  PDF
+//    //#define GJS_FUND_INVESTORRIGHT @"http://10.50.145.91/webfiles/staticfiles/html/fund/investorRight.pdf"
+//
+//    // #define GJS_HOST_NAME @"http://10.50.145.113:8080/APP_SERVER/"              //正式环境APP SERVER主机地址
+//    #define GJS_HOST_NAME @"http://218.17.205.130:18284/APP_SERVER/"
+//    #define GJS_WAP_SERVER_HOST_ADDR @"http://218.17.205.130:8107/"                //WAP手机网页版地址,用于公共页面及图片的获取
+//    //   前海联合基金投资者权益须知 pdf
+//    #define GJS_FUND_INVESTORRIGHT @"http://static.gjfax.com/webfiles/staticfiles/html/fund/investorRight.pdf"
+//
+//    #else
 
     //#define GJS_HOST_NAME @"http://218.17.205.130:18285/APP_SERVER/"
     ////  WAP
@@ -58,7 +58,7 @@
     //   前海联合基金投资者权益须知 pdf
     #define GJS_FUND_INVESTORRIGHT @"http://static.gjfax.com/webfiles/staticfiles/html/fund/investorRight.pdf"
 
-#endif
+//#endif
 
 
 #pragma mark - 平台

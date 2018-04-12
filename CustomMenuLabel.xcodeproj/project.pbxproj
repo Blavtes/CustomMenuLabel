@@ -1604,9 +1604,9 @@
 				TargetAttributes = {
 					571D60611EA494EF00BD6D15 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = DB9U584EMR;
+						DevelopmentTeam = 4244X5Z6M2;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1969,7 +1969,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = DB9U584EMR;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4244X5Z6M2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1992,8 +1993,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomMenuLabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7f090878-2791-4ea1-b2ab-36e083deaaf2";
-				PROVISIONING_PROFILE_SPECIFIER = gjfaxApp_Dev_0603;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -2004,7 +2005,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = DB9U584EMR;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4244X5Z6M2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2027,8 +2029,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomMenuLabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7f090878-2791-4ea1-b2ab-36e083deaaf2";
-				PROVISIONING_PROFILE_SPECIFIER = gjfaxApp_Dev_0603;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -472,11 +472,39 @@ static float const kLaunchSleepTime = 1.5f;
     // 这里真实需要处理交互的地方
     // 获取通知所带的数据
     
-   
+    [self login];
     
     // 在不需要再推送时，可以取消推送
     [NotificationViewController haveLocalNotificationInfo:notification.userInfo];
 }
 
+- (void)login
+{
+    [self startRequestLoginWithPhoneNum:@"13538101601" passWord:@"aaa111"];
+    [self startRequestLoginWithPhoneNum:@"18575564137" passWord:@"aaa111"];
+    [self startRequestLoginWithPhoneNum:@"18823836928" passWord:@"aaa111"];
+}
+
+- (void)startRequestLoginWithPhoneNum:(NSString *)phoneNum passWord:(NSString *)passWord
+{
+    
+    NSMutableDictionary *loginDic = [[NSMutableDictionary alloc]init];
+    
+    [loginDic setObject:phoneNum forKey:@"userName"];
+    [loginDic setObject:passWord forKey:@"password"];
+    
+    NSString *uuid = [CommonMethod UUIDWithKeyChain];
+    [loginDic setObject:uuid forKey:@"deviceNo"];
+    
+    
+    
+    [HttpTool postUrl:HX_POSTLogin params:loginDic success:^(id responseObj) {
+        //加载完成
+        DLog(@"login %@",responseObj);
+        
+    } failure:^(NSError *error) {
+       
+    }];
+}
 
 @end
