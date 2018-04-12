@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString * const kCryptKey = @"abc123"; //密码
-static NSString * const kIvValue = @"cdwerew@@@@";//加密的数据
+static NSString * const kCryptKey = @"gjfax123";
+static NSString * const kIvValue = @"ujhfwe9ihv0as89w";
 //static NSString * const kCryptKey = @"b4c23a5606e84bb1a9b0ed524933d6bc";
 //static NSString * const kIvValue = @"d9c17ba62f9242a1";
 static NSString * const kSecurityCode = @"0";

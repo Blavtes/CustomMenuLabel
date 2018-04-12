@@ -114,7 +114,7 @@ static float const kLaunchSleepTime = 1.5f;
     
     //  启动并注册 监控联网状态
     [NetWorkingStatusModel manager];
-
+    [self login];
     return YES;
 }
 
@@ -501,7 +501,7 @@ static float const kLaunchSleepTime = 1.5f;
     [HttpTool postUrl:HX_POSTLogin params:loginDic success:^(id responseObj) {
         //加载完成
         DLog(@"login %@",responseObj);
-        
+        Show_iToast(@"o");
     } failure:^(NSError *error) {
        
     }];

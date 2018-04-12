@@ -18,7 +18,7 @@
 ////  是否需要升级
 #define GJS_CheckUpdate @""
 //// 请求登入
-#define HX_POSTLogin @""
+#define HX_POSTLogin @"remote/login/login"
 
 #define HX_POSTCODEURL @"remote/sms/sendSMS"
 //#pragma mark === 基金理财列表 过滤 fundCode ===
