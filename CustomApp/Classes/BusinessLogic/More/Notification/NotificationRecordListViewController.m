@@ -39,8 +39,11 @@
     [_notificationListArr addObjectsFromArray:arr];
     // Do any additional setup after loading the view from its nib.
     [self queryNotificaitonInfo];
-    
-//    [self getAllNotificaiton];
+    __weak typeof(self) weakSelf = self;
+    [self.navTopView showRightTitle:@"消息" rightHandle:^(UIButton *view) {
+        [weakSelf getAllNotificaiton];
+    }];
+
 }
 
 - (void)queryNotificaitonInfo
@@ -52,7 +55,7 @@
         if (seqsArray.count > 0) {
             [weakSelf.notificationArr removeAllObjects];
             [weakSelf.notificationArr addObjectsFromArray:seqsArray];
-            _dataArray = @[_notificationArr,_notificationListArr];
+            _dataArray = @[_notificationArr];
         }
        
 
@@ -104,7 +107,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return _dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
