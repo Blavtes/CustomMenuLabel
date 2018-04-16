@@ -165,6 +165,12 @@
 		574715A61F305C37009B0BB4 /* TBCityCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5747159F1F305C36009B0BB4 /* TBCityCoreTextLabel.m */; };
 		574715A71F305C37009B0BB4 /* TBCityCoreTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 574715A11F305C36009B0BB4 /* TBCityCoreTextManager.m */; };
 		574715A81F305C37009B0BB4 /* TBCityCoreTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 574715A31F305C36009B0BB4 /* TBCityCoreTextParser.m */; };
+		5782344B208427C200AD68E2 /* HTTPDNSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823444208427C100AD68E2 /* HTTPDNSTool.m */; };
+		5782344C208427C200AD68E2 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823446208427C100AD68E2 /* NetworkManager.m */; };
+		5782344D208427C200AD68E2 /* AlicloudHttpDNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57823448208427C100AD68E2 /* AlicloudHttpDNS.framework */; };
+		5782344E208427C200AD68E2 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57823449208427C100AD68E2 /* AlicloudUtils.framework */; };
+		5782344F208427C200AD68E2 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5782344A208427C100AD68E2 /* UTDID.framework */; };
+		5782345120842CD200AD68E2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5782345020842CD100AD68E2 /* libresolv.tbd */; };
 		579F2F4F1EA49F6100DD2CCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */; };
 		57A4F1311F2B12AB0014378E /* NotificationRecordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */; };
 		57A4F1321F2B12AB0014378E /* NotificationRecordListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A4F1301F2B12AB0014378E /* NotificationRecordListViewController.xib */; };
@@ -491,6 +497,14 @@
 		574715A11F305C36009B0BB4 /* TBCityCoreTextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityCoreTextManager.m; sourceTree = "<group>"; };
 		574715A21F305C36009B0BB4 /* TBCityCoreTextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityCoreTextParser.h; sourceTree = "<group>"; };
 		574715A31F305C36009B0BB4 /* TBCityCoreTextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityCoreTextParser.m; sourceTree = "<group>"; };
+		57823443208427C100AD68E2 /* HTTPDNSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPDNSTool.h; sourceTree = "<group>"; };
+		57823444208427C100AD68E2 /* HTTPDNSTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPDNSTool.m; sourceTree = "<group>"; };
+		57823445208427C100AD68E2 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		57823446208427C100AD68E2 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		57823448208427C100AD68E2 /* AlicloudHttpDNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHttpDNS.framework; sourceTree = "<group>"; };
+		57823449208427C100AD68E2 /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudUtils.framework; sourceTree = "<group>"; };
+		5782344A208427C100AD68E2 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		5782345020842CD100AD68E2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		57A4F12E1F2B12AB0014378E /* NotificationRecordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRecordListViewController.h; sourceTree = "<group>"; };
 		57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRecordListViewController.m; sourceTree = "<group>"; };
@@ -532,14 +546,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5782345120842CD200AD68E2 /* libresolv.tbd in Frameworks */,
 				571D65821EA49A6400BD6D15 /* libz.tbd in Frameworks */,
+				5782344E208427C200AD68E2 /* AlicloudUtils.framework in Frameworks */,
 				571D65861EA49A7300BD6D15 /* libstdc++.tbd in Frameworks */,
 				571D65841EA49A6B00BD6D15 /* libicucore.tbd in Frameworks */,
 				571D65801EA49A5E00BD6D15 /* libsqlite3.tbd in Frameworks */,
 				571D657E1EA49A4800BD6D15 /* MobileCoreServices.framework in Frameworks */,
 				571D657C1EA49A2B00BD6D15 /* QuartzCore.framework in Frameworks */,
 				571D657A1EA49A2400BD6D15 /* CoreTelephony.framework in Frameworks */,
+				5782344F208427C200AD68E2 /* UTDID.framework in Frameworks */,
 				571D65781EA499FA00BD6D15 /* ImageIO.framework in Frameworks */,
+				5782344D208427C200AD68E2 /* AlicloudHttpDNS.framework in Frameworks */,
 				571D65761EA499F000BD6D15 /* MessageUI.framework in Frameworks */,
 				571D65741EA499E400BD6D15 /* JavaScriptCore.framework in Frameworks */,
 				571D65721EA499DE00BD6D15 /* MapKit.framework in Frameworks */,
@@ -555,6 +573,7 @@
 		0B98182084AEA4F78A5ED8CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5782345020842CD100AD68E2 /* libresolv.tbd */,
 				571D65851EA49A7300BD6D15 /* libstdc++.tbd */,
 				571D65831EA49A6B00BD6D15 /* libicucore.tbd */,
 				571D65811EA49A6400BD6D15 /* libz.tbd */,
@@ -1221,6 +1240,7 @@
 				574715991F305C36009B0BB4 /* TBCityCoreText */,
 				C11DF3A31EE24F6500DEA7F8 /* fmdb */,
 				571D63DF1EA495AC00BD6D15 /* ASProgressPopUpView */,
+				57823442208427C100AD68E2 /* HTTPDNS */,
 				571D63E61EA495AC00BD6D15 /* CoreLock */,
 				571D64091EA495AC00BD6D15 /* CustomKeyboard */,
 				571D640E1EA495AC00BD6D15 /* GeTuiSDK */,
@@ -1517,6 +1537,28 @@
 			path = TBCityCoreText;
 			sourceTree = "<group>";
 		};
+		57823442208427C100AD68E2 /* HTTPDNS */ = {
+			isa = PBXGroup;
+			children = (
+				57823443208427C100AD68E2 /* HTTPDNSTool.h */,
+				57823444208427C100AD68E2 /* HTTPDNSTool.m */,
+				57823445208427C100AD68E2 /* NetworkManager.h */,
+				57823446208427C100AD68E2 /* NetworkManager.m */,
+				57823447208427C100AD68E2 /* OneSDK */,
+			);
+			path = HTTPDNS;
+			sourceTree = "<group>";
+		};
+		57823447208427C100AD68E2 /* OneSDK */ = {
+			isa = PBXGroup;
+			children = (
+				57823448208427C100AD68E2 /* AlicloudHttpDNS.framework */,
+				57823449208427C100AD68E2 /* AlicloudUtils.framework */,
+				5782344A208427C100AD68E2 /* UTDID.framework */,
+			);
+			path = OneSDK;
+			sourceTree = "<group>";
+		};
 		7AE10B9DFFB464FE1840AB41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1796,6 +1838,7 @@
 				571D64B81EA495AC00BD6D15 /* NSDate+CalendarExtension.m in Sources */,
 				571D64F91EA495AC00BD6D15 /* SpecialLogicErrorTool.m in Sources */,
 				571D656A1EA495AC00BD6D15 /* WebViewJavascriptBridgeBase.m in Sources */,
+				5782344C208427C200AD68E2 /* NetworkManager.m in Sources */,
 				571D64DB1EA495AC00BD6D15 /* CustomImgBgLabel.m in Sources */,
 				570D37671F29E192008E9FC6 /* NotificationViewController.m in Sources */,
 				571D65011EA495AC00BD6D15 /* FPSObserver.m in Sources */,
@@ -1854,6 +1897,7 @@
 				571D64BE1EA495AC00BD6D15 /* NSArray+SafetyCrash.m in Sources */,
 				571D64F81EA495AC00BD6D15 /* NetWorkingStatusModel.m in Sources */,
 				C11DF3C91EE267EE00DEA7F8 /* SearchMenuViewController.m in Sources */,
+				5782344B208427C200AD68E2 /* HTTPDNSTool.m in Sources */,
 				571D64BC1EA495AC00BD6D15 /* NSString+Extension.m in Sources */,
 				571D65191EA495AC00BD6D15 /* WebViewInfoModel.m in Sources */,
 				571D65031EA495AC00BD6D15 /* HomePageViewController.m in Sources */,
@@ -1992,6 +2036,7 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/UI",
+					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/HTTPDNS/OneSDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomApp/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomApp/Info.plist;
@@ -2028,6 +2073,7 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/UI",
+					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/HTTPDNS/OneSDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomApp/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomApp/Info.plist;

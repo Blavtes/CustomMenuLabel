@@ -8,8 +8,12 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-@interface BaseNetworkingClient : AFHTTPSessionManager
+@interface BaseNetworkingClient : NSObject
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 + (instancetype)sharedClient;
-
++ (instancetype)sharedClientHttpDNS:(NSString*)ip host:(NSString *)host;
+- (void)configHttpDNSIP:(NSString*)ip path:(NSString*)path host:(NSString *)host;
++ (NSString *)getHostIP;
 @end
+

@@ -87,4 +87,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 //文字按钮 按下颜色
 #define COMMON_CHARACTER_TOUCHDOWN_COLOR UIColorFromRGBHex(0xadd6e3)
+
+#define GJWeakSelf  __weak typeof(self) weakSelf = self;
+#define GJStrongSelf __strong typeof(weakSelf) strongSelf = weakSelf;
+
 #endif /* ColorDefine_h */

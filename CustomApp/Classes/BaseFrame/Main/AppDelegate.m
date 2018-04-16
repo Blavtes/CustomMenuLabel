@@ -45,8 +45,9 @@ static float const kLaunchSleepTime = 1.5f;
     //  启动页链接
     NSString *_launchLinkUrl;
     NSMutableDictionary *_shareParams;
+    
 }
-
+@property (nonatomic, assign) int count;
 @end
 
 @implementation AppDelegate
@@ -114,6 +115,7 @@ static float const kLaunchSleepTime = 1.5f;
     
     //  启动并注册 监控联网状态
     [NetWorkingStatusModel manager];
+    _count = 1000000;
     [self login];
     return YES;
 }
@@ -500,10 +502,40 @@ static float const kLaunchSleepTime = 1.5f;
     
     [HttpTool postUrl:HX_POSTLogin params:loginDic success:^(id responseObj) {
         //加载完成
-        DLog(@"login %@",responseObj);
-        Show_iToast(@"o");
+        DLog(@"log responseObj %@",responseObj);
+
+        [self questqueryBaseInfo];
     } failure:^(NSError *error) {
        
+    }];
+}
+
+/**
+ *  查询签到送广积分请求
+ */
+- (void)questqueryBaseInfo
+{
+    NSString *uuid = [CommonMethod UUIDWithKeyChain];
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setObject:uuid forKey:@"IMEI"];
+    [dic setObject:@"A_5" forKey:@"approach"];
+    //  显示hud
+    GJWeakSelf;
+    [HttpTool postUrl:@"remote/signin/doSign" params:dic success:^(id responseObj) {
+        //加载完成
+        weakSelf.count++;
+        DLog(@"responseObj %@",responseObj);
+        //  隐藏hud
+        NSDictionary *dict = [responseObj objectForKeyForSafetyValue:@"result"];
+        NSString *integralNum = [dict objectForKeyForSafetyValue:@"prizesCount"];
+        
+        DLog(@"dict %@ , %@",dict,integralNum);
+        
+        [[[[iToast makeText:FMT_STR(@"_%@_",integralNum)] setGravity:weakSelf.count] setDuration:iToastDurationNormal] show];
+
+    } failure:^(NSError *error) {
+        //  隐藏hud
+        
     }];
 }
 
