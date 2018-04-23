@@ -526,12 +526,16 @@ static float const kLaunchSleepTime = 1.5f;
         weakSelf.count++;
         DLog(@"responseObj %@",responseObj);
         //  隐藏hud
-        NSDictionary *dict = [responseObj objectForKeyForSafetyValue:@"result"];
-        NSString *integralNum = [dict objectForKeyForSafetyValue:@"prizesCount"];
-        
-        DLog(@"dict %@ , %@",dict,integralNum);
-        
-        [[[[iToast makeText:FMT_STR(@"_%@_",integralNum)] setGravity:weakSelf.count] setDuration:iToastDurationNormal] show];
+        NSString *status = [[responseObj objectForKeyForSafetyValue:@"retInfo"] objectForKeyForSafetyValue:@"status"];
+        if (![status isEqualToString:@"FAIL"]) {
+            NSDictionary *dict = [responseObj objectForKeyForSafetyValue:@"result"];
+            NSString *integralNum = [dict objectForKeyForSafetyValue:@"prizesCount"];
+            
+            DLog(@"dict %@ , %@",dict,integralNum);
+            
+            [[[[iToast makeText:FMT_STR(@"_%@_",integralNum)] setGravity:weakSelf.count] setDuration:iToastDurationNormal] show];
+        }
+       
 
     } failure:^(NSError *error) {
         //  隐藏hud

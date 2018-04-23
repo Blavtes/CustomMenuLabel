@@ -174,6 +174,10 @@
 		579F2F4F1EA49F6100DD2CCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */; };
 		57A4F1311F2B12AB0014378E /* NotificationRecordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */; };
 		57A4F1321F2B12AB0014378E /* NotificationRecordListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A4F1301F2B12AB0014378E /* NotificationRecordListViewController.xib */; };
+		57B64867208DE78000F6AE91 /* GameCancellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64860208DE78000F6AE91 /* GameCancellController.m */; };
+		57B64868208DE78000F6AE91 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64862208DE78000F6AE91 /* GameView.m */; };
+		57B64869208DE78000F6AE91 /* LineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64864208DE78000F6AE91 /* LineInfo.m */; };
+		57B6486A208DE78000F6AE91 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64866208DE78000F6AE91 /* PointView.m */; };
 		C11DF3AF1EE24F6500DEA7F8 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DF3A51EE24F6500DEA7F8 /* FMDatabase.m */; };
 		C11DF3B01EE24F6500DEA7F8 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DF3A71EE24F6500DEA7F8 /* FMDatabaseAdditions.m */; };
 		C11DF3B11EE24F6500DEA7F8 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DF3A91EE24F6500DEA7F8 /* FMDatabasePool.m */; };
@@ -509,6 +513,14 @@
 		57A4F12E1F2B12AB0014378E /* NotificationRecordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRecordListViewController.h; sourceTree = "<group>"; };
 		57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRecordListViewController.m; sourceTree = "<group>"; };
 		57A4F1301F2B12AB0014378E /* NotificationRecordListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationRecordListViewController.xib; sourceTree = "<group>"; };
+		57B6485F208DE78000F6AE91 /* GameCancellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCancellController.h; sourceTree = "<group>"; };
+		57B64860208DE78000F6AE91 /* GameCancellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCancellController.m; sourceTree = "<group>"; };
+		57B64861208DE78000F6AE91 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		57B64862208DE78000F6AE91 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		57B64863208DE78000F6AE91 /* LineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineInfo.h; sourceTree = "<group>"; };
+		57B64864208DE78000F6AE91 /* LineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineInfo.m; sourceTree = "<group>"; };
+		57B64865208DE78000F6AE91 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
+		57B64866208DE78000F6AE91 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
 		768EF575564BF9000FB62568 /* Pods-CustomMenuLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomMenuLabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomMenuLabel/Pods-CustomMenuLabel.debug.xcconfig"; sourceTree = "<group>"; };
 		9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomMenuLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11DF3A41EE24F6500DEA7F8 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -650,6 +662,7 @@
 		571D607C1EA495AB00BD6D15 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				57B6485E208DE78000F6AE91 /* Game */,
 				571D607D1EA495AB00BD6D15 /* BaseFrame */,
 				571D61A11EA495AB00BD6D15 /* BusinessLogic */,
 				571D63DE1EA495AC00BD6D15 /* ThirdParty */,
@@ -1559,6 +1572,22 @@
 			path = OneSDK;
 			sourceTree = "<group>";
 		};
+		57B6485E208DE78000F6AE91 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				57B6485F208DE78000F6AE91 /* GameCancellController.h */,
+				57B64860208DE78000F6AE91 /* GameCancellController.m */,
+				57B64861208DE78000F6AE91 /* GameView.h */,
+				57B64862208DE78000F6AE91 /* GameView.m */,
+				57B64863208DE78000F6AE91 /* LineInfo.h */,
+				57B64864208DE78000F6AE91 /* LineInfo.m */,
+				57B64865208DE78000F6AE91 /* PointView.h */,
+				57B64866208DE78000F6AE91 /* PointView.m */,
+			);
+			name = Game;
+			path = ../../../ResetApp/ResetApp/Game;
+			sourceTree = "<group>";
+		};
 		7AE10B9DFFB464FE1840AB41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1808,6 +1837,7 @@
 				571D65161EA495AC00BD6D15 /* UpdateTool.m in Sources */,
 				571D64D41EA495AC00BD6D15 /* CustomADTipsView.m in Sources */,
 				C11DF3B21EE24F6500DEA7F8 /* FMDatabaseQueue.m in Sources */,
+				57B6486A208DE78000F6AE91 /* PointView.m in Sources */,
 				571D64BA1EA495AC00BD6D15 /* NSObject+Additions.m in Sources */,
 				571D64931EA495AC00BD6D15 /* UserInfoUtil.m in Sources */,
 				571D64CD1EA495AC00BD6D15 /* UIView+Extension.m in Sources */,
@@ -1819,6 +1849,7 @@
 				571D65001EA495AC00BD6D15 /* NSArray+ExceptionExtension.m in Sources */,
 				571D653F1EA495AC00BD6D15 /* MCKeyboardAccessoryView.m in Sources */,
 				571D65411EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.m in Sources */,
+				57B64868208DE78000F6AE91 /* GameView.m in Sources */,
 				571D65131EA495AC00BD6D15 /* GuidePageViewController.m in Sources */,
 				571D65281EA495AC00BD6D15 /* ASPopUpView.m in Sources */,
 				571D648E1EA495AC00BD6D15 /* BaseViewModel.m in Sources */,
@@ -1857,6 +1888,7 @@
 				571D64F41EA495AC00BD6D15 /* GjFaxCgiErrorModel.m in Sources */,
 				571D64F21EA495AC00BD6D15 /* BaseNetworkingClient.m in Sources */,
 				571D653B1EA495AC00BD6D15 /* MCCharacterKeyboardView.m in Sources */,
+				57B64869208DE78000F6AE91 /* LineInfo.m in Sources */,
 				571D64D91EA495AC00BD6D15 /* CustomerProgressView.m in Sources */,
 				571D651A1EA495AC00BD6D15 /* MyGetRewardInfo.m in Sources */,
 				571D64EE1EA495AC00BD6D15 /* SFRequestListService.m in Sources */,
@@ -1901,6 +1933,7 @@
 				571D64BC1EA495AC00BD6D15 /* NSString+Extension.m in Sources */,
 				571D65191EA495AC00BD6D15 /* WebViewInfoModel.m in Sources */,
 				571D65031EA495AC00BD6D15 /* HomePageViewController.m in Sources */,
+				57B64867208DE78000F6AE91 /* GameCancellController.m in Sources */,
 				571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */,
 				571D64FF1EA495AC00BD6D15 /* NSString+MD5.m in Sources */,
 				571D64921EA495AC00BD6D15 /* PhoneCodeViewModel.m in Sources */,

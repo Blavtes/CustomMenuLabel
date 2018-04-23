@@ -12,6 +12,7 @@
 #import "AddMenuViewController.h"
 #import "SearchMenuViewController.h"
 #import "NotificationViewController.h"
+#import "GameCancellController.h"
 
 @interface MorePageViewController () <UITableViewDataSource, UITableViewDelegate>{
     //
@@ -57,8 +58,8 @@
 
 - (void)configData
 {
-    _dataArray = @[@[@"添加菜名", @"查询菜单",@"通知设置"]];
-    _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter"], @[@"more_helpCenter", @"more_feedback"], @[@"more_recommend", @"more_aboutUs", @"more_score"]];
+    _dataArray = @[@[@"添加菜名", @"查询菜单",@"通知设置", @"不相交"]];
+    _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter" ,@"more_score"], @[@"more_helpCenter", @"more_feedback", @"more_recommend"], @[@"more_recommend", @"more_aboutUs", @"more_score", @"more_companyInfo"]];
 }
 
 - (void)initBaseView
@@ -202,8 +203,11 @@
     } else if (indexPath.row == 1){
         SearchMenuViewController *vc = [SearchMenuViewController new];
         [self.navigationController pushViewController:vc animated:YES];
-    } else {
+    } else if (indexPath.row == 2){
         NotificationViewController *vc = [[NotificationViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        GameCancellController *vc = [GameCancellController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

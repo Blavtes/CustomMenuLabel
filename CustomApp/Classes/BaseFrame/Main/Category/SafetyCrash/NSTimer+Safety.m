@@ -19,7 +19,25 @@
         //swizz
         [SafetyCrash exchangeClassMethod:[self class] method1Sel:@selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) method2Sel:@selector(SafetyScheduledTimerWithTimeInterval:target:selector:userInfo:repeats:)];
         [SafetyCrash exchangeClassMethod:[self class] method1Sel:@selector(timerWithTimeInterval:target:selector:userInfo:repeats:) method2Sel:@selector(SafetyTimerWithTimeInterval:target:selector:userInfo:repeats:)];
+//        [SafetyCrash exchangeClassMethod:[self class] method1Sel:@selector(timerWithTimeInterval:repeats:block:) method2Sel:@selector(SafetyTimerWithTimeInterval:repeats:block:)];
     });
+}
+
++ (NSTimer *)SafetyTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats target:(id)aTarget  block:(void (^)(NSTimer * _Nonnull))block
+{
+    if (repeats) {
+        SubTagertProxy *pro = [SubTagertProxy new];
+        
+        NSTimer *timer = [self timerWithTimeInterval:interval repeats:repeats block:block];
+        pro.timer = timer;
+        pro.target = aTarget;
+        pro.block = block;
+        pro.targetClass = [aTarget class];
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        return timer;
+    }
+    
+    return [self timerWithTimeInterval:interval repeats:repeats block:block];
 }
 
 + (NSTimer *)SafetyScheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo repeats:(BOOL)yesOrNo
@@ -66,7 +84,12 @@
         [_timer invalidate];
     } else {
         if (_selector) {
-            [_target performSelector:_selector withObject:_userInfo];
+            if ([self respondsToSelector:_selector]) {
+                [_target performSelector:_selector withObject:_userInfo];
+            }
+        }
+        if (_block) {
+            _block(_timer);
         }
     }
 }

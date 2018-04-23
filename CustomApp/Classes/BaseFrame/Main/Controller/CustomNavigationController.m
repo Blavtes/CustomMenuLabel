@@ -77,6 +77,7 @@
                                 @"TransferInvestSuccessViewController",@"BusinessInvestResultViewController", @"IngegralExchangeToGJBResultViewController",     /* 16~18*/
                                 @"ConvertDetailsSuccessViewController",@"ConvertDetailsFailViewController",@"ExchangeGJSTicketResultViewController" ,            /* 19~21*/
                                     @"SetPhoneNumberSuccessViewController" /*22*/
+                                ,@"GameCancellController"
                                 ];
     
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
