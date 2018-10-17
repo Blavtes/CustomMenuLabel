@@ -14,7 +14,7 @@
 #import "GuidePageViewController.h"
 
 #import "PreCommonHeader.h"
-
+#import "LocationTool.h"
 
 //#import "GeTuiManager.h"
 //#import "GJSShareSDKManager.h"
@@ -64,7 +64,7 @@ static float const kLaunchSleepTime = 1.5f;
     [NSThread sleepForTimeInterval:0.5f];
     
     [_window makeKeyAndVisible];
-    
+
     //开启bugly
 //    [BuglyTool setupBuglyConfig];
     
@@ -78,7 +78,7 @@ static float const kLaunchSleepTime = 1.5f;
     [self registerNotifications];
     //  个推SDK注册
 //    [GeTuiManager starGeTuiSDK];
-    
+    [LocationTool shareManager];
     //  创建搜索
     //[self initCoreSpotlight];
     
@@ -96,7 +96,7 @@ static float const kLaunchSleepTime = 1.5f;
 //    [[GuidePageViewController sharedInstance] fetchGuideData];
     
 #pragma mark - - 小红点信息
-    [[BadgeTool sharedInstance] reqBadgeInfo];
+//    [[BadgeTool sharedInstance] reqBadgeInfo];
     
 #pragma mark - - 更新信息
    // [[UpdateTool sharedInstance] reqUpdateInfo];
@@ -117,7 +117,7 @@ static float const kLaunchSleepTime = 1.5f;
     //  启动并注册 监控联网状态
     [NetWorkingStatusModel manager];
     _count = 1000000;
-    [self login];
+    // [self login];
 //    DLog(@"identi %@ ", [[UIDevice currentDevice] uniqueIdentifier] );
     
 //    DLog(@"udeif %@ ", [AADeviceInfo udid]);
@@ -376,6 +376,10 @@ static float const kLaunchSleepTime = 1.5f;
 #pragma mark - 程序启动相关
 - (void)applicationWillResignActive:(UIApplication *)application {
     //  当应用程序将要入非活动状态执行，在此期间，应用程序不接收消息或事件，比如来电话了
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    if ([LocationTool getLocationServicesEnabled]) {
+        [[LocationTool shareManager].locationManager startUpdatingLocation];
+    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -390,10 +394,29 @@ static float const kLaunchSleepTime = 1.5f;
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     //  当程序被推送到后台的时候调用。所以要设置后台继续运行，则在这个函数里面设置即可
-    
-    // [EXT] APP进入后台时，通知个推SDK进入后台
-//    [GeTuiManager enterBackGroud];
-    
+    if ([LocationTool getLocationServicesEnabled]) {
+        UIApplication *app = [UIApplication sharedApplication];
+        __block  UIBackgroundTaskIdentifier bgTask;
+        bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if (bgTask != UIBackgroundTaskInvalid){
+                    bgTask = UIBackgroundTaskInvalid;
+                }
+            });
+        }];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (bgTask != UIBackgroundTaskInvalid){
+                    bgTask = UIBackgroundTaskInvalid;
+                }
+            });
+        });
+       
+        [[LocationTool shareManager].locationManager startUpdatingLocation];
+        // [EXT] APP进入后台时，通知个推SDK进入后台
+    //    [GeTuiManager enterBackGroud];
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -478,7 +501,7 @@ static float const kLaunchSleepTime = 1.5f;
     // 这里真实需要处理交互的地方
     // 获取通知所带的数据
     
-    [self login];
+//    [self login];
     
     // 在不需要再推送时，可以取消推送
     [NotificationViewController haveLocalNotificationInfo:notification.userInfo];

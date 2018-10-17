@@ -16,7 +16,6 @@
 //static LocationTool *myLocationManager;
 
 @interface LocationTool () <CLLocationManagerDelegate>
-@property (nonatomic, strong) CLLocationManager * locationManager;
 @property (nonatomic, copy) void(^complete)(CLLocation *location);
 @end
 
@@ -49,20 +48,32 @@
 //开始定位
 - (instancetype)init {
     if (self = [super init]) {
-    
+        
         if ([CLLocationManager locationServicesEnabled]) {
             [LocationTool setLocationServicesEnabled:YES];
             //        CLog(@"--------开始定位");
             self.locationManager = [[CLLocationManager alloc]init];
             self.locationManager.delegate = self;
             //控制定位精度,越高耗电量越
+            [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
             self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+            self.locationManager.pausesLocationUpdatesAutomatically = NO;
+            
             // 总是授权
-            if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-                [self.locationManager requestWhenInUseAuthorization];
+            if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+                [self.locationManager requestAlwaysAuthorization];
             }
-            self.locationManager.distanceFilter = 10.0f;
+            //            self.locationManager.distanceFilter = 10.0f;
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8) {
+                //在后台也可定位
+                [self.locationManager requestAlwaysAuthorization];
+            }
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9) {
+                self.locationManager.allowsBackgroundLocationUpdates = YES;
+            }
+            
             [self.locationManager startUpdatingLocation];
+            [self.locationManager startUpdatingHeading];
             NSString *string = [self getIPWithHostName:@"app.gjfax.com"];
             
             DLog(@"ip -> %@",string );
@@ -88,10 +99,10 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     if ([error code] == kCLErrorDenied) {
-        BLYLogWarn(@"=== 定位信息异常： 访问被拒绝 === ");
+//        BLYLogWarn(@"=== 定位信息异常： 访问被拒绝 === ");
     }
     if ([error code] == kCLErrorLocationUnknown) {
-        BLYLogWarn(@"=== 定位信息异常： 无法获取位置信息 ===  ");
+//        BLYLogWarn(@"=== 定位信息异常： 无法获取位置信息 ===  ");
     }
 }
 
@@ -123,7 +134,7 @@
             }
             DLog(@"city = %@", city);
             [LocationModel shareManager].locationDes = [NSString stringWithFormat:@"%@%@%@%@%@",placemark.country,city,placemark.subLocality,placemark.thoroughfare,placemark.name];
-            BLYLogWarn(@"[LocationModel shareManager].locationDes = %@", [LocationModel shareManager].locationDes);
+//            BLYLogWarn(@"[LocationModel shareManager].locationDes = %@", [LocationModel shareManager].locationDes);
             [LocationModel shareManager].city = city;
             
         }
@@ -173,7 +184,7 @@
     } @catch (NSException *e) {
         return nil;
     }
-  
+    
     struct in_addr ip_addr;
     if(phot) {
         memcpy(&ip_addr,phot->h_addr_list[0],4);
@@ -210,14 +221,14 @@
     NSMutableDictionary *reqDic = [[NSMutableDictionary alloc] init];
     [reqDic setObject:location forKey:@"location"];
     
-    [HttpTool postUrl:GJS_CollectData params:reqDic success:^(id responseObj) {
-        //  加载完成
-        [self reqSubmitCollectionData_callBack:responseObj];
-        
-    } failure:^(NSError *error) {
-        //
-        DLog(@"%@",error);
-    }];
+//    [HttpTool postUrl:GJS_CollectData params:reqDic success:^(id responseObj) {
+//        //  加载完成
+//        [self reqSubmitCollectionData_callBack:responseObj];
+//
+//    } failure:^(NSError *error) {
+//        //
+//        DLog(@"%@",error);
+//    }];
 }
 
 - (void)reqSubmitCollectionData_callBack:(id)data

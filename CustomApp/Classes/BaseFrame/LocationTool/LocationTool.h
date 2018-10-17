@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface LocationTool : NSObject
+@property (nonatomic, strong) CLLocationManager * locationManager;
+
 + (LocationTool*)shareManager;
 //用户状态 
 + (BOOL)locationUserStatus;

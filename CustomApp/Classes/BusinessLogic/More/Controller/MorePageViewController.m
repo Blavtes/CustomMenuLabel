@@ -15,6 +15,7 @@
 #import "GameCancellController.h"
 #import "NormalProductModel.h"
 #import "RMTBdReportBufferManager.h"
+#import "LocationTool.h"
 
 @interface MorePageViewController () <UITableViewDataSource, UITableViewDelegate>{
     //
@@ -25,6 +26,9 @@
 @property (strong, nonatomic) NSArray *dataArray;
 @property (strong, nonatomic) NSArray *imgArray;
 @property (strong, nonatomic) NSString *tipsTitle;
+@property (nonatomic, strong) NSTimer *time;
+@property (nonatomic, assign) BOOL isFecth;
+@property (nonatomic, assign) int fecthCount;
 @end
 
 @implementation MorePageViewController
@@ -58,15 +62,43 @@
     [self.navTopView hideBack];
     self.title  = @"我的地盘";
   
-    NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:10 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [self fetchProductData];
-    }];
+ 
 }
 
 - (void)configData
 {
     _dataArray = @[@[@"添加菜名", @"查询菜单",@"通知设置", @"不相交",self.tipsTitle]];
     _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter" ,@"more_score",@"more_score"], @[@"more_helpCenter", @"more_feedback", @"more_recommend", @"more_recommend"], @[@"more_recommend", @"more_aboutUs", @"more_score", @"more_companyInfo",@"more_companyInfo"]];
+}
+
+
+- (void)switchChange:(UISwitch *)se
+{
+    DLog(@"UISwitch %d",se.isOn);
+    if (se.isOn) {
+        _isFecth = YES;
+        if (_time) {
+            [_time invalidate];
+            _time = nil;
+        }
+        self.fecthCount = 0;
+        [LocationTool setLocationServicesEnabled:YES];
+        NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            [self fetchProductData];
+            self.fecthCount++;
+        }];
+        _time = time;
+        
+    } else {
+        if (_time) {
+            [_time invalidate];
+            _time = nil;
+        }
+        self.fecthCount = 0;
+        [LocationTool setLocationServicesEnabled:NO];
+        _isFecth = NO;
+    }
+//    [self.tableView reloadData];
 }
 
 - (void)fetchProductData
@@ -106,16 +138,16 @@
                 sum += [model.productBalance floatValue];
             }
         }
-        self.tipsTitle = FMT_STR(@"数量 %d 剩余 %.2f",a,sum);
+        self.tipsTitle = FMT_STR(@"数量 %d 剩余 %.2f 统计次数 %d",a,sum,self.fecthCount);
         Show_iToast( self.tipsTitle);
-//        if (sum > 0) {
+        if (sum > 0) {
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
             [dict setObject:@"aaa" forKey:BdReportPrimaryKey];
             [dict setObject: self.tipsTitle forKey:BdNotificationConstentName];
             [dict setObject:@"消息" forKey:BdNotificationKeyName];
             
             [NotificationViewController registerLocalNotification:4 notiInfo:dict];
-//        }
+        }
         [self configData];
         [self.tableView reloadData];
     } else {
@@ -236,6 +268,11 @@
             [cell.contentView addSubview:_redPointLabel2];
             //  是否显示小红点
             _redPointLabel2.hidden = ![[BadgeTool sharedInstance] getIsShowBadgeWithType:isShowNewsCenterType];
+        } else if (indexPath.row == 4) {
+            UISwitch *swit = [[UISwitch alloc] initWithFrame:CGRectMake(MAIN_SCREEN_WIDTH - 60, 10, 100, kTableViewCellHeightNormal)];
+            [swit setOn:self.isFecth];
+            [swit addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
+            [cell.contentView addSubview:swit];
         }
     }
     if (indexPath.section == 2 && indexPath.row == 2) {
@@ -243,9 +280,13 @@
         cell.detailTextLabel.font = [UIFont systemFontOfSize:kCommonFontSizeTitle_18];
         cell.detailTextLabel.text = FMT_STR(@"V%@",[CommonMethod appVersion]);
     }
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if(indexPath.row != 4){
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     return cell;
 }
 
