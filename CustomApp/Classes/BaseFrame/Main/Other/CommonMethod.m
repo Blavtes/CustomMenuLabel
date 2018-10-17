@@ -358,20 +358,18 @@
 
 + (NSString *)UUIDWithKeyChain
 {
-    KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:@"GJFax_UUID" accessGroup:nil];
     
-    NSString *uuid = [wrapper objectForKey:(__bridge id)kSecAttrAccount];
+    CFUUIDRef uuid_ref = CFUUIDCreate(NULL);
     
-    if (uuid && [uuid length] > 0) {
-        return uuid;
-    } else {
-        uuid = [[self class] uuid];
-        if (uuid) {
-            [wrapper setObject:uuid forKey:(__bridge id)kSecAttrAccount];
-        }
-        
-        return uuid;
-    }
+    CFStringRef uuid_string_ref= CFUUIDCreateString(NULL, uuid_ref);
+    
+    NSString *uuid = [NSString stringWithString:(__bridge NSString *)uuid_string_ref];
+    
+    CFRelease(uuid_ref);
+    
+    CFRelease(uuid_string_ref);
+    
+    return [uuid stringByReplacingOccurrencesOfString:@"-" withString:@"B"];
 }
 
 + (NSString*)uuid
@@ -399,6 +397,7 @@
 
 + (NSString *)deviceType
 {
+    return @"OPPO R9s";
     struct utsname systemInfo;
     
     uname(&systemInfo);
@@ -489,9 +488,9 @@
     
     if ([platform isEqualToString:@"iPad4,6"]) return @"iPad Mini 2G";
     
-    if ([platform isEqualToString:@"i386"]) return @"iPhone Simulator";
+    if ([platform isEqualToString:@"i386"]) return @"iPhone XR";
     
-    if ([platform isEqualToString:@"x86_64"]) return @"iPhone Simulator";
+    if ([platform isEqualToString:@"x86_64"]) return @"iPhone XR";
     
     return platform;
     

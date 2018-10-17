@@ -49,17 +49,17 @@
     if (!srcDic) {
         //  orgin
         NSMutableDictionary *originDic = [[NSMutableDictionary alloc] init];
-        [originDic setObject:Gjfax_iOS_PlatformStr forKey:@"platform"];
-        [originDic setObject:Gjfax_iOS_ChannelStr forKey:@"channel"];
+        [originDic setObject:@(4) forKey:@"platform"];
+        [originDic setObject:@"901_gjfax" forKey:@"channel"];
         [originDic setObject:Gjfax_iOS_ApiVersion forKey:@"apiVersion"];
-        [originDic setObject:[CommonMethod appVersion] forKey:@"appVersion"];
+        [originDic setObject:@"3.23.0" forKey:@"appVersion"];
         [originDic setObject:[CommonMethod UUIDWithKeyChain] forKey:@"uuid"];
         [originDic setObject:[CommonMethod strTimeIntervalSince1970] forKey:@"timestamp"];
 #pragma mark - 手机型号 - 系统号
         [originDic setObject:[CommonMethod deviceType] forKey:@"phoneType"];
-        NSString *sysVersion = FMT_STR(@"%@_%@", [[UIDevice currentDevice] systemName],
-                                       [[UIDevice currentDevice] systemVersion]);
-        [originDic setObject:sysVersion forKey:@"sysVersion"];
+//        NSString *sysVersion = FMT_STR(@"%@_%@", [[UIDevice currentDevice] systemName],
+//                                       [[UIDevice currentDevice] systemVersion]);
+        [originDic setObject:@"6.0.1" forKey:@"sysVersion"];
         
         [retDic setObject:originDic forKey:@"origin"];
     } else {
