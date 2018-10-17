@@ -12,7 +12,7 @@
 
 
 // 设置本地通知
-//+ (void)registerLocalNotification:(NSInteger)alertTime notiInfo:(NSDictionary *)str;
++ (void)registerLocalNotification:(NSInteger)alertTime notiInfo:(NSDictionary *)str;
 //+ (void)cancelLocalNotificationWithKey:(NSString *)key;
 //
 + (void)haveLocalNotificationInfo:(NSDictionary *)dict;

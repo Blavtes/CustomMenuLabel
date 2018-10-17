@@ -171,13 +171,18 @@
 		5782344E208427C200AD68E2 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57823449208427C100AD68E2 /* AlicloudUtils.framework */; };
 		5782344F208427C200AD68E2 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5782344A208427C100AD68E2 /* UTDID.framework */; };
 		5782345120842CD200AD68E2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5782345020842CD100AD68E2 /* libresolv.tbd */; };
+		579565192092D09A0000973C /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579565102092D0990000973C /* PointView.m */; };
+		5795651A2092D09A0000973C /* LineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 579565142092D0990000973C /* LineInfo.m */; };
+		5795651C2092D09A0000973C /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579565162092D0990000973C /* GameView.m */; };
+		5795651D2092D09A0000973C /* GameCancellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579565182092D0990000973C /* GameCancellController.m */; };
 		579F2F4F1EA49F6100DD2CCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */; };
 		57A4F1311F2B12AB0014378E /* NotificationRecordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */; };
 		57A4F1321F2B12AB0014378E /* NotificationRecordListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A4F1301F2B12AB0014378E /* NotificationRecordListViewController.xib */; };
-		57B64867208DE78000F6AE91 /* GameCancellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64860208DE78000F6AE91 /* GameCancellController.m */; };
-		57B64868208DE78000F6AE91 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64862208DE78000F6AE91 /* GameView.m */; };
-		57B64869208DE78000F6AE91 /* LineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64864208DE78000F6AE91 /* LineInfo.m */; };
-		57B6486A208DE78000F6AE91 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64866208DE78000F6AE91 /* PointView.m */; };
+		57CC055B21770D8A0031D68E /* BaseProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CC055921770D8A0031D68E /* BaseProductModel.m */; };
+		57CC055E21770DA20031D68E /* NormalProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CC055C21770DA10031D68E /* NormalProductModel.m */; };
+		57CC056121770F080031D68E /* NormalProductNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CC055F21770F080031D68E /* NormalProductNewModel.m */; };
+		57CC056421770F230031D68E /* ProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CC056221770F220031D68E /* ProductDetailModel.m */; };
+		57CC056821771A4F0031D68E /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CC056621771A4F0031D68E /* LocationTool.m */; };
 		C11DF3AF1EE24F6500DEA7F8 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DF3A51EE24F6500DEA7F8 /* FMDatabase.m */; };
 		C11DF3B01EE24F6500DEA7F8 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DF3A71EE24F6500DEA7F8 /* FMDatabaseAdditions.m */; };
 		C11DF3B11EE24F6500DEA7F8 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DF3A91EE24F6500DEA7F8 /* FMDatabasePool.m */; };
@@ -509,18 +514,31 @@
 		57823449208427C100AD68E2 /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudUtils.framework; sourceTree = "<group>"; };
 		5782344A208427C100AD68E2 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		5782345020842CD100AD68E2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		579565032092ABD10000973C /* Xcode.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Xcode.app; path = ../../../../../../Applications/Xcode.app; sourceTree = "<group>"; };
+		579565052092AD5A0000973C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		5795650F2092D0990000973C /* LineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineInfo.h; sourceTree = "<group>"; };
+		579565102092D0990000973C /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
+		579565112092D0990000973C /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		579565122092D0990000973C /* GameCancellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCancellController.h; sourceTree = "<group>"; };
+		579565132092D0990000973C /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
+		579565142092D0990000973C /* LineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineInfo.m; sourceTree = "<group>"; };
+		579565162092D0990000973C /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		579565172092D0990000973C /* AADeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AADeviceInfo.h; sourceTree = "<group>"; };
+		579565182092D0990000973C /* GameCancellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCancellController.m; sourceTree = "<group>"; };
 		579F2F4E1EA49F6100DD2CCD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		57A4F12E1F2B12AB0014378E /* NotificationRecordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRecordListViewController.h; sourceTree = "<group>"; };
 		57A4F12F1F2B12AB0014378E /* NotificationRecordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRecordListViewController.m; sourceTree = "<group>"; };
 		57A4F1301F2B12AB0014378E /* NotificationRecordListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationRecordListViewController.xib; sourceTree = "<group>"; };
-		57B6485F208DE78000F6AE91 /* GameCancellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCancellController.h; sourceTree = "<group>"; };
-		57B64860208DE78000F6AE91 /* GameCancellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCancellController.m; sourceTree = "<group>"; };
-		57B64861208DE78000F6AE91 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
-		57B64862208DE78000F6AE91 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
-		57B64863208DE78000F6AE91 /* LineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineInfo.h; sourceTree = "<group>"; };
-		57B64864208DE78000F6AE91 /* LineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineInfo.m; sourceTree = "<group>"; };
-		57B64865208DE78000F6AE91 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
-		57B64866208DE78000F6AE91 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
+		57CC055921770D8A0031D68E /* BaseProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProductModel.m; sourceTree = "<group>"; };
+		57CC055A21770D8A0031D68E /* BaseProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseProductModel.h; sourceTree = "<group>"; };
+		57CC055C21770DA10031D68E /* NormalProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalProductModel.m; sourceTree = "<group>"; };
+		57CC055D21770DA10031D68E /* NormalProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalProductModel.h; sourceTree = "<group>"; };
+		57CC055F21770F080031D68E /* NormalProductNewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalProductNewModel.m; sourceTree = "<group>"; };
+		57CC056021770F080031D68E /* NormalProductNewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalProductNewModel.h; sourceTree = "<group>"; };
+		57CC056221770F220031D68E /* ProductDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDetailModel.m; sourceTree = "<group>"; };
+		57CC056321770F230031D68E /* ProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDetailModel.h; sourceTree = "<group>"; };
+		57CC056621771A4F0031D68E /* LocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTool.m; sourceTree = "<group>"; };
+		57CC056721771A4F0031D68E /* LocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
 		768EF575564BF9000FB62568 /* Pods-CustomMenuLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomMenuLabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomMenuLabel/Pods-CustomMenuLabel.debug.xcconfig"; sourceTree = "<group>"; };
 		9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomMenuLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11DF3A41EE24F6500DEA7F8 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -585,6 +603,8 @@
 		0B98182084AEA4F78A5ED8CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				579565052092AD5A0000973C /* Accounts.framework */,
+				579565032092ABD10000973C /* Xcode.app */,
 				5782345020842CD100AD68E2 /* libresolv.tbd */,
 				571D65851EA49A7300BD6D15 /* libstdc++.tbd */,
 				571D65831EA49A6B00BD6D15 /* libicucore.tbd */,
@@ -662,7 +682,7 @@
 		571D607C1EA495AB00BD6D15 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				57B6485E208DE78000F6AE91 /* Game */,
+				5795650E2092D0990000973C /* Game */,
 				571D607D1EA495AB00BD6D15 /* BaseFrame */,
 				571D61A11EA495AB00BD6D15 /* BusinessLogic */,
 				571D63DE1EA495AC00BD6D15 /* ThirdParty */,
@@ -673,6 +693,7 @@
 		571D607D1EA495AB00BD6D15 /* BaseFrame */ = {
 			isa = PBXGroup;
 			children = (
+				57CC056521771A4F0031D68E /* LocationTool */,
 				571D607E1EA495AB00BD6D15 /* AudioUtil */,
 				571D60861EA495AB00BD6D15 /* DataModelTool */,
 				571D60951EA495AB00BD6D15 /* GestureTool */,
@@ -1075,6 +1096,7 @@
 		571D61A11EA495AB00BD6D15 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				57CC055221770D300031D68E /* Model */,
 				571D61B11EA495AB00BD6D15 /* Home */,
 				571D61E81EA495AB00BD6D15 /* More */,
 				571D61F81EA495AB00BD6D15 /* Newfeature */,
@@ -1572,20 +1594,45 @@
 			path = OneSDK;
 			sourceTree = "<group>";
 		};
-		57B6485E208DE78000F6AE91 /* Game */ = {
+		5795650E2092D0990000973C /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				57B6485F208DE78000F6AE91 /* GameCancellController.h */,
-				57B64860208DE78000F6AE91 /* GameCancellController.m */,
-				57B64861208DE78000F6AE91 /* GameView.h */,
-				57B64862208DE78000F6AE91 /* GameView.m */,
-				57B64863208DE78000F6AE91 /* LineInfo.h */,
-				57B64864208DE78000F6AE91 /* LineInfo.m */,
-				57B64865208DE78000F6AE91 /* PointView.h */,
-				57B64866208DE78000F6AE91 /* PointView.m */,
+				5795650F2092D0990000973C /* LineInfo.h */,
+				579565102092D0990000973C /* PointView.m */,
+				579565112092D0990000973C /* GameView.h */,
+				579565122092D0990000973C /* GameCancellController.h */,
+				579565132092D0990000973C /* PointView.h */,
+				579565142092D0990000973C /* LineInfo.m */,
+				579565162092D0990000973C /* GameView.m */,
+				579565172092D0990000973C /* AADeviceInfo.h */,
+				579565182092D0990000973C /* GameCancellController.m */,
 			);
 			name = Game;
-			path = ../../../ResetApp/ResetApp/Game;
+			path = BaseFrame/Game;
+			sourceTree = "<group>";
+		};
+		57CC055221770D300031D68E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57CC056321770F230031D68E /* ProductDetailModel.h */,
+				57CC056221770F220031D68E /* ProductDetailModel.m */,
+				57CC055D21770DA10031D68E /* NormalProductModel.h */,
+				57CC056021770F080031D68E /* NormalProductNewModel.h */,
+				57CC055F21770F080031D68E /* NormalProductNewModel.m */,
+				57CC055C21770DA10031D68E /* NormalProductModel.m */,
+				57CC055A21770D8A0031D68E /* BaseProductModel.h */,
+				57CC055921770D8A0031D68E /* BaseProductModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57CC056521771A4F0031D68E /* LocationTool */ = {
+			isa = PBXGroup;
+			children = (
+				57CC056621771A4F0031D68E /* LocationTool.m */,
+				57CC056721771A4F0031D68E /* LocationTool.h */,
+			);
+			path = LocationTool;
 			sourceTree = "<group>";
 		};
 		7AE10B9DFFB464FE1840AB41 /* Pods */ = {
@@ -1792,12 +1839,14 @@
 			files = (
 				571D64D61EA495AC00BD6D15 /* CustomerCaculateView.m in Sources */,
 				571D653D1EA495AC00BD6D15 /* MCImageButton.m in Sources */,
+				5795651C2092D09A0000973C /* GameView.m in Sources */,
 				571D65491EA495AC00BD6D15 /* SCNavTabBar.m in Sources */,
 				571D64B71EA495AC00BD6D15 /* AppDelegate.m in Sources */,
 				571D65361EA495AC00BD6D15 /* CoreArchive.m in Sources */,
 				571D64EF1EA495AC00BD6D15 /* SFRequestService.m in Sources */,
 				571D64B91EA495AC00BD6D15 /* NSDictionary+Extension.m in Sources */,
 				571D64EC1EA495AC00BD6D15 /* SFArchiverRequestService.m in Sources */,
+				5795651A2092D09A0000973C /* LineInfo.m in Sources */,
 				571D64D31EA495AC00BD6D15 /* CheckUpdateAlertView.m in Sources */,
 				571D65121EA495AC00BD6D15 /* BadgeTool.m in Sources */,
 				571D64C81EA495AC00BD6D15 /* SafetyCrash.m in Sources */,
@@ -1811,6 +1860,7 @@
 				C11DF3B31EE24F6500DEA7F8 /* FMResultSet.m in Sources */,
 				571D64C51EA495AC00BD6D15 /* NSObject+SafetyCrash.m in Sources */,
 				571D654A1EA495AC00BD6D15 /* SCPopView.m in Sources */,
+				5795651D2092D09A0000973C /* GameCancellController.m in Sources */,
 				571D64E51EA495AC00BD6D15 /* main.m in Sources */,
 				571D64C21EA495AC00BD6D15 /* NSMutableAttributedString+SafetyCrash.m in Sources */,
 				571D64CF1EA495AC00BD6D15 /* CustomBaseViewController.m in Sources */,
@@ -1835,9 +1885,9 @@
 				571D652D1EA495AC00BD6D15 /* CALayer+Anim.m in Sources */,
 				C176E9161EE2E6D100D83EB2 /* YesterdayMenuViewController.m in Sources */,
 				571D65161EA495AC00BD6D15 /* UpdateTool.m in Sources */,
+				57CC056121770F080031D68E /* NormalProductNewModel.m in Sources */,
 				571D64D41EA495AC00BD6D15 /* CustomADTipsView.m in Sources */,
 				C11DF3B21EE24F6500DEA7F8 /* FMDatabaseQueue.m in Sources */,
-				57B6486A208DE78000F6AE91 /* PointView.m in Sources */,
 				571D64BA1EA495AC00BD6D15 /* NSObject+Additions.m in Sources */,
 				571D64931EA495AC00BD6D15 /* UserInfoUtil.m in Sources */,
 				571D64CD1EA495AC00BD6D15 /* UIView+Extension.m in Sources */,
@@ -1849,7 +1899,6 @@
 				571D65001EA495AC00BD6D15 /* NSArray+ExceptionExtension.m in Sources */,
 				571D653F1EA495AC00BD6D15 /* MCKeyboardAccessoryView.m in Sources */,
 				571D65411EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.m in Sources */,
-				57B64868208DE78000F6AE91 /* GameView.m in Sources */,
 				571D65131EA495AC00BD6D15 /* GuidePageViewController.m in Sources */,
 				571D65281EA495AC00BD6D15 /* ASPopUpView.m in Sources */,
 				571D648E1EA495AC00BD6D15 /* BaseViewModel.m in Sources */,
@@ -1857,10 +1906,13 @@
 				571D64F31EA495AC00BD6D15 /* GjFaxCgiErrorCollection.m in Sources */,
 				571D64D51EA495AC00BD6D15 /* CustomAlertView.m in Sources */,
 				571D651B1EA495AC00BD6D15 /* MyGetRewardInfoService.m in Sources */,
+				57CC056421770F230031D68E /* ProductDetailModel.m in Sources */,
 				571D64E21EA495AC00BD6D15 /* FoldListSubTitleView.m in Sources */,
 				571D64C01EA495AC00BD6D15 /* NSDictionary+SafetyCrash.m in Sources */,
 				571D65371EA495AC00BD6D15 /* GJSNumKeyBoardField.m in Sources */,
 				571D64C91EA495AC00BD6D15 /* UIBarButtonItem+Extension.m in Sources */,
+				57CC056821771A4F0031D68E /* LocationTool.m in Sources */,
+				57CC055B21770D8A0031D68E /* BaseProductModel.m in Sources */,
 				C11DF3CE1EE2894B00DEA7F8 /* RadomViewController.m in Sources */,
 				571D65341EA495AC00BD6D15 /* CLLockView.m in Sources */,
 				571D64E11EA495AC00BD6D15 /* CustomTopHeaderView.m in Sources */,
@@ -1888,7 +1940,6 @@
 				571D64F41EA495AC00BD6D15 /* GjFaxCgiErrorModel.m in Sources */,
 				571D64F21EA495AC00BD6D15 /* BaseNetworkingClient.m in Sources */,
 				571D653B1EA495AC00BD6D15 /* MCCharacterKeyboardView.m in Sources */,
-				57B64869208DE78000F6AE91 /* LineInfo.m in Sources */,
 				571D64D91EA495AC00BD6D15 /* CustomerProgressView.m in Sources */,
 				571D651A1EA495AC00BD6D15 /* MyGetRewardInfo.m in Sources */,
 				571D64EE1EA495AC00BD6D15 /* SFRequestListService.m in Sources */,
@@ -1906,6 +1957,7 @@
 				571D64BD1EA495AC00BD6D15 /* NSString+Judgement.m in Sources */,
 				571D64D81EA495AC00BD6D15 /* CustomerIncomeCaculateView.m in Sources */,
 				571D65151EA495AC00BD6D15 /* SigninRequestService.m in Sources */,
+				579565192092D09A0000973C /* PointView.m in Sources */,
 				571D64FA1EA495AC00BD6D15 /* RefreshTool.m in Sources */,
 				571D64FD1EA495AC00BD6D15 /* NSData+CommonCrypto.m in Sources */,
 				571D64FE1EA495AC00BD6D15 /* NSString+Base64.m in Sources */,
@@ -1924,6 +1976,7 @@
 				571D64E71EA495AC00BD6D15 /* SFRefreshTableViewController.m in Sources */,
 				571D64F71EA495AC00BD6D15 /* HttpTool.m in Sources */,
 				574715A41F305C36009B0BB4 /* TBCityColorManager.m in Sources */,
+				57CC055E21770DA20031D68E /* NormalProductModel.m in Sources */,
 				571D64D11EA495AC00BD6D15 /* CustomTabBarViewController.m in Sources */,
 				571D64C41EA495AC00BD6D15 /* NSMutableString+SafetyCrash.m in Sources */,
 				571D64BE1EA495AC00BD6D15 /* NSArray+SafetyCrash.m in Sources */,
@@ -1933,7 +1986,6 @@
 				571D64BC1EA495AC00BD6D15 /* NSString+Extension.m in Sources */,
 				571D65191EA495AC00BD6D15 /* WebViewInfoModel.m in Sources */,
 				571D65031EA495AC00BD6D15 /* HomePageViewController.m in Sources */,
-				57B64867208DE78000F6AE91 /* GameCancellController.m in Sources */,
 				571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */,
 				571D64FF1EA495AC00BD6D15 /* NSString+MD5.m in Sources */,
 				571D64921EA495AC00BD6D15 /* PhoneCodeViewModel.m in Sources */,
@@ -2070,6 +2122,7 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/UI",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/HTTPDNS/OneSDK",
+					"$(PROJECT_DIR)/CustomApp/Classes/BaseFrame/Game",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomApp/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomApp/Info.plist;
@@ -2079,7 +2132,7 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomMenuLabel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.CustomMenuLabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2107,6 +2160,7 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/UI",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/HTTPDNS/OneSDK",
+					"$(PROJECT_DIR)/CustomApp/Classes/BaseFrame/Game",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomApp/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomApp/Info.plist;
@@ -2116,7 +2170,7 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gjfax.CustomMenuLabel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.CustomMenuLabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

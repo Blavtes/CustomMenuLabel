@@ -55,27 +55,29 @@ static iToastSettings *sharedSettings = nil;
 	}
 	
     UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    UIFont *font = [UIFont systemFontOfSize:14];
+    //CGSize textSize = [text sizeWithFont:font constrainedToSize:CGSizeMake(280, 40)];
+    //  最长限制12个字
+    //NSString *maxLmtStr = @"浮层提示文字最多12个字。";
+    //CGSize maxLmtTextSize = [maxLmtStr strSizeWithFont:14 maxSize:MAX_SIZE];
     
+    //CGSize textSize = [text strSizeWithFont:14 maxSize:MAX_SIZE];
+    //CGFloat textSizeWidth = textSize.width;
+    //if (textSize.width >= maxLmtTextSize.width) {
+    //    textSizeWidth = maxLmtTextSize.width;
+    //}
+    CGFloat textSizeWidth = [text boundingRectWithSize:CGSizeMake(280, 60) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.width;
+    CGFloat textSizeHeight = [text boundingRectWithSize:CGSizeMake(280, 60) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.height;
     UIButton *infoBtn = (UIButton *)[window viewWithTag:998];
     if (infoBtn && isShared) {
         UILabel *infoLb = (UILabel *)[window viewWithTag:1024];
         if (infoLb) {
+           
             infoLb.text = text;
+            infoLb.frame = CGRectMake(0, 0, textSizeWidth , textSizeHeight );
         }
     } else {
-        UIFont *font = [UIFont systemFontOfSize:14];
-        //CGSize textSize = [text sizeWithFont:font constrainedToSize:CGSizeMake(280, 40)];
-        //  最长限制12个字
-        //NSString *maxLmtStr = @"浮层提示文字最多12个字。";
-        //CGSize maxLmtTextSize = [maxLmtStr strSizeWithFont:14 maxSize:MAX_SIZE];
-        
-        //CGSize textSize = [text strSizeWithFont:14 maxSize:MAX_SIZE];
-        //CGFloat textSizeWidth = textSize.width;
-        //if (textSize.width >= maxLmtTextSize.width) {
-        //    textSizeWidth = maxLmtTextSize.width;
-        //}
-        CGFloat textSizeWidth = [text boundingRectWithSize:CGSizeMake(280, 60) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.width;
-        CGFloat textSizeHeight = [text boundingRectWithSize:CGSizeMake(280, 60) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.height;
+       
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, textSizeWidth , textSizeHeight )];
         label.backgroundColor = [UIColor clearColor];

@@ -19,6 +19,7 @@
 #define GJS_CheckUpdate @""
 //// 请求登入
 #define HX_POSTLogin @"remote/login/login"
+#define GJS_GJF_FinancialProductList @"restapi/gjf/financial/getFixedProductList"
 
 #define HX_POSTCODEURL @"remote/sms/sendSMS"
 //#pragma mark === 基金理财列表 过滤 fundCode ===

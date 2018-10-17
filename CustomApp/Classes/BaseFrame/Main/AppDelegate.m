@@ -15,6 +15,7 @@
 
 #import "PreCommonHeader.h"
 
+
 //#import "GeTuiManager.h"
 //#import "GJSShareSDKManager.h"
 
@@ -117,6 +118,9 @@ static float const kLaunchSleepTime = 1.5f;
     [NetWorkingStatusModel manager];
     _count = 1000000;
     [self login];
+//    DLog(@"identi %@ ", [[UIDevice currentDevice] uniqueIdentifier] );
+    
+//    DLog(@"udeif %@ ", [AADeviceInfo udid]);
     return YES;
 }
 

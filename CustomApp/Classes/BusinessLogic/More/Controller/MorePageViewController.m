@@ -13,6 +13,8 @@
 #import "SearchMenuViewController.h"
 #import "NotificationViewController.h"
 #import "GameCancellController.h"
+#import "NormalProductModel.h"
+#import "RMTBdReportBufferManager.h"
 
 @interface MorePageViewController () <UITableViewDataSource, UITableViewDelegate>{
     //
@@ -22,10 +24,11 @@
 
 @property (strong, nonatomic) NSArray *dataArray;
 @property (strong, nonatomic) NSArray *imgArray;
-
+@property (strong, nonatomic) NSString *tipsTitle;
 @end
 
 @implementation MorePageViewController
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -49,17 +52,75 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+      self.tipsTitle = @"0";
     [self configData];
     [self initBaseView];
     [self.navTopView hideBack];
     self.title  = @"我的地盘";
+  
+    NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:10 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [self fetchProductData];
+    }];
 }
 
 - (void)configData
 {
-    _dataArray = @[@[@"添加菜名", @"查询菜单",@"通知设置", @"不相交"]];
-    _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter" ,@"more_score"], @[@"more_helpCenter", @"more_feedback", @"more_recommend"], @[@"more_recommend", @"more_aboutUs", @"more_score", @"more_companyInfo"]];
+    _dataArray = @[@[@"添加菜名", @"查询菜单",@"通知设置", @"不相交",self.tipsTitle]];
+    _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter" ,@"more_score",@"more_score"], @[@"more_helpCenter", @"more_feedback", @"more_recommend", @"more_recommend"], @[@"more_recommend", @"more_aboutUs", @"more_score", @"more_companyInfo",@"more_companyInfo"]];
+}
+
+- (void)fetchProductData
+{
+
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:@(1) forKey:@"pageNum"];
+    [params setObject:@(20) forKey:@"pageSize"];
+    
+    [HttpTool postUrl:GJS_GJF_FinancialProductList params:params success:^(id responseObj) {
+        //加载完成
+        DLog(@"log responseObj %@",responseObj);
+        
+        [self req_callBack:responseObj];
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+- (void)req_callBack:(id)data
+{
+    NSDictionary *body = [NSDictionary dictionaryWithDictionary:data];
+    
+    NSString *retStatusStr = FMT_STR(@"%@", [[body objectForKeyForSafetyDictionary:@"retInfo"] objectForKeyForSafetyValue:@"status"]);
+    NSString *retCodeStr = FMT_STR(@"%@", [[body objectForKeyForSafetyDictionary:@"retInfo"] objectForKeyForSafetyValue:@"retCode"]);
+    NSString *retNoteStr = FMT_STR(@"%@", [[body objectForKeyForSafetyDictionary:@"retInfo"] objectForKeyForSafetyValue:@"note"]);
+    
+    if ([[retStatusStr lowercaseString] isEqualToString:kInterfaceRetStatusSuccess]) {
+        
+        NSArray *resultArray = [[body objectForKeyForSafetyDictionary:@"result"] objectForKeyForSafetyArray:@"list"];
+        int a = 0;
+        float sum = 0;
+        NSMutableArray *retModelArray = [NSMutableArray arrayWithArray:[NormalProductModel modelArrayWithArray:resultArray]];
+        for (NormalProductModel *model in retModelArray ) {
+            if ([model.productBalance integerValue] > 0) {
+                a++;
+                sum += [model.productBalance floatValue];
+            }
+        }
+        self.tipsTitle = FMT_STR(@"数量 %d 剩余 %.2f",a,sum);
+        Show_iToast( self.tipsTitle);
+//        if (sum > 0) {
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
+            [dict setObject:@"aaa" forKey:BdReportPrimaryKey];
+            [dict setObject: self.tipsTitle forKey:BdNotificationConstentName];
+            [dict setObject:@"消息" forKey:BdNotificationKeyName];
+            
+            [NotificationViewController registerLocalNotification:4 notiInfo:dict];
+//        }
+        [self configData];
+        [self.tableView reloadData];
+    } else {
+        
+    }
 }
 
 - (void)initBaseView
@@ -206,7 +267,7 @@
     } else if (indexPath.row == 2){
         NotificationViewController *vc = [[NotificationViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
-    } else {
+    } else if (indexPath.row == 3){
         GameCancellController *vc = [GameCancellController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
