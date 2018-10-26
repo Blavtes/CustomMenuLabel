@@ -165,6 +165,11 @@
 		574715A61F305C37009B0BB4 /* TBCityCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5747159F1F305C36009B0BB4 /* TBCityCoreTextLabel.m */; };
 		574715A71F305C37009B0BB4 /* TBCityCoreTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 574715A11F305C36009B0BB4 /* TBCityCoreTextManager.m */; };
 		574715A81F305C37009B0BB4 /* TBCityCoreTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 574715A31F305C36009B0BB4 /* TBCityCoreTextParser.m */; };
+		5749C863217D740A00B48CD3 /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5749C85A217D740A00B48CD3 /* NSStream+SKPSMTPExtensions.m */; };
+		5749C864217D740A00B48CD3 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5749C85E217D740A00B48CD3 /* SKPSMTPMessage.m */; };
+		5749C865217D740A00B48CD3 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5749C860217D740A00B48CD3 /* NSData+Base64Additions.m */; };
+		5749C866217D740A00B48CD3 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5749C861217D740A00B48CD3 /* Base64Transcoder.m */; };
+		5749C867217D740A00B48CD3 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5749C862217D740A00B48CD3 /* HSK_CFUtilities.m */; };
 		5782344B208427C200AD68E2 /* HTTPDNSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823444208427C100AD68E2 /* HTTPDNSTool.m */; };
 		5782344C208427C200AD68E2 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57823446208427C100AD68E2 /* NetworkManager.m */; };
 		5782344D208427C200AD68E2 /* AlicloudHttpDNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57823448208427C100AD68E2 /* AlicloudHttpDNS.framework */; };
@@ -506,6 +511,16 @@
 		574715A11F305C36009B0BB4 /* TBCityCoreTextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityCoreTextManager.m; sourceTree = "<group>"; };
 		574715A21F305C36009B0BB4 /* TBCityCoreTextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityCoreTextParser.h; sourceTree = "<group>"; };
 		574715A31F305C36009B0BB4 /* TBCityCoreTextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityCoreTextParser.m; sourceTree = "<group>"; };
+		5749C859217D740A00B48CD3 /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		5749C85A217D740A00B48CD3 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		5749C85B217D740A00B48CD3 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
+		5749C85C217D740A00B48CD3 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		5749C85D217D740A00B48CD3 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
+		5749C85E217D740A00B48CD3 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
+		5749C85F217D740A00B48CD3 /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		5749C860217D740A00B48CD3 /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		5749C861217D740A00B48CD3 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
+		5749C862217D740A00B48CD3 /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSK_CFUtilities.m; sourceTree = "<group>"; };
 		57823443208427C100AD68E2 /* HTTPDNSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPDNSTool.h; sourceTree = "<group>"; };
 		57823444208427C100AD68E2 /* HTTPDNSTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPDNSTool.m; sourceTree = "<group>"; };
 		57823445208427C100AD68E2 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -1272,6 +1287,7 @@
 		571D63DE1EA495AC00BD6D15 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				5749C858217D740A00B48CD3 /* SMTPLibrary */,
 				574715991F305C36009B0BB4 /* TBCityCoreText */,
 				C11DF3A31EE24F6500DEA7F8 /* fmdb */,
 				571D63DF1EA495AC00BD6D15 /* ASProgressPopUpView */,
@@ -1572,6 +1588,23 @@
 			path = TBCityCoreText;
 			sourceTree = "<group>";
 		};
+		5749C858217D740A00B48CD3 /* SMTPLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				5749C859217D740A00B48CD3 /* NSData+Base64Additions.h */,
+				5749C85A217D740A00B48CD3 /* NSStream+SKPSMTPExtensions.m */,
+				5749C85B217D740A00B48CD3 /* SKPSMTPMessage.h */,
+				5749C85C217D740A00B48CD3 /* Base64Transcoder.h */,
+				5749C85D217D740A00B48CD3 /* HSK_CFUtilities.h */,
+				5749C85E217D740A00B48CD3 /* SKPSMTPMessage.m */,
+				5749C85F217D740A00B48CD3 /* NSStream+SKPSMTPExtensions.h */,
+				5749C860217D740A00B48CD3 /* NSData+Base64Additions.m */,
+				5749C861217D740A00B48CD3 /* Base64Transcoder.m */,
+				5749C862217D740A00B48CD3 /* HSK_CFUtilities.m */,
+			);
+			path = SMTPLibrary;
+			sourceTree = "<group>";
+		};
 		57823442208427C100AD68E2 /* HTTPDNS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1855,6 +1888,7 @@
 				571D64E91EA495AC00BD6D15 /* SFArchiverBaseModel.m in Sources */,
 				571D64ED1EA495AC00BD6D15 /* SFRequestError.m in Sources */,
 				574715A61F305C37009B0BB4 /* TBCityCoreTextLabel.m in Sources */,
+				5749C863217D740A00B48CD3 /* NSStream+SKPSMTPExtensions.m in Sources */,
 				574715A51F305C37009B0BB4 /* TBCityCoreTextAttribute.m in Sources */,
 				C11DF3C41EE2540600DEA7F8 /* AddMenuViewController.m in Sources */,
 				C11DF3B31EE24F6500DEA7F8 /* FMResultSet.m in Sources */,
@@ -1863,6 +1897,7 @@
 				5795651D2092D09A0000973C /* GameCancellController.m in Sources */,
 				571D64E51EA495AC00BD6D15 /* main.m in Sources */,
 				571D64C21EA495AC00BD6D15 /* NSMutableAttributedString+SafetyCrash.m in Sources */,
+				5749C866217D740A00B48CD3 /* Base64Transcoder.m in Sources */,
 				571D64CF1EA495AC00BD6D15 /* CustomBaseViewController.m in Sources */,
 				571D65401EA495AC00BD6D15 /* MCNumberKeyboardView.m in Sources */,
 				571D65381EA495AC00BD6D15 /* SecurityNumberKeyBoardView.m in Sources */,
@@ -1888,6 +1923,7 @@
 				57CC056121770F080031D68E /* NormalProductNewModel.m in Sources */,
 				571D64D41EA495AC00BD6D15 /* CustomADTipsView.m in Sources */,
 				C11DF3B21EE24F6500DEA7F8 /* FMDatabaseQueue.m in Sources */,
+				5749C865217D740A00B48CD3 /* NSData+Base64Additions.m in Sources */,
 				571D64BA1EA495AC00BD6D15 /* NSObject+Additions.m in Sources */,
 				571D64931EA495AC00BD6D15 /* UserInfoUtil.m in Sources */,
 				571D64CD1EA495AC00BD6D15 /* UIView+Extension.m in Sources */,
@@ -1934,6 +1970,7 @@
 				571D64BB1EA495AC00BD6D15 /* NSObject+Extension.m in Sources */,
 				571D64CA1EA495AC00BD6D15 /* UIButton+Extention.m in Sources */,
 				C11DF3B61EE2510B00DEA7F8 /* RMTBdReportBufferManager.m in Sources */,
+				5749C864217D740A00B48CD3 /* SKPSMTPMessage.m in Sources */,
 				571D65101EA495AC00BD6D15 /* MorePageViewController.m in Sources */,
 				571D64951EA495AC00BD6D15 /* GJSSwipeBackTool.m in Sources */,
 				571D64F61EA495AC00BD6D15 /* HttpParamsSetting.m in Sources */,
@@ -1962,6 +1999,7 @@
 				571D64FD1EA495AC00BD6D15 /* NSData+CommonCrypto.m in Sources */,
 				571D64FE1EA495AC00BD6D15 /* NSString+Base64.m in Sources */,
 				571D64F11EA495AC00BD6D15 /* SFTableViewCell.m in Sources */,
+				5749C867217D740A00B48CD3 /* HSK_CFUtilities.m in Sources */,
 				571D64C11EA495AC00BD6D15 /* NSMutableArray+SafetyCrash.m in Sources */,
 				571D652E1EA495AC00BD6D15 /* CoreLockConst.m in Sources */,
 				571D64C31EA495AC00BD6D15 /* NSMutableDictionary+SafetyCrash.m in Sources */,

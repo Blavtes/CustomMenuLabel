@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = COMMON_GREY_WHITE_COLOR;
-
+    [self.view endEditing:YES];
     [self initNavTopView];
     // Do any additional setup after loading the view.
 }
@@ -45,6 +45,10 @@
 - (void)back
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesEnded:touches withEvent:event];
+    [self.view endEditing:YES];
 }
 
 /*

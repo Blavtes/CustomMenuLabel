@@ -16,19 +16,25 @@
 #import "NormalProductModel.h"
 #import "RMTBdReportBufferManager.h"
 #import "LocationTool.h"
+#import "SKPSMTPMessage.h"
+#import "NSData+Base64Additions.h"
+#import "NSStream+SKPSMTPExtensions.h"
 
-@interface MorePageViewController () <UITableViewDataSource, UITableViewDelegate>{
+@interface MorePageViewController () <UITableViewDataSource, UITableViewDelegate,SKPSMTPMessageDelegate>{
     //
 }
 
 @property (strong, nonatomic) UITableView *tableView;
-
+@property (weak, nonatomic) UISwitch *swit;
+@property (weak,nonatomic) UITextField *field;
 @property (strong, nonatomic) NSArray *dataArray;
 @property (strong, nonatomic) NSArray *imgArray;
 @property (strong, nonatomic) NSString *tipsTitle;
 @property (nonatomic, strong) NSTimer *time;
 @property (nonatomic, assign) BOOL isFecth;
 @property (nonatomic, assign) int fecthCount;
+@property (nonatomic, assign) int repeatTime;
+@property (nonatomic,strong)SKPSMTPMessage *mail;
 @end
 
 @implementation MorePageViewController
@@ -56,12 +62,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-      self.tipsTitle = @"0";
+    self.repeatTime = 5.0f;
+    self.tipsTitle = @"0";;
     [self configData];
     [self initBaseView];
     [self.navTopView hideBack];
     self.title  = @"我的地盘";
-  
+    
+    [self.tableView endEditing:YES];
  
 }
 
@@ -71,9 +79,17 @@
     _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter" ,@"more_score",@"more_score"], @[@"more_helpCenter", @"more_feedback", @"more_recommend", @"more_recommend"], @[@"more_recommend", @"more_aboutUs", @"more_score", @"more_companyInfo",@"more_companyInfo"]];
 }
 
+- (void)input:(UITextField*)field
+{
+    self.repeatTime = [field.text intValue] > 5 ? [field.text intValue] : 5;
+    [self switchChange:_swit];
+}
 
 - (void)switchChange:(UISwitch *)se
 {
+    [self.field resignFirstResponder];
+//    [self sendTenEmailTo:@"" verifyCode:@"test"];
+//    return;
     DLog(@"UISwitch %d",se.isOn);
     if (se.isOn) {
         _isFecth = YES;
@@ -83,7 +99,7 @@
         }
         self.fecthCount = 0;
         [LocationTool setLocationServicesEnabled:YES];
-        NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:self.repeatTime repeats:YES block:^(NSTimer * _Nonnull timer) {
             [self fetchProductData];
             self.fecthCount++;
         }];
@@ -139,7 +155,7 @@
             }
         }
         self.tipsTitle = FMT_STR(@"数量 %d 剩余 %.2f 统计次数 %d",a,sum,self.fecthCount);
-        Show_iToast( self.tipsTitle);
+//        Show_iToast( self.tipsTitle);
         if (sum > 0) {
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
             [dict setObject:@"aaa" forKey:BdReportPrimaryKey];
@@ -153,6 +169,47 @@
     } else {
         
     }
+}
+
+- (void)sendTenEmailTo:(NSString *)toEmail verifyCode:(NSString *)verifyCode
+{
+    SKPSMTPMessage *mail = [[SKPSMTPMessage alloc] init];
+    mail.fromEmail = @"574949555@qq.com"; //发送邮箱
+    mail.toEmail = @"574949555@qq.com"; //收件邮箱
+//    myMessage.bccEmail = @"1290925941@qq.com";//抄送
+    
+    mail.relayHost = @"smtp.exmail.qq.com";//发送地址host 腾讯企业邮箱:smtp.exmail.qq.com
+    mail.requiresAuth = YES;
+    mail.login = @"574949555@qq.com";//发送邮箱的用户名
+    mail.pass = @"nrgkdqeoippvbdef";//发送邮箱的密码
+    
+    mail.wantsSecure = YES;
+    mail.subject = @"test";//邮件主题
+    mail.delegate = self;
+    
+    NSDictionary *param = [NSDictionary dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey,[NSString stringWithFormat:@"%@",verifyCode],kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey, nil];
+    mail.parts = @[param];
+    
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
+        
+        [mail send];
+
+        [[NSRunLoop currentRunLoop] run];//这里开启一下runloop要不然重试其他端口的操作不会进行
+
+    });
+}
+
+- (void)messageSent:(SKPSMTPMessage *)message
+
+{
+    NSLog(@"%@", message);
+}
+
+- (void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error
+
+{
+    NSLog(@"message - %@\nerror - %@", message, error);//因为存在发送失败的情况，所以这里可用再次调用 sendEMail方法 我的测试情况是 一般3次就可以成功了
 }
 
 - (void)initBaseView
@@ -273,6 +330,14 @@
             [swit setOn:self.isFecth];
             [swit addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
             [cell.contentView addSubview:swit];
+            UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(MAIN_SCREEN_WIDTH - 120, 10, 40, 30)];
+            field.keyboardType = UIKeyboardTypeDecimalPad;
+            field.backgroundColor = COMMON_GREY_COLOR;
+            [cell.contentView addSubview:field];
+            field.text = FMT_STR(@"%d",self.repeatTime);
+            [field addTarget:self action:@selector(input:) forControlEvents:UIControlEventEditingDidEnd];
+            self.swit = swit;
+            self.field = field;
         }
     }
     if (indexPath.section == 2 && indexPath.row == 2) {
