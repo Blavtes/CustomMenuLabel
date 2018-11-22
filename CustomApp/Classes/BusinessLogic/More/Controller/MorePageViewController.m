@@ -19,6 +19,8 @@
 #import "SKPSMTPMessage.h"
 #import "NSData+Base64Additions.h"
 #import "NSStream+SKPSMTPExtensions.h"
+#import "ProductNavigationModel.h"
+#import "TransferProductModel.h"
 
 @interface MorePageViewController () <UITableViewDataSource, UITableViewDelegate,SKPSMTPMessageDelegate>{
     //
@@ -32,9 +34,15 @@
 @property (strong, nonatomic) NSString *tipsTitle;
 @property (nonatomic, strong) NSTimer *time;
 @property (nonatomic, assign) BOOL isFecth;
+@property (nonatomic, assign) int proCount;
+@property (nonatomic, assign) int loanCount;
 @property (nonatomic, assign) int fecthCount;
+@property (nonatomic, assign) float fecthProMoney;
+@property (nonatomic, assign) float rask;
+@property (nonatomic, assign) float fecthLoanMoney;
 @property (nonatomic, assign) int repeatTime;
 @property (nonatomic,strong)SKPSMTPMessage *mail;
+
 @end
 
 @implementation MorePageViewController
@@ -98,9 +106,17 @@
             _time = nil;
         }
         self.fecthCount = 0;
+        self.loanCount = 0;
+        self.proCount= 0;
+        
         [LocationTool setLocationServicesEnabled:YES];
         NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:self.repeatTime repeats:YES block:^(NSTimer * _Nonnull timer) {
-            [self fetchProductData];
+            if (self.fecthCount % 3 == 1) {
+                [self fetchProData];
+
+            }
+            
+            [self fetchLoanData];
             self.fecthCount++;
         }];
         _time = time;
@@ -111,13 +127,14 @@
             _time = nil;
         }
         self.fecthCount = 0;
+        
         [LocationTool setLocationServicesEnabled:NO];
         _isFecth = NO;
     }
 //    [self.tableView reloadData];
 }
 
-- (void)fetchProductData
+- (void)fetchLoanData
 {
 
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -132,6 +149,55 @@
     } failure:^(NSError *error) {
         
     }];
+}
+
+- (void)fetchProData {
+    
+    [HttpTool postUrl:GJS_GetProductZoneList params:nil success:^(id responseObj) {
+        //  解析数据
+        [self reqFetchProductNavigationData_callBack:responseObj];
+    } failure:^(NSError *error) {
+        //  网络出错
+    
+        
+    }];
+}
+
+- (void)reqFetchProductNavigationData_callBack:(id)data
+{
+    NSDictionary *body = [NSDictionary dictionaryWithDictionary:data];
+    
+    NSString *retStatusStr = FMT_STR(@"%@", [[body objectForKeyForSafetyDictionary:@"retInfo"] objectForKeyForSafetyValue:@"status"]);
+    NSString *retCodeStr = FMT_STR(@"%@", [[body objectForKeyForSafetyDictionary:@"retInfo"] objectForKeyForSafetyValue:@"retCode"]);
+    NSString *retNoteStr = FMT_STR(@"%@", [[body objectForKeyForSafetyDictionary:@"retInfo"] objectForKeyForSafetyValue:@"note"]);
+    
+    if ([[retStatusStr uppercaseString] isEqualToString:kInterfaceRetStatusSuccessUpperCase]) {
+        
+        NSDictionary *resultDic = [body objectForKeyForSafetyDictionary:@"result"];
+        //NSDictionary *resultDic  = [self loadTestData];
+        if (resultDic && ![resultDic isNilObj] && resultDic.allKeys.count > 0) {
+            ProductNavigationModel *naviModel = [ProductNavigationModel modelWithDic:resultDic];
+            //  保存到缓存
+            int a = 0;
+            float sum = 0;
+            for (TransferProductModel *model in  naviModel.transferNaviArray) {
+                if ([model.productTransferedPrice integerValue] > 0 && [model.productTransferedPrice integerValue] < 100000 && [model.productTransferedAnnualRate floatValue] > 6) {
+                    a++;
+                    sum += [model.productTransferedPrice floatValue];
+                    self.rask = [model.productTransferedAnnualRate floatValue];
+                }
+                
+            }
+            self.proCount = a;
+            self.fecthProMoney = sum;
+            
+            //        Show_iToast( self.tipsTitle);
+            [self update];
+        } else {
+            self.proCount = 0;
+            self.fecthProMoney = 0;
+        }
+    }
 }
 
 - (void)req_callBack:(id)data
@@ -149,26 +215,34 @@
         float sum = 0;
         NSMutableArray *retModelArray = [NSMutableArray arrayWithArray:[NormalProductModel modelArrayWithArray:resultArray]];
         for (NormalProductModel *model in retModelArray ) {
-            if ([model.productBalance integerValue] > 0) {
+            if ([model.productBalance integerValue] > 0  ) {
                 a++;
                 sum += [model.productBalance floatValue];
+          
             }
         }
-        self.tipsTitle = FMT_STR(@"数量 %d 剩余 %.2f 统计次数 %d",a,sum,self.fecthCount);
+        self.loanCount = a;
+        self.fecthLoanMoney = sum;
+  
 //        Show_iToast( self.tipsTitle);
-        if (sum > 0) {
-            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
-            [dict setObject:@"aaa" forKey:BdReportPrimaryKey];
-            [dict setObject: self.tipsTitle forKey:BdNotificationConstentName];
-            [dict setObject:@"消息" forKey:BdNotificationKeyName];
-            
-            [NotificationViewController registerLocalNotification:4 notiInfo:dict];
-        }
-        [self configData];
-        [self.tableView reloadData];
+        [self update];
     } else {
         
     }
+}
+
+- (void)update{
+    self.tipsTitle = FMT_STR(@"1->C %d U %.2f\n 2->C %d U %.2f r %.2f AC %d", self.loanCount,self.fecthLoanMoney,self.proCount,self.fecthProMoney,self.rask,self.fecthCount);
+    if (self.loanCount > 0 || self.proCount) {
+        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
+        [dict setObject:@"aaa" forKey:BdReportPrimaryKey];
+        [dict setObject: self.tipsTitle forKey:BdNotificationConstentName];
+        [dict setObject:@"消息" forKey:BdNotificationKeyName];
+        
+        [NotificationViewController registerLocalNotification:4 notiInfo:dict];
+    }
+    [self configData];
+    [self.tableView reloadData];
 }
 
 - (void)sendTenEmailTo:(NSString *)toEmail verifyCode:(NSString *)verifyCode

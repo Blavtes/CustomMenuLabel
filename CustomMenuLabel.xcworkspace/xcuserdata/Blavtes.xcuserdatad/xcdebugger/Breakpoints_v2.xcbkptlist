@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/MorePageViewController.m"
-            timestampString = "562212816.134298"
+            timestampString = "564544739.407895"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "-sendTenEmailTo:verifyCode:"
             landmarkType = "7">
             <Locations>
@@ -89,11 +89,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/MorePageViewController.m"
-            timestampString = "562212816.134954"
+            timestampString = "564544739.410717"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "-sendTenEmailTo:verifyCode:"
             landmarkType = "7">
          </BreakpointContent>
@@ -105,11 +105,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/MorePageViewController.m"
-            timestampString = "562212816.1354001"
+            timestampString = "564544739.411651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "-sendTenEmailTo:verifyCode:"
             landmarkType = "7">
          </BreakpointContent>

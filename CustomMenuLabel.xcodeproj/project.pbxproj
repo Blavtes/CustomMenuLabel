@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		17A0392AB9A493B776C6F77B /* libPods-CustomMenuLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */; };
+		570293B2219BCC6100CE4753 /* ProductNavigationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570293B1219BCC6000CE4753 /* ProductNavigationModel.m */; };
+		570293B5219BCEB800CE4753 /* TransferProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570293B4219BCEB700CE4753 /* TransferProductModel.m */; };
+		570293BD219BCF6900CE4753 /* TransferProductNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570293BB219BCF6900CE4753 /* TransferProductNewModel.m */; };
 		570D37671F29E192008E9FC6 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570D37651F29E192008E9FC6 /* NotificationViewController.m */; };
 		570D37681F29E192008E9FC6 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570D37661F29E192008E9FC6 /* NotificationViewController.xib */; };
 		571D60701EA494EF00BD6D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D606E1EA494EF00BD6D15 /* Main.storyboard */; };
@@ -206,6 +209,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		570293B0219BCC6000CE4753 /* ProductNavigationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductNavigationModel.h; sourceTree = "<group>"; };
+		570293B1219BCC6000CE4753 /* ProductNavigationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductNavigationModel.m; sourceTree = "<group>"; };
+		570293B3219BCEB700CE4753 /* TransferProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferProductModel.h; sourceTree = "<group>"; };
+		570293B4219BCEB700CE4753 /* TransferProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferProductModel.m; sourceTree = "<group>"; };
+		570293BB219BCF6900CE4753 /* TransferProductNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferProductNewModel.m; sourceTree = "<group>"; };
+		570293BC219BCF6900CE4753 /* TransferProductNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferProductNewModel.h; sourceTree = "<group>"; };
 		570D37641F29E192008E9FC6 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		570D37651F29E192008E9FC6 /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		570D37661F29E192008E9FC6 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
@@ -1647,6 +1656,12 @@
 		57CC055221770D300031D68E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				570293BC219BCF6900CE4753 /* TransferProductNewModel.h */,
+				570293BB219BCF6900CE4753 /* TransferProductNewModel.m */,
+				570293B0219BCC6000CE4753 /* ProductNavigationModel.h */,
+				570293B1219BCC6000CE4753 /* ProductNavigationModel.m */,
+				570293B3219BCEB700CE4753 /* TransferProductModel.h */,
+				570293B4219BCEB700CE4753 /* TransferProductModel.m */,
 				57CC056321770F230031D68E /* ProductDetailModel.h */,
 				57CC056221770F220031D68E /* ProductDetailModel.m */,
 				57CC055D21770DA10031D68E /* NormalProductModel.h */,
@@ -1935,6 +1950,7 @@
 				571D65001EA495AC00BD6D15 /* NSArray+ExceptionExtension.m in Sources */,
 				571D653F1EA495AC00BD6D15 /* MCKeyboardAccessoryView.m in Sources */,
 				571D65411EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.m in Sources */,
+				570293BD219BCF6900CE4753 /* TransferProductNewModel.m in Sources */,
 				571D65131EA495AC00BD6D15 /* GuidePageViewController.m in Sources */,
 				571D65281EA495AC00BD6D15 /* ASPopUpView.m in Sources */,
 				571D648E1EA495AC00BD6D15 /* BaseViewModel.m in Sources */,
@@ -1963,6 +1979,7 @@
 				571D65011EA495AC00BD6D15 /* FPSObserver.m in Sources */,
 				571D64DF1EA495AC00BD6D15 /* CustomSecondRateButton.m in Sources */,
 				57A4F1311F2B12AB0014378E /* NotificationRecordListViewController.m in Sources */,
+				570293B2219BCC6100CE4753 /* ProductNavigationModel.m in Sources */,
 				571D65481EA495AC00BD6D15 /* SCNavTabBarController.m in Sources */,
 				571D64EB1EA495AC00BD6D15 /* SFTableViewCellModel.m in Sources */,
 				571D64BF1EA495AC00BD6D15 /* NSAttributedString+SafetyCrash.m in Sources */,
@@ -1990,6 +2007,7 @@
 				C11DF3B91EE2518800DEA7F8 /* RMTFileUtils.m in Sources */,
 				571D64E31EA495AC00BD6D15 /* FoldListView.m in Sources */,
 				C11DF3AF1EE24F6500DEA7F8 /* FMDatabase.m in Sources */,
+				570293B5219BCEB800CE4753 /* TransferProductModel.m in Sources */,
 				571D64DD1EA495AC00BD6D15 /* CustomNavTopView.m in Sources */,
 				571D64BD1EA495AC00BD6D15 /* NSString+Judgement.m in Sources */,
 				571D64D81EA495AC00BD6D15 /* CustomerIncomeCaculateView.m in Sources */,
