@@ -11,6 +11,8 @@
 		570293B2219BCC6100CE4753 /* ProductNavigationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570293B1219BCC6000CE4753 /* ProductNavigationModel.m */; };
 		570293B5219BCEB800CE4753 /* TransferProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570293B4219BCEB700CE4753 /* TransferProductModel.m */; };
 		570293BD219BCF6900CE4753 /* TransferProductNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570293BB219BCF6900CE4753 /* TransferProductNewModel.m */; };
+		5704FE3F21A65C3600855307 /* GameCleanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5704FE3E21A65C3600855307 /* GameCleanViewController.m */; };
+		5704FE4221A6A31900855307 /* GameTappyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704FE4121A6A31900855307 /* GameTappyViewController.swift */; };
 		570D37671F29E192008E9FC6 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570D37651F29E192008E9FC6 /* NotificationViewController.m */; };
 		570D37681F29E192008E9FC6 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570D37661F29E192008E9FC6 /* NotificationViewController.xib */; };
 		571D60701EA494EF00BD6D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D606E1EA494EF00BD6D15 /* Main.storyboard */; };
@@ -215,6 +217,10 @@
 		570293B4219BCEB700CE4753 /* TransferProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferProductModel.m; sourceTree = "<group>"; };
 		570293BB219BCF6900CE4753 /* TransferProductNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferProductNewModel.m; sourceTree = "<group>"; };
 		570293BC219BCF6900CE4753 /* TransferProductNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferProductNewModel.h; sourceTree = "<group>"; };
+		5704FE3D21A65C3600855307 /* GameCleanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameCleanViewController.h; sourceTree = "<group>"; };
+		5704FE3E21A65C3600855307 /* GameCleanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameCleanViewController.m; sourceTree = "<group>"; };
+		5704FE4021A6A31700855307 /* CustomMenuLabel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomMenuLabel-Bridging-Header.h"; sourceTree = "<group>"; };
+		5704FE4121A6A31900855307 /* GameTappyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTappyViewController.swift; sourceTree = "<group>"; };
 		570D37641F29E192008E9FC6 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		570D37651F29E192008E9FC6 /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		570D37661F29E192008E9FC6 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
@@ -646,6 +652,17 @@
 				9A3A3FD6C9C3617FD6B53FFE /* libPods-CustomMenuLabel.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5704FE3C21A65C0900855307 /* GameClean */ = {
+			isa = PBXGroup;
+			children = (
+				5704FE4121A6A31900855307 /* GameTappyViewController.swift */,
+				5704FE3D21A65C3600855307 /* GameCleanViewController.h */,
+				5704FE3E21A65C3600855307 /* GameCleanViewController.m */,
+				5704FE4021A6A31700855307 /* CustomMenuLabel-Bridging-Header.h */,
+			);
+			path = GameClean;
 			sourceTree = "<group>";
 		};
 		570D37631F29E16E008E9FC6 /* Notification */ = {
@@ -1141,6 +1158,7 @@
 		571D61E81EA495AB00BD6D15 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				5704FE3C21A65C0900855307 /* GameClean */,
 				570D37631F29E16E008E9FC6 /* Notification */,
 				C11DF3BA1EE2533200DEA7F8 /* AddMenu */,
 				C11DF3BB1EE2533200DEA7F8 /* ShowMenu */,
@@ -1770,8 +1788,8 @@
 				TargetAttributes = {
 					571D60611EA494EF00BD6D15 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4244X5Z6M2;
-						LastSwiftMigration = 0830;
+						DevelopmentTeam = MQBF47L68X;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1887,6 +1905,7 @@
 			files = (
 				571D64D61EA495AC00BD6D15 /* CustomerCaculateView.m in Sources */,
 				571D653D1EA495AC00BD6D15 /* MCImageButton.m in Sources */,
+				5704FE3F21A65C3600855307 /* GameCleanViewController.m in Sources */,
 				5795651C2092D09A0000973C /* GameView.m in Sources */,
 				571D65491EA495AC00BD6D15 /* SCNavTabBar.m in Sources */,
 				571D64B71EA495AC00BD6D15 /* AppDelegate.m in Sources */,
@@ -1986,6 +2005,7 @@
 				571D65331EA495AC00BD6D15 /* CLLockMainView.m in Sources */,
 				571D64BB1EA495AC00BD6D15 /* NSObject+Extension.m in Sources */,
 				571D64CA1EA495AC00BD6D15 /* UIButton+Extention.m in Sources */,
+				5704FE4221A6A31900855307 /* GameTappyViewController.swift in Sources */,
 				C11DF3B61EE2510B00DEA7F8 /* RMTBdReportBufferManager.m in Sources */,
 				5749C864217D740A00B48CD3 /* SKPSMTPMessage.m in Sources */,
 				571D65101EA495AC00BD6D15 /* MorePageViewController.m in Sources */,
@@ -2108,7 +2128,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2150,7 +2170,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2163,10 +2183,12 @@
 			baseConfigurationReference = 768EF575564BF9000FB62568 /* Pods-CustomMenuLabel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4244X5Z6M2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MQBF47L68X;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2189,10 +2211,12 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yy.CustomMenuLabel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifax.p2p2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomApp/Classes/BusinessLogic/More/GameClean/CustomMenuLabel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -2202,10 +2226,12 @@
 			baseConfigurationReference = DD4D4C92FCE4FDEBF7C9F387 /* Pods-CustomMenuLabel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4244X5Z6M2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MQBF47L68X;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2228,10 +2254,11 @@
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/CustomApp/Classes/ThirdParty/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yy.CustomMenuLabel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifax.p2p2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomApp/Classes/BusinessLogic/More/GameClean/CustomMenuLabel-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

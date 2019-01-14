@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/MorePageViewController.m"
-            timestampString = "564544739.407895"
+            timestampString = "569142955.759876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "-sendTenEmailTo:verifyCode:"
             landmarkType = "7">
             <Locations>
@@ -89,11 +89,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/MorePageViewController.m"
-            timestampString = "564544739.410717"
+            timestampString = "569142955.765718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
             landmarkName = "-sendTenEmailTo:verifyCode:"
             landmarkType = "7">
          </BreakpointContent>
@@ -105,11 +105,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/MorePageViewController.m"
-            timestampString = "564544739.411651"
+            timestampString = "569142955.766713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "-sendTenEmailTo:verifyCode:"
             landmarkType = "7">
          </BreakpointContent>
@@ -297,12 +297,12 @@
                   moduleName = "CustomMenuLabel"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Blavtes/Documents/WorkPlace/myWork/CustomMenuLabel/CustomApp/Classes/ThirdParty/SMTPLibrary/SKPSMTPMessage.m"
-                  timestampString = "561872728.061501"
+                  timestampString = "564627821.259264"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "237"
                   endingLineNumber = "237"
-                  offsetFromSymbolStart = "26">
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -312,12 +312,12 @@
                   moduleName = "CustomMenuLabel"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Blavtes/Documents/WorkPlace/myWork/CustomMenuLabel/CustomApp/Classes/ThirdParty/SMTPLibrary/SKPSMTPMessage.m"
-                  timestampString = "561872728.091663"
+                  timestampString = "564627821.261341"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "237"
                   endingLineNumber = "237"
-                  offsetFromSymbolStart = "70">
+                  offsetFromSymbolStart = "112">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -404,7 +404,7 @@
                     count = 0;
                 }
                 
-                DLog(@"count %ld",count);
+                DLog(@"count %d",count);
                 NSDictionary *dic = seqsArray[count];
                 [NotificationViewController repeatNotificaiton:dic nextTime:4 * 60 * 60];
 
@@ -417,7 +417,7 @@
     }];
     [vc addAction:no];
     [vc addAction:yes];
-    [GJSTopMostViewController() presentViewController:vc animated:yes completion:^{
+    [GJSTopMostViewController() presentViewController:vc animated:YES completion:^{
         
     }];
 }

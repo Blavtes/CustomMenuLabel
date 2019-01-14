@@ -21,6 +21,7 @@
 #import "NSStream+SKPSMTPExtensions.h"
 #import "ProductNavigationModel.h"
 #import "TransferProductModel.h"
+#import "CustomMenuLabel-swift.h"
 
 @interface MorePageViewController () <UITableViewDataSource, UITableViewDelegate,SKPSMTPMessageDelegate>{
     //
@@ -83,8 +84,8 @@
 
 - (void)configData
 {
-    _dataArray = @[@[@"添加菜名", @"查询菜单",@"通知设置", @"不相交",self.tipsTitle]];
-    _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter" ,@"more_score",@"more_score"], @[@"more_helpCenter", @"more_feedback", @"more_recommend", @"more_recommend"], @[@"more_recommend", @"more_aboutUs", @"more_score", @"more_companyInfo",@"more_companyInfo"]];
+    _dataArray = @[@[@"添加菜名", @"查询菜单",@"通知设置", @"不相交",@"Tappy",self.tipsTitle]];
+    _imgArray = @[@[@"more_actCenter", @"more_companyInfo", @"more_newsCenter", @"more_newsCenter" ,@"more_score",@"more_score"], @[@"more_helpCenter", @"more_feedback", @"more_recommend", @"more_recommend", @"more_recommend"], @[@"more_recommend", @"more_aboutUs", @"more_score", @"more_companyInfo",@"more_recommend",@"more_companyInfo"]];
 }
 
 - (void)input:(UITextField*)field
@@ -127,7 +128,7 @@
             _time = nil;
         }
         self.fecthCount = 0;
-        
+        self.loanCount = 0;
         [LocationTool setLocationServicesEnabled:NO];
         _isFecth = NO;
     }
@@ -227,7 +228,8 @@
 //        Show_iToast( self.tipsTitle);
         [self update];
     } else {
-        
+        self.loanCount = 0;
+        self.fecthLoanMoney = 0;
     }
 }
 
@@ -382,24 +384,12 @@
     }
     if (indexPath.section==0) {
         if (indexPath.row ==0) {
-#pragma mark - 活动中心小红点
-            _redPointLabel0 = [BadgeTool redPointLabel:CGRectMake(redPointx,redPointy, redPointwidth, redPointwidth)];
-            [cell.contentView addSubview:_redPointLabel0];
-            // 是否显示小红点x
-            _redPointLabel0.hidden = ![[BadgeTool sharedInstance] getIsShowBadgeWithType:isShowActCenterType];
+
         }else if (indexPath.row == 1){
-#pragma mark - 新闻动态小红点
-            _redPointLabel1 = [BadgeTool redPointLabel:CGRectMake(redPointx,redPointy, redPointwidth, redPointwidth)];
-            [cell.contentView addSubview:_redPointLabel1];
-            //  是否显示小红点
-            _redPointLabel1.hidden = ![[BadgeTool sharedInstance] getIsShowBadgeWithType:isShowNewInfomationType];
+
         }else if (indexPath.row == 2){
-#pragma mark - 系统公告小红点
-            _redPointLabel2 = [BadgeTool redPointLabel:CGRectMake(redPointx,redPointy, redPointwidth, redPointwidth)];
-            [cell.contentView addSubview:_redPointLabel2];
-            //  是否显示小红点
-            _redPointLabel2.hidden = ![[BadgeTool sharedInstance] getIsShowBadgeWithType:isShowNewsCenterType];
-        } else if (indexPath.row == 4) {
+
+        } else if (indexPath.row == ((NSArray*)self.dataArray[0]).count - 1) {
             UISwitch *swit = [[UISwitch alloc] initWithFrame:CGRectMake(MAIN_SCREEN_WIDTH - 60, 10, 100, kTableViewCellHeightNormal)];
             [swit setOn:self.isFecth];
             [swit addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
@@ -419,7 +409,7 @@
         cell.detailTextLabel.font = [UIFont systemFontOfSize:kCommonFontSizeTitle_18];
         cell.detailTextLabel.text = FMT_STR(@"V%@",[CommonMethod appVersion]);
     }
-    if(indexPath.row != 4){
+    if(indexPath.row != ((NSArray*)self.dataArray[0]).count - 1){
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     } else {
@@ -450,6 +440,11 @@
     } else if (indexPath.row == 3){
         GameCancellController *vc = [GameCancellController new];
         [self.navigationController pushViewController:vc animated:YES];
+        
+    } else if (indexPath.row == 4){
+        GameTappyViewController *vc = [GameTappyViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+        
     }
 }
 @end
